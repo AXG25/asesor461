@@ -18,6 +18,7 @@ const ASISTENTE_NUMERO = '573025479797@c.us';
 const USERS_FILE = path.join(__dirname, 'users.json');
 const CLEANUP_INTERVAL = 15 * 24 * 60 * 60 * 1000; // 15 días en milisegundos
 const INACTIVE_TIMEOUT = 24 * 60 * 60 * 1000; // 24 horas en milisegundos
+const FOLLOW_UP_TIMEOUT = 3 * 24 * 60 * 60 * 1000; // 3 días en milisegundos
 const STOP_EMOJI = '✨'; // Emoji para detener interacción
 
 // Estructura de datos para usuarios
@@ -48,20 +49,31 @@ const saveUsers = () => {
 };
 
 // Limpiar usuarios inactivos
-const cleanupInactiveUsers = () => {
+const cleanupInactiveUsers = async () => {
     const now = Date.now();
     let count = 0;
 
-    Object.keys(users).forEach(userId => {
-        const user = users[userId];
-        if (!user.finalizado && user.lastActivity && (now - user.lastActivity > INACTIVE_TIMEOUT)) {
-            delete users[userId];
-            count++;
+    for (const [userId, user] of Object.entries(users)) {
+        if (!user.finalizado && user.lastActivity) {
+            const timeSinceLastActivity = now - user.lastActivity;
+            
+            // Si han pasado 3 días y no se ha enviado el mensaje de seguimiento
+            if (timeSinceLastActivity > FOLLOW_UP_TIMEOUT && !user.followUpSent && user.estado === 'seleccion_fechas') {
+                await sendMessage(userId, 'Hola, ¿lograste revisar la información que te mandé? ¿Tienes alguna duda? ¿Te interesa el curso?');
+                user.followUpSent = true;
+                user.lastActivity = now;
+                count++;
+            }
+            // Si han pasado más de 24 horas desde la última actividad, limpiar el usuario
+            else if (timeSinceLastActivity > INACTIVE_TIMEOUT) {
+                delete users[userId];
+                count++;
+            }
         }
-    });
+    }
 
     if (count > 0) {
-        console.log(`Limpiados ${count} usuarios inactivos.`);
+        console.log(`Procesados ${count} usuarios inactivos.`);
         saveUsers();
     }
 };
@@ -143,7 +155,6 @@ const sendAudio = async (chatId, audioPath) => {
         if (!fs.existsSync(absolutePath)) {
             console.error(`Archivo de audio no encontrado: ${absolutePath}`);
             // Si el audio no existe, enviar un mensaje de texto como alternativa
-[]
             return false;
         }
 
@@ -153,7 +164,6 @@ const sendAudio = async (chatId, audioPath) => {
     } catch (error) {
         console.error(`Error al enviar audio a ${chatId}:`, error);
         // En caso de error, enviar un mensaje de texto alternativo
-
         return false;
     }
 };
@@ -242,7 +252,8 @@ const handleNewConversation = async (chatId, text) => {
             curso: cursoEncontrado,
             createdAt: Date.now(),
             lastActivity: Date.now(),
-            respuestasInesperadas: 0
+            respuestasInesperadas: 0,
+            followUpSent: false // Agregar campo para rastrear si se envió el mensaje de seguimiento
         };
         saveUsers();
 
