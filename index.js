@@ -189,6 +189,8 @@ const finalizarConversacionAutomatica = async (chatId, mensaje) => {
 // Manejar proceso de selección de fechas
 const handleDateSelection = async (chatId, text, usuario) => {
     if (text.includes('si') || text.includes('ok') || text.includes('dale') || text.includes('siii') || text.includes('fechas') || text.includes('fecha') || text.includes('inicio') || text.includes('horario') || text.includes('horarios') || text.includes('bueno') || text.includes('bien') || text.includes('porfavor') || text.includes('gracias') || text.includes('favor') || text.includes('entre') || text.includes('entre semana') || text.includes('en semana') || text.includes('fines') || text.includes('fines de semana') || text.includes('fin')) {
+        usuario.estado = 'seleccion_reserva';
+        usuario.lastActivity = Date.now();
         usuario.respuestasInesperadas = 0; // Reiniciar contador de respuestas inesperadas
         await waitRandom();
         await sendMessage(chatId, cursos[usuario.curso].fechas);
@@ -196,8 +198,6 @@ const handleDateSelection = async (chatId, text, usuario) => {
         await sendMessage(chatId, 'Voy a estar muy atento a cualquier duda o inquietud que tengas 😌');
         await waitRandom();
         await sendMessage(chatId, 'Te gustaria aprovechar la promocion? como te queda mas facil apartar el cupo. con una transferencia o pagando en efectivo?');
-        usuario.estado = 'seleccion_reserva';
-        usuario.lastActivity = Date.now();
         saveUsers();
     }
 };
@@ -384,11 +384,11 @@ client.on('message_create', async msg => {
 
             const cursoEncontrado = Object.keys(cursos).find(curso =>
                 cursos[curso].palabrasClave.some(palabra =>
-                    text.includes(normalizeText(palabra))
+                    text.includes(palabra)
                 )
             );
 
-            if (cursoEncontrado) {
+            if (cursoEncontrado && text?.includes('🚀')) {
                 // Si el usuario ya está en la base de datos, evitar reiniciar su flujo
                 if (!users[chatId] || users[chatId].finalizado) {
                     users[chatId] = {
