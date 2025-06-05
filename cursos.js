@@ -125,7 +125,7 @@ module.exports = {
 
     },
     'trenzas': {
-        palabrasClave: ['trenzas', 'peinados', 'trenzadora', 'trenza', 'peinado'],
+        palabrasClave: ['trenzas', 'trensa', 'trensas', 'peinados', 'peinado', 'trenzadora', 'trenza', 'peinado'],
         promocion: 'El curso cuesta ~$500.000~, pero *hasta el 8 de Junio* tiene un *descuento del 30%* y queda en *$350.000* Puedes *apartar tu cupo con solo $100.000* y pagar los $250.000 restantes tres dias antes de comenzar clases. \n\nSon 8 clases. Si estudia *entre semana*, el curso dura *4 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *8 semanas (1 clase por semana)*.',
         pensum: 'trenzas.jpg',
         presentacion: 'presentacionTrenzas.mp3',
