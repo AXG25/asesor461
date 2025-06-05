@@ -10,8 +10,6 @@ module.exports = {
 
 17 Junio 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
 
-4 Junio 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
-
 2 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
 
 26 Julio 2025 | Sábados | 1:00 pm a 5:00 pm
@@ -19,10 +17,9 @@ module.exports = {
 13 Julio 2025 | Domingos | 8:00 am a 12:00 pm
 
 29 Junio 2025 | Domingos | 1:00 pm a 5:00 pm`
-
     },
     'cejas': {
-        palabrasClave: ['cejas y pestañas', 'pestañas', 'pestaña', 'pestañina', 'laminado', 'laminados', 'volumen', 'volumenes'],
+        palabrasClave: ['cejas y pestañas', 'pestañas', 'pestaña', 'pestanas', 'pestana', 'pestañina', 'laminado', 'laminados', 'volumen', 'volumenes'],
         promocion: 'El curso cuesta ~$500.000~, pero *hasta el 8 de Junio* tiene un *descuento del 30%* y queda en *$350.000* Puedes *apartar tu cupo con solo $100.000* y pagar los $250.000 restantes tres dias antes de comenzar clases. \n\nSon 8 clases. si estudia *entre semana*, el curso dura *4 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *8 semanas (1 clase por semana)*.',
         pensum: 'pestañas.jpg',
         presentacion: 'presentacionCejas.mp3',
@@ -34,7 +31,7 @@ module.exports = {
 
 18 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-4 Junio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
+11 Junio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
 19 Julio 2025 | Sábados | 8:00 am a 12:00 pm
 
@@ -118,9 +115,9 @@ module.exports = {
         presentacion: 'presentacionCelulares.mp3',
         fechas: `Fechas inicio REPARACIÓN DE CELULARES
 
-3 Junio 2025 | Martes a Viernes | 7:00 am a 9:00 am
+24 Junio 2025 | Martes a Viernes | 7:00 am a 9:00 am
 
-3 Junio 2025 | Martes a Viernes | 1:00 pm a 3:00 pm
+24 Junio 2025 | Miércoles y Viernes | 1:00 pm a 3:00 pm
 
 28 Junio 2025 | Sábados | 8:00 am a 1:00 pm
 
