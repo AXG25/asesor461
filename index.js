@@ -205,7 +205,8 @@ const handleDateSelection = async (chatId, text, usuario) => {
 // Manejar proceso de reserva
 const handleReservationSelection = async (chatId, text, usuario) => {
     if (text.includes('transferencia') || text.includes('transfiero') || text.includes('consigno') || text.includes('transferir') || text.includes('cuenta') || text.includes('cuentas') || text.includes('consignacion') || text.includes('consignar') || text.includes('numero') || text.includes('nequi') || text.includes('neki') || text.includes('bancolombia')) {
-        usuario.respuestasInesperadas = 0; // Reiniciar contador
+        usuario.respuestasInesperadas = 0; // Reiniciar 
+        users[chatId].finalizado = true;
         await waitRandom();
         await sendMessage(chatId, `Bueno primero debemos llenar este formulario para hacer la matricula el formulario te va a pedir un codigo de asesor. *Mi codigo de asesor es _Abi_*\n\n https://docs.google.com/forms/d/e/1FAIpQLSeCzIyb-5ASy_vFDo71WEoVh27GtfKfS5DuOZKRqGjEafALtQ/viewform?usp=sf_linkh`);
         await waitRandom();
@@ -213,6 +214,7 @@ const handleReservationSelection = async (chatId, text, usuario) => {
     }
     else if (text.includes('presencial') || text.includes('sede') || text.includes('direccion') || text.includes('ubicacion') || text.includes('ubicados') || text.includes('ubicado') || text.includes('encuentra') || text.includes('encuentras') || text.includes('efectivo') || text.includes('acercarme') || text.includes('acercar') || text.includes('encuentras') || text.includes('encuentran')) {
         usuario.respuestasInesperadas = 0; // Reiniciar contador
+        users[chatId].finalizado = true;
         await waitRandom();
         await sendMessage(chatId, `Aca te dejo la ubicacion: \nhttps://g.co/kgs/cc6o1RU`);
         await waitRandom();
@@ -366,7 +368,6 @@ client.on('message', async msg => {
             else {
                 // Estado desconocido, podría ser un error en nuestra lógica
                 console.error(`Estado desconocido para usuario ${chatId}: ${usuario.estado}`);
-                await finalizarConversacionAutomatica(chatId, `❓ Cliente con estado desconocido: ${chatId}, mensaje: "${msg.body}"`);
             }
         }
     } catch (error) {
