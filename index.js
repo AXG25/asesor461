@@ -18,7 +18,7 @@ const ASISTENTE_NUMERO = '573025479797@c.us';
 const USERS_FILE = path.join(__dirname, 'users.json');
 const CLEANUP_INTERVAL = 15 * 24 * 60 * 60 * 1000; // 15 días en milisegundos
 const INACTIVE_TIMEOUT = 24 * 60 * 60 * 1000; // 24 horas en milisegundos
-const FOLLOW_UP_TIMEOUT = 3 * 24 * 60 * 60 * 1000; // 3 días en milisegundos
+const FOLLOW_UP_TIMEOUT = 24 * 60 * 60 * 1000; // 1 día en milisegundos
 const STOP_EMOJI = '✨'; // Emoji para detener interacción
 
 // Estructura de datos para usuarios
@@ -57,12 +57,14 @@ const cleanupInactiveUsers = async () => {
         if (!user.finalizado && user.lastActivity) {
             const timeSinceLastActivity = now - user.lastActivity;
             
-            // Si han pasado 3 días y no se ha enviado el mensaje de seguimiento
+            // Si han pasado 24 horas y no se ha enviado el mensaje de seguimiento
             if (timeSinceLastActivity > FOLLOW_UP_TIMEOUT && !user.followUpSent && user.estado === 'seleccion_fechas') {
+                await waitRandom();
                 await sendMessage(userId, 'Hola, ¿lograste revisar la información que te mandé? ¿Tienes alguna duda? ¿Te interesa el curso?');
                 user.followUpSent = true;
                 user.lastActivity = now;
                 count++;
+                console.log(`Enviado mensaje de seguimiento a ${userId}`);
             }
             // Si han pasado más de 24 horas desde la última actividad, limpiar el usuario
             else if (timeSinceLastActivity > INACTIVE_TIMEOUT) {
@@ -80,8 +82,29 @@ const cleanupInactiveUsers = async () => {
 
 // Limpiar todos los usuarios periódicamente
 const setupCleanup = () => {
-    // Limpiar usuarios inactivos cada día
-    setInterval(cleanupInactiveUsers, INACTIVE_TIMEOUT);
+    // Verificar usuarios inactivos cada hora para enviar mensajes de seguimiento
+    setInterval(cleanupInactiveUsers, 60 * 60 * 1000); // 1 hora en milisegundos
+
+    // Limpiar usuarios completamente inactivos cada 24 horas
+    setInterval(() => {
+        const now = Date.now();
+        let count = 0;
+
+        for (const [userId, user] of Object.entries(users)) {
+            if (!user.finalizado && user.lastActivity) {
+                const timeSinceLastActivity = now - user.lastActivity;
+                if (timeSinceLastActivity > INACTIVE_TIMEOUT) {
+                    delete users[userId];
+                    count++;
+                }
+            }
+        }
+
+        if (count > 0) {
+            console.log(`Eliminados ${count} usuarios completamente inactivos.`);
+            saveUsers();
+        }
+    }, INACTIVE_TIMEOUT);
 
     // Limpiar todos los usuarios cada 15 días
     setInterval(() => {
@@ -186,60 +209,6 @@ const finalizarConversacionAutomatica = async (chatId, mensaje) => {
     }
 };
 
-// Manejar proceso de selección de fechas
-const handleDateSelection = async (chatId, text, usuario) => {
-    if (text.includes('si') || text.includes('ok') || text.includes('dale') || text.includes('siii') || text.includes('fechas') || text.includes('fecha') || text.includes('inicio') || text.includes('horario') || text.includes('horarios') || text.includes('bueno') || text.includes('bien') || text.includes('porfavor') || text.includes('gracias') || text.includes('favor') || text.includes('entre') || text.includes('entre semana') || text.includes('en semana') || text.includes('fines') || text.includes('fines de semana') || text.includes('fin')) {
-        usuario.estado = 'seleccion_reserva';
-        usuario.lastActivity = Date.now();
-        usuario.respuestasInesperadas = 0; // Reiniciar contador de respuestas inesperadas
-        await waitRandom();
-        await sendMessage(chatId, cursos[usuario.curso].fechas);
-        await waitRandom();
-        await sendMessage(chatId, 'Voy a estar muy atento a cualquier duda o inquietud que tengas 😌');
-        await waitRandom();
-        await sendMessage(chatId, 'Te gustaria aprovechar la promocion? como te queda mas facil apartar el cupo. con una transferencia o pagando en efectivo?');
-        saveUsers();
-    }
-};
-
-// Manejar proceso de reserva
-const handleReservationSelection = async (chatId, text, usuario) => {
-    if (text.includes('transferencia') || text.includes('transfiero') || text.includes('consigno') || text.includes('transferir') || text.includes('cuenta') || text.includes('cuentas') || text.includes('consignacion') || text.includes('consignar') || text.includes('numero') || text.includes('nequi') || text.includes('neki') || text.includes('bancolombia')) {
-        usuario.respuestasInesperadas = 0; // Reiniciar 
-        users[chatId].finalizado = true;
-        await waitRandom();
-        await sendMessage(chatId, `Bueno primero debemos llenar este formulario para hacer la matricula el formulario te va a pedir un codigo de asesor. *Mi codigo de asesor es _Abi_*\n\n https://docs.google.com/forms/d/e/1FAIpQLSeCzIyb-5ASy_vFDo71WEoVh27GtfKfS5DuOZKRqGjEafALtQ/viewform?usp=sf_linkh`);
-        await waitRandom();
-        await sendMessage(chatId, `Y podemos hacer la consignación a una de nuestras cuentas\n\n1.💳 BANCOLOMBIA \nCuenta de ahorros: Claudia Bolívar \n00896502867\n\n2.📱Nequi \nClaudia Bolívar \n3117367087`);
-    }
-    else if (text.includes('presencial') || text.includes('sede') || text.includes('direccion') || text.includes('ubicacion') || text.includes('ubicados') || text.includes('ubicado') || text.includes('encuentra') || text.includes('encuentras') || text.includes('efectivo') || text.includes('acercarme') || text.includes('acercar') || text.includes('encuentras') || text.includes('encuentran')) {
-        usuario.respuestasInesperadas = 0; // Reiniciar contador
-        users[chatId].finalizado = true;
-        await waitRandom();
-        await sendMessage(chatId, `Aca te dejo la ubicacion: \nhttps://g.co/kgs/cc6o1RU`);
-        await waitRandom();
-        await sendMessage(chatId, `Necesito que me digas que dia y a que hora puedes venir para poder agendarte la cita. Nosotros atendemos de 8 a 5, en caso de que ese dia no puedas venir agradeceria muchisimo que me lo informaras tambien`);
-        await waitRandom();
-
-        // Usar el nuevo metodo sendAudio con manejo de errores
-        await sendAudio(chatId, './fidelidad.mp3');
-    }
-    else {
-        // Incrementar contador de respuestas inesperadas
-        usuario.respuestasInesperadas = (usuario.respuestasInesperadas || 0) + 1;
-
-        // Simplemente guardar el estado y esperar la próxima respuesta
-        saveUsers();
-        return;
-    }
-
-    await waitRandom();
-    await sendMessage(ASISTENTE_NUMERO, `✅ Cliente completó el flujo. Interesado en ${usuario.curso}: ${chatId}`);
-    users[chatId].finalizado = true;
-    users[chatId].lastActivity = Date.now();
-    saveUsers();
-};
-
 // Manejar inicio de nueva conversación
 const handleNewConversation = async (chatId, text) => {
     const cursoEncontrado = Object.keys(cursos).find(curso =>
@@ -255,28 +224,103 @@ const handleNewConversation = async (chatId, text) => {
             createdAt: Date.now(),
             lastActivity: Date.now(),
             respuestasInesperadas: 0,
-            followUpSent: false // Agregar campo para rastrear si se envió el mensaje de seguimiento
+            followUpSent: false
         };
         saveUsers();
 
-        // Usar el nuevo método sendAudio con manejo de errores
-        await waitRandom();
-        await sendAudio(chatId, 'bienvenida.mp3');
         await waitRandom();
         await sendMedia(chatId, cursos[cursoEncontrado].pensum, cursos[cursoEncontrado].promocion);
         await waitRandom();
         await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
         await waitRandom();
-        await sendMedia(chatId, 'ubicacion.jpg', "Estamos en el centro de Medellin\nCra 42 #49-34");
-        await waitRandom();
-        await sendMessage(chatId, 'Quieres conocer las fechas de inicio con sus respectivos horarios?');
+        await sendMessage(chatId, 'Le gustaria conocer las fechas de inicio con sus respectivos horarios?');
 
-        users[chatId].estado = 'seleccion_fechas';
-        users[chatId].lastActivity = Date.now();
+        return true;
+    }
+    return false;
+};
+
+// Manejar proceso de selección de fechas
+const handleDateSelection = async (chatId, text, usuario) => {
+    if (text.includes('si') || text.includes('ok') || text.includes('dale') || text.includes('siii') || text.includes('fechas') || text.includes('fecha') || text.includes('inicio') || text.includes('horario') || text.includes('horarios') || text.includes('bueno') || text.includes('bien') || text.includes('porfavor') || text.includes('gracias') || text.includes('favor') || text.includes('entre') || text.includes('entre semana') || text.includes('en semana') || text.includes('fines') || text.includes('fines de semana') || text.includes('fin')) {
+        usuario.estado = 'seleccion_fechas';
+        usuario.lastActivity = Date.now();
+        usuario.respuestasInesperadas = 0;
+        
+        await waitRandom();
+        await sendMessage(chatId, cursos[usuario.curso].fechas);
+        await waitRandom();
+        await sendAudio(chatId, 'explicacion_fechas.mp3');
+        await waitRandom();
+        await sendMessage(chatId, '¿Cuál de estas fechas te gustaría más?');
         saveUsers();
         return true;
     }
     return false;
+};
+
+// Manejar selección de fecha específica
+const handleFechaEspecifica = async (chatId, text, usuario) => {
+    const fechasValidas = ['martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'entre semana', 'fin de semana', 'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'];
+    const contieneFecha = fechasValidas.some(fecha => text.toLowerCase().includes(fecha));
+
+    if (contieneFecha) {
+        usuario.respuestasInesperadas = 0;
+        usuario.estado = 'confirmacion_promocion';
+        await waitRandom();
+        await sendMessage(chatId, '¡Excelente! Entonces ¿Te gustaría aprovechar la promoción? ¿Cómo te queda más fácil apartar el cupo, con una transferencia o pagando en efectivo?');
+        saveUsers();
+        return true;
+    }
+    return false;
+};
+
+// Manejar confirmación de promoción y método de pago
+const handleConfirmacionPromocion = async (chatId, text, usuario) => {
+    if (text.includes('transferencia') || text.includes('transfiero') || text.includes('consigno') || text.includes('transferir') || text.includes('cuenta') || text.includes('cuentas') || text.includes('consignacion') || text.includes('consignar') || text.includes('numero') || text.includes('nequi') || text.includes('neki') || text.includes('bancolombia')) {
+        usuario.respuestasInesperadas = 0;
+        users[chatId].finalizado = true;
+        await waitRandom();
+        await sendMessage(chatId, `Debemos llenar este formulario para hacer la matricula el formulario te va a pedir un codigo de asesor. *Mi codigo de asesor es _Abi_*\n\n https://docs.google.com/forms/d/e/1FAIpQLSeCzIyb-5ASy_vFDo71WEoVh27GtfKfS5DuOZKRqGjEafALtQ/viewform?usp=sf_linkh`);
+        await waitRandom();
+        await sendMessage(chatId, `Y podemos hacer la consignación a una de nuestras cuentas\n\n1.💳 BANCOLOMBIA \nCuenta de ahorros: Claudia Bolívar \n00896502867\n\n2.📱Nequi \nClaudia Bolívar \n3117367087`);
+        return true;
+    }
+    else if (text.includes('presencial') || text.includes('sede') || text.includes('direccion') || text.includes('ubicacion') || text.includes('ubicados') || text.includes('ubicado') || text.includes('encuentra') || text.includes('encuentras') || text.includes('efectivo') || text.includes('acercarme') || text.includes('acercar') || text.includes('encuentras') || text.includes('encuentran')) {
+        usuario.respuestasInesperadas = 0;
+        users[chatId].finalizado = true;
+        await waitRandom();
+        await sendMessage(chatId, `Aca te dejo la ubicacion: \nhttps://g.co/kgs/cc6o1RU`);
+        await waitRandom();
+        await sendMessage(chatId, `Necesito que me digas que dia y a que hora puedes venir para poder agendarte la cita. Nosotros atendemos de 8 a 5, en caso de que ese dia no puedas venir agradeceria muchisimo que me lo informaras tambien`);
+        await waitRandom();
+        await sendAudio(chatId, './fidelidad.mp3');
+        return true;
+    }
+    return false;
+};
+
+// Manejar proceso de reserva
+const handleReservationSelection = async (chatId, text, usuario) => {
+    if (usuario.estado === 'seleccion_fechas') {
+        const fechaSeleccionada = await handleFechaEspecifica(chatId, text, usuario);
+        if (fechaSeleccionada) return;
+    }
+    else if (usuario.estado === 'confirmacion_promocion') {
+        const promocionConfirmada = await handleConfirmacionPromocion(chatId, text, usuario);
+        if (promocionConfirmada) {
+            await waitRandom();
+            await sendMessage(ASISTENTE_NUMERO, `✅ Cliente completó el flujo. Interesado en ${usuario.curso}: ${chatId}`);
+            users[chatId].finalizado = true;
+            users[chatId].lastActivity = Date.now();
+            saveUsers();
+            return;
+        }
+    }
+
+    // Si no se procesó ninguna respuesta válida
+    usuario.respuestasInesperadas = (usuario.respuestasInesperadas || 0) + 1;
+    saveUsers();
 };
 
 // Verificar si un chat es un grupo
@@ -335,7 +379,7 @@ client.on('message', async msg => {
         // Verificar si el mensaje proviene de un grupo
         if (await isGroup(chatId)) {
             console.log(`Ignorando mensaje del grupo: ${chatId}`);
-            return; // No procesar mensajes de grupos
+            return;
         }
 
         // Ignorar mensajes vacíos o no textuales
@@ -351,22 +395,43 @@ client.on('message', async msg => {
         if (!users[chatId]) {
             const iniciado = await handleNewConversation(chatId, text);
             if (!iniciado) {
-                // Ignorar mensajes que no contienen palabras clave
                 return;
             }
         } else {
             // Continuar el proceso existente
             const usuario = users[chatId];
-            usuario.lastActivity = Date.now(); // Actualizar última actividad
+            usuario.lastActivity = Date.now();
 
-            if (usuario.estado === 'seleccion_fechas') {
-                await handleDateSelection(chatId, text, usuario);
+            console.log(`Procesando mensaje para usuario ${chatId} en estado: ${usuario.estado}`);
+
+            if (usuario.estado === 'inicio') {
+                const respuestaProcesada = await handleDateSelection(chatId, text, usuario);
+                if (!respuestaProcesada) {
+                    usuario.respuestasInesperadas = (usuario.respuestasInesperadas || 0) + 1;
+                    saveUsers();
+                }
             }
-            else if (usuario.estado === 'seleccion_reserva') {
-                await handleReservationSelection(chatId, text, usuario);
+            else if (usuario.estado === 'seleccion_fechas') {
+                const fechaSeleccionada = await handleFechaEspecifica(chatId, text, usuario);
+                if (!fechaSeleccionada) {
+                    usuario.respuestasInesperadas = (usuario.respuestasInesperadas || 0) + 1;
+                    saveUsers();
+                }
+            }
+            else if (usuario.estado === 'confirmacion_promocion') {
+                const promocionConfirmada = await handleConfirmacionPromocion(chatId, text, usuario);
+                if (promocionConfirmada) {
+                    await waitRandom();
+                    await sendMessage(ASISTENTE_NUMERO, `✅ Cliente completó el flujo. Interesado en ${usuario.curso}: ${chatId}`);
+                    users[chatId].finalizado = true;
+                    users[chatId].lastActivity = Date.now();
+                    saveUsers();
+                } else {
+                    usuario.respuestasInesperadas = (usuario.respuestasInesperadas || 0) + 1;
+                    saveUsers();
+                }
             }
             else {
-                // Estado desconocido, podría ser un error en nuestra lógica
                 console.error(`Estado desconocido para usuario ${chatId}: ${usuario.estado}`);
             }
         }
@@ -404,15 +469,11 @@ client.on('message_create', async msg => {
                     console.log(`Iniciando flujo automático para ${chatId} sobre el curso: ${cursoEncontrado}`);
 
                     await waitRandom();
-                    await sendAudio(chatId, 'bienvenida.mp3');
-                    await waitRandom();
                     await sendMedia(chatId, cursos[cursoEncontrado].pensum, cursos[cursoEncontrado].promocion);
                     await waitRandom();
                     await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
                     await waitRandom();
-                    await sendMedia(chatId, 'ubicacion.jpg', "Estamos en el centro de Medellín\nCra 42 #49-34");
-                    await waitRandom();
-                    await sendMessage(chatId, '¿Quieres conocer las fechas de inicio con sus respectivos horarios?');
+                    await sendMessage(chatId, 'Le gustaria conocer las fechas de inicio con sus respectivos horarios?');
 
                     users[chatId].estado = 'seleccion_fechas';
                     users[chatId].lastActivity = Date.now();
