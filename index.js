@@ -475,7 +475,6 @@ client.on('message_create', async msg => {
                     await waitRandom();
                     await sendMessage(chatId, 'Le gustaria conocer las fechas de inicio con sus respectivos horarios?');
 
-                    users[chatId].estado = 'seleccion_fechas';
                     users[chatId].lastActivity = Date.now();
                     saveUsers();
                 }
