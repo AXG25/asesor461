@@ -8,6 +8,7 @@ module.exports = {
 🎉 *Promoción especial:*
 Precio estándar: ~$500.000~
 *Valor con descuento: _$350.000_*
+Promocion super especial: *2 cursos por 600.000*
 
 _Promoción disponible *hasta el 15 de junio*_
 
@@ -35,11 +36,12 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         palabrasClave: ['cejas y pestañas', 'pestañas', 'pestaña', 'pestanas', 'pestana', 'pestañina', 'laminado', 'laminados', 'volumen', 'volumenes'],
         promocion:`
 📚 *Duración del curso:*
-8 clases de 4 horas cada una (32 horas)
+8 clases de 4 horas cada una. (32 horas)
 
 🎉 *Promoción especial:*
 Precio estándar: ~$500.000~
 *Valor con descuento: _$350.000_*
+Promocion super especial: *2 cursos por 600.000*
 
 _Promoción disponible *hasta el 15 de junio*_
 
@@ -67,11 +69,12 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         palabrasClave: ['uñas', 'manicure', 'pedicure', 'manicurista', 'pedicure', 'manicura', 'pedicura'],
         promocion: `
 📚 *Duración del curso:*
-8 clases de 4 horas cada una (32 horas)
+8 clases de 4 horas cada una. (32 horas)
 
 🎉 *Promoción especial:*
 Precio estándar: ~$500.000~
 *Valor con descuento: _$350.000_*
+Promocion super especial: *2 cursos por 600.000*
 
 _Promoción disponible *hasta el 15 de junio*_
 
@@ -100,11 +103,12 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         palabrasClave: ['maquillaje', 'maquilladora', 'maquillar'],
         promocion:  `
         📚 *Duración del curso:*
-        8 clases de 4 horas cada una (32 horas)
+        8 clases de 4 horas cada una. (32 horas)
         
         🎉 *Promoción especial:*
         Precio estándar: ~$500.000~
         *Valor con descuento: _$350.000_*
+Promocion super especial: *2 cursos por 600.000*
 
         _Promoción disponible *hasta el 15 de junio*_
  
@@ -128,11 +132,12 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         palabrasClave: ['masajes', 'corporales', 'masajista', 'masaje', 'maderoterapia'],
         promocion:`
         📚 *Duración del curso:*
-        5 clases de 4 horas cada una (25 horas)
+        5 clases de 4 horas cada una. (25 horas)
         
         🎉 *Promoción especial:*
         Precio estándar: ~$500.000~
         *Valor con descuento: _$350.000_*
+Promocion super especial: *2 cursos por 600.000*
 
         _Promoción disponible *hasta el 15 de junio*_
 

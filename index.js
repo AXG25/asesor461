@@ -58,9 +58,9 @@ const cleanupInactiveUsers = async () => {
             const timeSinceLastActivity = now - user.lastActivity;
             
             // Si han pasado 24 horas y no se ha enviado el mensaje de seguimiento
-            if (timeSinceLastActivity > FOLLOW_UP_TIMEOUT && !user.followUpSent && user.estado === 'seleccion_fechas') {
+            if (timeSinceLastActivity > FOLLOW_UP_TIMEOUT && !user.followUpSent && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
                 await waitRandom();
-                await sendMessage(userId, 'Hola, ¿lograste revisar la información que te mandé? ¿Tienes alguna duda? ¿Te interesa el curso?');
+                await sendMessage(userId, 'Hola 😊 Quería saber si pudiste ver la info que te mandé. *A varias personas les interesó el curso y ya se están matriculando*, ¿te gustaría aprovecharlo también? \n\n O ¿Quizas te gustaria conocer los otros 10 cursos que tenemos disponibles y que *le pueden servir a algun familiar o conocido*?');
                 user.followUpSent = true;
                 user.lastActivity = now;
                 count++;
