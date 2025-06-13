@@ -20,7 +20,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 
 1 Julio 2025 | Martes y Jueves | 9:00 am a 12:00 pm
 
-17 Junio 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
+17 Junio 2025 | Martes y Jueves | 4:00 pm a 7:00 pm (este horario esta en promocion: 250.000)
 
 9 Julio 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
 
@@ -30,7 +30,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 
 13 Julio 2025 | Domingos | 8:00 am a 12:00 pm
 
-29 Junio 2025 | Domingos | 1:00 pm a 5:00 pm`
+6 Julio 2025 | Domingos | 1:00 pm a 5:00 pm`
     },
     'cejas': {
         palabrasClave: ['cejas y pestañas', 'pestañas', 'pestaña', 'pestanas', 'pestana', 'pestañina', 'laminado', 'laminados', 'volumen', 'volumenes'],
@@ -51,11 +51,11 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         presentacion: 'presentacionCejas.mp3',
         fechas: `Fechas inicio CEJAS & PESTAÑAS
 
-24 Junio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+24 Junio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
 
-24 Junio 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
+1 Julio 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
-18 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+18 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
 
 11 Junio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
@@ -84,17 +84,17 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         presentacion: 'presentacionUñas.mp3',
         fechas: `Fechas inicio MANICURE & PEDICURE
 
-10 Junio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+8 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000 pesos)
 
 18 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-4 Junio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
+2 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
 21 Junio 2025 | Sábados | 8:00 am a 12:00 pm
 
 26 Julio 2025 | Sábados | 1:00 pm a 5:00 pm
 
-8 Junio 2025 | Domingos | 8:00 am a 12:00 pm
+3 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
 
 13 Julio 2025 | Domingos | 1:00 pm a 5:00 pm`
 
@@ -119,11 +119,11 @@ Promocion super especial: *2 cursos por 600.000*
         presentacion: 'presentacionMaquillaje.mp3',
         fechas: `Fechas inicio MAQUILLAJE PROFESIONAL
 
-24 Junio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+1 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-18 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+18 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
 
-7 Junio 2025 | Sábados | 8:00 am a 12:00 pm
+14 Junio 2025 | Sábados | 8:00 am a 12:00 pm
 
 27 Julio 2025 | Domingos | 8:00 am a 12:00 pm`
 
@@ -164,7 +164,7 @@ Promocion super especial: *2 cursos por 600.000*
         presentacion: 'presentacionMelamina.mp3',
         fechas: `Fechas inicio Muebles & Cocinas Integrales
 
-24 Junio 2025 | Martes y Jueves | 6:00 pm a 9:00 pm
+24 Junio 2025 | Martes y Jueves | 6:00 pm a 9:00 pm (este horario esta en promocion: 350.000)
 
 21 Junio 2025 | Sábados | 8:00 am a 12:00 pm
 
@@ -196,11 +196,14 @@ Promocion super especial: *2 cursos por 600.000*
         presentacion: 'presentacionTrenzas.mp3',
         fechas: `Fechas inicio TRENZAS & PEINADOS
 
-17 Junio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+17 Junio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
 
 12 Julio 2025 | Sábados | 8:00 am a 12:00 pm
 
-13 Julio 2025 | Domingos | 8:00 am a 12:00 pm`
+26 Julio 2025 | Sábados | 1:00 pm a 5:00 pm
+
+13 Julio 2025 | Domingos | 8:00 am a 12:00 pm
+`
 
     },
 };
