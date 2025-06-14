@@ -1,6 +1,6 @@
 module.exports = {
     'barberia': {
-        palabrasClave: ['barberia', 'barbería', 'barbero', 'peluqueria', 'peluquero'],
+        palabrasClave: ['barberia', 'barbería', 'barbero', 'peluqueria', 'peluquero', 'peluquiar', 'motilar'],
         promocion:`
 📚 *Duración del curso:*
 +30 Horas
@@ -8,7 +8,7 @@ module.exports = {
 🎉 *Promoción especial:*
 Precio estándar: ~$500.000~
 *Valor con descuento: _$350.000_*
-Promocion super especial: *2 cursos por 600.000*
+Promocion super especial: *2 cursos por $600.000*
 
 _Promoción disponible *hasta el 15 de junio*_
 
@@ -36,12 +36,13 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         palabrasClave: ['cejas y pestañas', 'pestañas', 'pestaña', 'pestanas', 'pestana', 'pestañina', 'laminado', 'laminados', 'volumen', 'volumenes'],
         promocion:`
 📚 *Duración del curso:*
-8 clases de 4 horas cada una. (32 horas)
+8 clases de 4 horas cada una. 
+(32 horas en total)
 
 🎉 *Promoción especial:*
 Precio estándar: ~$500.000~
 *Valor con descuento: _$350.000_*
-Promocion super especial: *2 cursos por 600.000*
+Promocion super especial: *2 cursos por $600.000*
 
 _Promoción disponible *hasta el 15 de junio*_
 
@@ -69,12 +70,13 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         palabrasClave: ['uñas', 'manicure', 'pedicure', 'manicurista', 'pedicure', 'manicura', 'pedicura'],
         promocion: `
 📚 *Duración del curso:*
-8 clases de 4 horas cada una. (32 horas)
+8 clases de 4 horas cada una. 
+(32 horas en total)
 
 🎉 *Promoción especial:*
 Precio estándar: ~$500.000~
 *Valor con descuento: _$350.000_*
-Promocion super especial: *2 cursos por 600.000*
+Promocion super especial: *2 cursos por $600.000*
 
 _Promoción disponible *hasta el 15 de junio*_
 
@@ -84,9 +86,9 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         presentacion: 'presentacionUñas.mp3',
         fechas: `Fechas inicio MANICURE & PEDICURE
 
-8 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000 pesos)
+8 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-18 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+18 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000 pesos)
 
 2 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
@@ -102,19 +104,20 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
     'maquillaje': {
         palabrasClave: ['maquillaje', 'maquilladora', 'maquillar'],
         promocion:  `
-        📚 *Duración del curso:*
-        8 clases de 4 horas cada una. (32 horas)
+📚 *Duración del curso:*
+8 clases de 4 horas cada una. 
+(32 horas en total)
         
-        🎉 *Promoción especial:*
-        Precio estándar: ~$500.000~
-        *Valor con descuento: _$350.000_*
-Promocion super especial: *2 cursos por 600.000*
+🎉 *Promoción especial:*
+Precio estándar: ~$500.000~
+*Valor con descuento: _$350.000_*
+Promocion super especial: *2 cursos por $600.000*
 
-        _Promoción disponible *hasta el 15 de junio*_
+_Promoción disponible *hasta el 15 de junio*_
  
         
-        📍 *Ubicación:*
-        Estamos en el centro de *Medellín Cra 42 #49-34*`,
+📍 *Ubicación:*
+Estamos en el centro de *Medellín Cra 42 #49-34*`,
         pensum: 'maquillaje.jpg',
         presentacion: 'presentacionMaquillaje.mp3',
         fechas: `Fechas inicio MAQUILLAJE PROFESIONAL
@@ -131,19 +134,20 @@ Promocion super especial: *2 cursos por 600.000*
     'masajes': {
         palabrasClave: ['masajes', 'corporales', 'masajista', 'masaje', 'maderoterapia'],
         promocion:`
-        📚 *Duración del curso:*
-        5 clases de 4 horas cada una. (25 horas)
+📚 *Duración del curso:*
+5 clases de 4 horas cada una. 
+(20 horas en total)
         
-        🎉 *Promoción especial:*
-        Precio estándar: ~$500.000~
-        *Valor con descuento: _$350.000_*
-Promocion super especial: *2 cursos por 600.000*
+🎉 *Promoción especial:*
+Precio estándar: ~$500.000~
+*Valor con descuento: _$350.000_*
+Promocion super especial: *2 cursos por $600.000*
 
-        _Promoción disponible *hasta el 15 de junio*_
+_Promoción disponible *hasta el 15 de junio*_
 
         
-        📍 *Ubicación:*
-        Estamos en el centro de *Medellín Cra 42 #49-34*`,
+📍 *Ubicación:*
+Estamos en el centro de *Medellín Cra 42 #49-34*`,
         pensum: 'masajes.jpg',
         presentacion: 'presentacionMasajes.mp3',
         fechas: `Fechas inicio MASAJES CORPORALES
@@ -159,7 +163,19 @@ Promocion super especial: *2 cursos por 600.000*
     },
     'melamina': {
         palabrasClave: ['melamina', 'mdf', 'muebles', 'cocinas', 'cocina', 'madera', 'carpinteria', 'carpintero', 'formaleta'],
-        promocion: 'El curso cuesta ~$600.000~, pero *hasta el 15 de Junio* tiene un *descuento del 33%* y queda en *$400.000* Puedes *apartar tu cupo con solo $100.000* y pagar los $300.000 restantes tres dias antes de comenzar clases. \n\nSi estudia *entre semana*, el curso dura *4 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *6 semanas (1 clase por semana)*.',
+        promocion:`
+📚 *Duración del curso:*
++24 Horas
+
+🎉 *Promoción especial:*
+Precio estándar: ~$600.000~
+*Valor con descuento: _$400.000_*
+Promoción super especial: *10% de descuento en segundo curso*
+
+_Promoción disponible *hasta el 15 de junio*_
+
+📍 *Ubicación:*
+Estamos en el centro de *Medellín Cra 42 #49-34*`,
         pensum: 'melamina.jpg',
         presentacion: 'presentacionMelamina.mp3',
         fechas: `Fechas inicio Muebles & Cocinas Integrales
@@ -175,7 +191,19 @@ Promocion super especial: *2 cursos por 600.000*
     },
     'celulares': {
         palabrasClave: ['celulares', 'celular'],
-        promocion: 'El curso cuesta ~$500.000~, pero *hasta el 15 de Junio* tiene un *descuento del 30%* y queda en *$350.000* Puedes *apartar tu cupo con solo $100.000* y pagar los $250.000 restantes tres dias antes de comenzar clases. \n\nSi estudia *entre semana*, el curso dura *7 semanas (4 clases por semana)*. Si estudia los *sábados o domingos*, dura *10 semanas (1 clase por semana)*.',
+        promocion:`
+📚 *Duración del curso:*
++50 Horas
+
+🎉 *Promoción especial:*
+Precio estándar: ~$500.000~
+*Valor con descuento: _$350.000_*
+Promocion super especial: *2 cursos por $600.000*
+
+_Promoción disponible *hasta el 15 de junio*_
+
+📍 *Ubicación:*
+Estamos en el centro de *Medellín Cra 42 #49-34*`,
         pensum: 'celulares.jpg',
         presentacion: 'presentacionCelulares.mp3',
         fechas: `Fechas inicio REPARACIÓN DE CELULARES
@@ -191,7 +219,20 @@ Promocion super especial: *2 cursos por 600.000*
     },
     'trenzas': {
         palabrasClave: ['trenzas', 'trensa', 'trensas', 'peinados', 'peinado', 'trenzadora', 'trenza', 'peinado'],
-        promocion: 'El curso cuesta ~$500.000~, pero *hasta el 15 de Junio* tiene un *descuento del 30%* y queda en *$350.000* Puedes *apartar tu cupo con solo $100.000* y pagar los $250.000 restantes tres dias antes de comenzar clases. \n\nSon 8 clases. Si estudia *entre semana*, el curso dura *4 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *8 semanas (1 clase por semana)*.',
+        promocion:`
+📚 *Duración del curso:*
+8 clases de 4 horas cada una. 
+(32 horas en total)
+
+🎉 *Promoción especial:*
+Precio estándar: ~$500.000~
+*Valor con descuento: _$350.000_*
+Promocion super especial: *2 cursos por $600.000*
+
+_Promoción disponible *hasta el 15 de junio*_
+
+📍 *Ubicación:*
+Estamos en el centro de *Medellín Cra 42 #49-34*`,
         pensum: 'trenzas.jpg',
         presentacion: 'presentacionTrenzas.mp3',
         fechas: `Fechas inicio TRENZAS & PEINADOS

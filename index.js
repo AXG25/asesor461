@@ -60,7 +60,7 @@ const cleanupInactiveUsers = async () => {
             // Si han pasado 24 horas y no se ha enviado el mensaje de seguimiento
             if (timeSinceLastActivity > FOLLOW_UP_TIMEOUT && !user.followUpSent && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
                 await waitRandom();
-                await sendMessage(userId, 'Hola 😊 Quería saber si pudiste ver la info que te mandé. *A varias personas les interesó el curso y ya se están matriculando*, ¿te gustaría aprovecharlo también? \n\n O ¿Quizas te gustaria conocer los otros 10 cursos que tenemos disponibles y que *le pueden servir a algun familiar o conocido*?');
+                await sendMessage(userId, 'Hola 😊 Quería saber si pudiste ver la info que te mandé. *A varias personas les interesó el curso y ya se están matriculando*, ¿te gustaría aprovecharlo también? \n\n O ¿Quizas te gustaria conocer los otros 10 cursos que tenemos disponibles y que *le pueden servir a algun familiar o conocido ✨*?');
                 user.followUpSent = true;
                 user.lastActivity = now;
                 count++;
@@ -233,7 +233,7 @@ const handleNewConversation = async (chatId, text) => {
         await waitRandom();
         await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
         await waitRandom();
-        await sendMessage(chatId, 'Le gustaria conocer las fechas de inicio con sus respectivos horarios?');
+        await sendMessage(chatId, '¿Le gustaria conocer las fechas de inicio con sus respectivos horarios?');
 
         return true;
     }
@@ -242,7 +242,7 @@ const handleNewConversation = async (chatId, text) => {
 
 // Manejar proceso de selección de fechas
 const handleDateSelection = async (chatId, text, usuario) => {
-    if (text.includes('si') || text.includes('ok') || text.includes('dale') || text.includes('siii') || text.includes('fechas') || text.includes('fecha') || text.includes('inicio') || text.includes('horario') || text.includes('horarios') || text.includes('bueno') || text.includes('bien') || text.includes('porfavor') || text.includes('gracias') || text.includes('favor') || text.includes('entre') || text.includes('entre semana') || text.includes('en semana') || text.includes('fines') || text.includes('fines de semana') || text.includes('fin')) {
+    if (text.includes('si') || text.includes('ok') || text.includes('dale') || text.includes('siii') || text.includes('fechas') || text.includes('fecha') || text.includes('inicio') || text.includes('horario') || text.includes('horarios') || text.includes('bueno') || text.includes('bien') || text.includes('porfavor') || text.includes('gracias') || text.includes('favor') || text.includes('entre') || text.includes('entre semana') || text.includes('en semana') || text.includes('fines') || text.includes('fines de semana') || text.includes('dias') || text.includes('dia')) {
         usuario.estado = 'seleccion_fechas';
         usuario.lastActivity = Date.now();
         usuario.respuestasInesperadas = 0;
@@ -252,7 +252,7 @@ const handleDateSelection = async (chatId, text, usuario) => {
         await waitRandom();
         await sendAudio(chatId, 'explicacion_fechas.mp3');
         await waitRandom();
-        await sendMessage(chatId, '¿Cuál de estas fechas te gustaría más?');
+        await sendMessage(chatId, '¿Cuál de estas fechas te gustaría más para comenzar con tu curso?');
         saveUsers();
         return true;
     }
@@ -268,7 +268,7 @@ const handleFechaEspecifica = async (chatId, text, usuario) => {
         usuario.respuestasInesperadas = 0;
         usuario.estado = 'confirmacion_promocion';
         await waitRandom();
-        await sendMessage(chatId, '¡Excelente! Entonces ¿Te gustaría aprovechar la promoción? ¿Cómo te queda más fácil apartar el cupo, con una transferencia o pagando en efectivo?');
+        await sendMessage(chatId, '¡Excelente! Entonces ¿Tienes alguna otra duda? yo con gusto la resuelvo 😊\n\n¿Te gustaría aprovechar la promoción? ¿Cómo te queda más fácil apartar el cupo, con una transferencia o pagando en efectivo?');
         saveUsers();
         return true;
     }
@@ -277,7 +277,7 @@ const handleFechaEspecifica = async (chatId, text, usuario) => {
 
 // Manejar confirmación de promoción y método de pago
 const handleConfirmacionPromocion = async (chatId, text, usuario) => {
-    if (text.includes('transferencia') || text.includes('transfiero') || text.includes('consigno') || text.includes('transferir') || text.includes('cuenta') || text.includes('cuentas') || text.includes('consignacion') || text.includes('consignar') || text.includes('numero') || text.includes('nequi') || text.includes('neki') || text.includes('bancolombia')) {
+    if (text.includes('transferencia') || text.includes('tranferencia') || text.includes('trasferencia') || text.includes('transfiero') || text.includes('consigno') || text.includes('transferir') || text.includes('cuenta') || text.includes('cuentas') || text.includes('consignacion') || text.includes('consignar') || text.includes('numero') || text.includes('nequi') || text.includes('neki') || text.includes('bancolombia')) {
         usuario.respuestasInesperadas = 0;
         users[chatId].finalizado = true;
         await waitRandom();
@@ -292,9 +292,7 @@ const handleConfirmacionPromocion = async (chatId, text, usuario) => {
         await waitRandom();
         await sendMessage(chatId, `Aca te dejo la ubicacion: \nhttps://g.co/kgs/cc6o1RU`);
         await waitRandom();
-        await sendMessage(chatId, `Necesito que me digas que dia y a que hora puedes venir para poder agendarte la cita. Nosotros atendemos de 8 a 5, en caso de que ese dia no puedas venir agradeceria muchisimo que me lo informaras tambien`);
-        await waitRandom();
-        await sendAudio(chatId, './fidelidad.mp3');
+        await sendMessage(chatId, `Seria posible que me digas que dia y a que hora puedes venir para poder agendarte la cita?\n\n Nosotros atendemos todos los dias de 8 a 5. Si puedes preguntar por mi me harias un enorme favor Yo me llamo Abi 😊`);
         return true;
     }
     return false;
