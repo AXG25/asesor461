@@ -10,7 +10,7 @@ Precio estándar: ~$500.000~
 *Valor con descuento: _$350.000_*
 Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 15 de junio*_
+_Promoción disponible *hasta el 30 de junio*_
 
 📍 *Ubicación:*
 Estamos en el centro de *Medellín Cra 42 #49-34*`,
@@ -44,7 +44,7 @@ Precio estándar: ~$500.000~
 *Valor con descuento: _$350.000_*
 Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 15 de junio*_
+_Promoción disponible *hasta el 30 de junio*_
 
 📍 *Ubicación:*
 Estamos en el centro de *Medellín Cra 42 #49-34*`,
@@ -78,7 +78,7 @@ Precio estándar: ~$500.000~
 *Valor con descuento: _$350.000_*
 Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 15 de junio*_
+_Promoción disponible *hasta el 30 de junio*_
 
 📍 *Ubicación:*
 Estamos en el centro de *Medellín Cra 42 #49-34*`,
@@ -113,7 +113,7 @@ Precio estándar: ~$500.000~
 *Valor con descuento: _$350.000_*
 Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 15 de junio*_
+_Promoción disponible *hasta el 30 de junio*_
  
         
 📍 *Ubicación:*
@@ -143,7 +143,7 @@ Precio estándar: ~$500.000~
 *Valor con descuento: _$350.000_*
 Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 15 de junio*_
+_Promoción disponible *hasta el 30 de junio*_
 
         
 📍 *Ubicación:*
@@ -172,7 +172,7 @@ Precio estándar: ~$600.000~
 *Valor con descuento: _$400.000_*
 Promoción super especial: *10% de descuento en segundo curso*
 
-_Promoción disponible *hasta el 15 de junio*_
+_Promoción disponible *hasta el 30 de junio*_
 
 📍 *Ubicación:*
 Estamos en el centro de *Medellín Cra 42 #49-34*`,
@@ -200,7 +200,7 @@ Precio estándar: ~$500.000~
 *Valor con descuento: _$350.000_*
 Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 15 de junio*_
+_Promoción disponible *hasta el 30 de junio*_
 
 📍 *Ubicación:*
 Estamos en el centro de *Medellín Cra 42 #49-34*`,
@@ -229,7 +229,7 @@ Precio estándar: ~$500.000~
 *Valor con descuento: _$350.000_*
 Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 15 de junio*_
+_Promoción disponible *hasta el 30 de junio*_
 
 📍 *Ubicación:*
 Estamos en el centro de *Medellín Cra 42 #49-34*`,
