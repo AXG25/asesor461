@@ -20,7 +20,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 
 1 Julio 2025 | Martes y Jueves | 9:00 am a 12:00 pm
 
-17 Junio 2025 | Martes y Jueves | 4:00 pm a 7:00 pm (este horario esta en promocion: 250.000)
+24 Junio 2025 | Martes y Jueves | 4:00 pm a 7:00 pm (este horario esta en promocion: 250.000)
 
 9 Julio 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
 
@@ -52,13 +52,13 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         presentacion: 'presentacionCejas.mp3',
         fechas: `Fechas inicio CEJAS & PESTAÑAS
 
-24 Junio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
+1 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
 
 1 Julio 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
-18 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
+25 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
 
-11 Junio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
+9 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
 19 Julio 2025 | Sábados | 8:00 am a 12:00 pm
 
@@ -88,7 +88,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 
 8 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-18 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000 pesos)
+16 Julio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
 2 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
@@ -124,9 +124,9 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 
 1 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-18 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
+25 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
 
-14 Junio 2025 | Sábados | 8:00 am a 12:00 pm
+9 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 27 Julio 2025 | Domingos | 8:00 am a 12:00 pm`
 
@@ -151,8 +151,6 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         pensum: 'masajes.jpg',
         presentacion: 'presentacionMasajes.mp3',
         fechas: `Fechas inicio MASAJES CORPORALES
-
-17 Junio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
 25 Junio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
@@ -212,7 +210,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 
 24 Junio 2025 | Miércoles y Viernes | 1:00 pm a 3:00 pm
 
-28 Junio 2025 | Sábados | 8:00 am a 1:00 pm
+26 Julio 2025 | Sábados | 8:00 am a 1:00 pm
 
 3 Agosto 2025 | Domingos | 8:00 am a 1:00 pm`
 
@@ -237,7 +235,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         presentacion: 'presentacionTrenzas.mp3',
         fechas: `Fechas inicio TRENZAS & PEINADOS
 
-17 Junio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
+15 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
 12 Julio 2025 | Sábados | 8:00 am a 12:00 pm
 

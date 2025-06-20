@@ -60,7 +60,7 @@ const cleanupInactiveUsers = async () => {
             // Si han pasado 24 horas y no se ha enviado el mensaje de seguimiento
             if (timeSinceLastActivity > FOLLOW_UP_TIMEOUT && !user.followUpSent && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
                 await waitRandom();
-                await sendMessage(userId, 'Hola 😊 Quería saber si pudiste ver la info que te mandé. *A varias personas les interesó el curso y ya se están matriculando*, ¿te gustaría aprovecharlo también? \n\n O ¿Quizas te gustaria conocer los otros 10 cursos que tenemos disponibles y que *le pueden servir a algun familiar o conocido ✨*?');
+                await sendMessage(userId, 'Hola 😊 Quería saber si pudiste ver la info que te mandé. *A varias personas les interesó el curso y ya se están matriculando*, ¿te gustaría aprovecharlo también? \n\n O ¿Quizas te gustaria conocer los otros 10 cursos que tenemos disponibles y que *le pueden servir a algun familiar o conocido?*');
                 user.followUpSent = true;
                 user.lastActivity = now;
                 count++;
@@ -242,7 +242,7 @@ const handleNewConversation = async (chatId, text) => {
 
 // Manejar proceso de selección de fechas
 const handleDateSelection = async (chatId, text, usuario) => {
-    if (text.includes('si') || text.includes('ok') || text.includes('dale') || text.includes('siii') || text.includes('fechas') || text.includes('fecha') || text.includes('inicio') || text.includes('horario') || text.includes('horarios') || text.includes('bueno') || text.includes('bien') || text.includes('porfavor') || text.includes('gracias') || text.includes('favor') || text.includes('entre') || text.includes('entre semana') || text.includes('en semana') || text.includes('fines') || text.includes('fines de semana') || text.includes('dias') || text.includes('dia') || text.includes('empiezan') || text.includes('empiezas')) {
+    if (text.includes('cuando') || text.includes('cundo') || text.includes('si') || text.includes('ok') || text.includes('dale') || text.includes('siii') || text.includes('fechas') || text.includes('fecha') || text.includes('inicio') || text.includes('horario') || text.includes('horarios') || text.includes('bueno') || text.includes('bien') || text.includes('porfavor') || text.includes('gracias') || text.includes('favor') || text.includes('entre') || text.includes('entre semana') || text.includes('en semana') || text.includes('fines') || text.includes('fines de semana') || text.includes('dias') || text.includes('dia') || text.includes('empiezan') || text.includes('empiezas')  || text.includes('empezaría') || text.includes('inicia') || text.includes('inicias')) {
         usuario.estado = 'seleccion_fechas';
         usuario.lastActivity = Date.now();
         usuario.respuestasInesperadas = 0;
@@ -261,8 +261,71 @@ const handleDateSelection = async (chatId, text, usuario) => {
 
 // Manejar selección de fecha específica
 const handleFechaEspecifica = async (chatId, text, usuario) => {
-    const fechasValidas = ['martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'entre semana', 'fin de semana', 'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'];
-    const contieneFecha = fechasValidas.some(fecha => text.toLowerCase().includes(fecha));
+    // Listas de meses y días
+    const meses = [
+        'enero', 'eneros', 'eneroo',
+        'febrero', 'febreros', 'febrer', 'febreross',
+        'marzo', 'marzos', 'marzoo',
+        'abril', 'abriles', 'abrill',
+        'mayo', 'mayos', 'mayoo',
+        'junio', 'junios', 'junioo', 'junioos',
+        'julio', 'julios', 'julioss', 'juli', 'jullio',
+        'agosto', 'agostos', 'agostoo',
+        'septiembre', 'setiembre', 'septiembr', 'sept',
+        'octubre', 'octubres', 'octubr',
+        'noviembre', 'noviembres', 'noviembr', 'nov',
+        'diciembre', 'diciembres', 'diciembr', 'dic'
+    ];
+    const dias = [
+        'lunes', 'martes', 'miercoles', 'miércoles', 'jueves', 'viernes', 'sabado', 'sábado', 'domingo',
+        'lun', 'mar', 'mie', 'mié', 'jue', 'vie', 'sab', 'sáb', 'dom',
+        'entre semana', 'fin de semana', 'fines', 'fin'
+    ];
+
+    // LOG para depuración
+    console.log('Texto recibido en handleFechaEspecifica:', text);
+
+    // 1. Si el mensaje es solo un número (con o sin puntos/comas), NO es fecha
+    const soloNumeros = text.replace(/[.,\\s]/g, '');
+    if (/^\d+$/.test(soloNumeros)) {
+        console.log('NO es fecha: solo números');
+        return false;
+    }
+
+    // 2. Si el mensaje contiene un precio (número con punto o coma y 3 cifras), NO es fecha
+    if (/\d{1,3}[.,]\d{3}/.test(text)) {
+        console.log('NO es fecha: parece precio');
+        return false;
+    }
+
+    // 3. Si el mensaje contiene un número mayor a 31, NO es fecha
+    const numerosEnMensaje = text.match(/\d+/g);
+    if (numerosEnMensaje && numerosEnMensaje.some(n => parseInt(n) > 31)) {
+        console.log('NO es fecha: número mayor a 31');
+        return false;
+    }
+
+    // 4. Regex para detectar frases tipo "26 de julio", "15 agosto", etc.
+    const regexFecha = /\b([1-9]|1[0-9]|2[0-9]|3[0-1])\s*(de)?\s*([a-záéíóúñ]+)\b/gi;
+    let contieneFecha = false;
+
+    // Buscar coincidencias con regex (número del 1 al 31 + mes/día)
+    let match;
+    while ((match = regexFecha.exec(text)) !== null) {
+        const mes = match[3].toLowerCase();
+        if (meses.some(m => mes.includes(m)) || dias.some(d => mes.includes(d))) {
+            contieneFecha = true;
+            break;
+        }
+    }
+
+    // 5. Si no encontró con regex, buscar por palabras sueltas (meses o días, pero NO solo números)
+    if (!contieneFecha) {
+        contieneFecha = meses.some(m => text.includes(m)) || dias.some(d => text.includes(d));
+        if (contieneFecha) {
+            console.log('Detectado mes o día suelto');
+        }
+    }
 
     if (contieneFecha) {
         usuario.respuestasInesperadas = 0;
@@ -270,8 +333,10 @@ const handleFechaEspecifica = async (chatId, text, usuario) => {
         await waitRandom();
         await sendMessage(chatId, '¡Excelente! Entonces ¿Tienes alguna otra duda? yo con gusto la resuelvo 😊\n\n¿Te gustaría aprovechar la promoción? ¿Cómo te queda más fácil apartar el cupo, con una transferencia o pagando en efectivo?');
         saveUsers();
+        console.log('AVANZA el flujo: se detectó fecha');
         return true;
     }
+    console.log('NO avanza: no se detectó fecha');
     return false;
 };
 
@@ -403,31 +468,13 @@ client.on('message', async msg => {
             console.log(`Procesando mensaje para usuario ${chatId} en estado: ${usuario.estado}`);
 
             if (usuario.estado === 'inicio') {
-                const respuestaProcesada = await handleDateSelection(chatId, text, usuario);
-                if (!respuestaProcesada) {
-                    usuario.respuestasInesperadas = (usuario.respuestasInesperadas || 0) + 1;
-                    saveUsers();
-                }
+                await handleDateSelection(chatId, text, usuario);
             }
             else if (usuario.estado === 'seleccion_fechas') {
-                const fechaSeleccionada = await handleFechaEspecifica(chatId, text, usuario);
-                if (!fechaSeleccionada) {
-                    usuario.respuestasInesperadas = (usuario.respuestasInesperadas || 0) + 1;
-                    saveUsers();
-                }
+                await handleFechaEspecifica(chatId, text, usuario);
             }
             else if (usuario.estado === 'confirmacion_promocion') {
-                const promocionConfirmada = await handleConfirmacionPromocion(chatId, text, usuario);
-                if (promocionConfirmada) {
-                    await waitRandom();
-                    await sendMessage(ASISTENTE_NUMERO, `✅ Cliente completó el flujo. Interesado en ${usuario.curso}: ${chatId}`);
-                    users[chatId].finalizado = true;
-                    users[chatId].lastActivity = Date.now();
-                    saveUsers();
-                } else {
-                    usuario.respuestasInesperadas = (usuario.respuestasInesperadas || 0) + 1;
-                    saveUsers();
-                }
+                await handleConfirmacionPromocion(chatId, text, usuario);
             }
             else {
                 console.error(`Estado desconocido para usuario ${chatId}: ${usuario.estado}`);
@@ -487,6 +534,23 @@ client.on('message_create', async msg => {
                 saveUsers();
 
                 console.log(`Conversación detenida manualmente con ${chatId}`);
+            }
+
+            // NUEVO: Si el mensaje contiene el emoji ✔, avanzar el flujo según el estado
+            const EMOJIS_CONFIRMACION = ['✔', '✅', '👌', '👍'];
+            if (EMOJIS_CONFIRMACION.some(e => msg.body.includes(e))) {
+                if (users[chatId] && !users[chatId].finalizado) {
+                    const usuario = users[chatId];
+                    usuario.lastActivity = Date.now();
+                    if (usuario.estado === 'inicio') {
+                        await handleDateSelection(chatId, 'fechas', usuario);
+                    } else if (usuario.estado === 'seleccion_fechas') {
+                        await handleFechaEspecifica(chatId, '26 de julio', usuario);
+                    } else if (usuario.estado === 'confirmacion_promocion') {
+                        await handleConfirmacionPromocion(chatId, 'transferencia', usuario);
+                    }
+                    saveUsers();
+                }
             }
         }
     } catch (error) {

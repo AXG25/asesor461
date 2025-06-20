@@ -1239,14 +1239,6 @@
     "respuestasInesperadas": 0,
     "finalizado": true
   },
-  "573022658278@c.us": {
-    "estado": "seleccion_reserva",
-    "curso": "cejas",
-    "createdAt": 1744040101493,
-    "lastActivity": 1744040640692,
-    "respuestasInesperadas": 1,
-    "finalizado": true
-  },
   "573042074007@c.us": {
     "estado": "seleccion_fechas",
     "curso": "barberia",
@@ -3769,7 +3761,7 @@
     "estado": "seleccion_reserva",
     "curso": "masajes",
     "createdAt": 1745161401289,
-    "lastActivity": 1747748755541,
+    "lastActivity": 1750106102737,
     "respuestasInesperadas": 0,
     "finalizado": true,
     "handledManually": true
@@ -4269,16 +4261,6 @@
     "lastActivity": 1745507734914,
     "respuestasInesperadas": 0,
     "finalizado": true
-  },
-  "573023851555@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "uñas",
-    "createdAt": 1745469661077,
-    "lastActivity": 1745495884383,
-    "respuestasInesperadas": 0,
-    "finalizado": true,
-    "requiereAsesor": true,
-    "handledManually": true
   },
   "573117885094@c.us": {
     "estado": "seleccion_reserva",
@@ -6018,14 +6000,6 @@
     "respuestasInesperadas": 0,
     "finalizado": true
   },
-  "573113004673@c.us": {
-    "estado": "seleccion_reserva",
-    "curso": "masajes",
-    "createdAt": 1746566975592,
-    "lastActivity": 1746623908752,
-    "respuestasInesperadas": 1,
-    "finalizado": true
-  },
   "573026871694@c.us": {
     "estado": "seleccion_fechas",
     "curso": "uñas",
@@ -7659,13 +7633,12 @@
     "handledManually": true
   },
   "573108135786@c.us": {
-    "estado": "seleccion_reserva",
-    "curso": "barberia",
-    "createdAt": 1748624735202,
-    "lastActivity": 1748624996101,
-    "respuestasInesperadas": 0,
-    "followUpSent": false,
-    "finalizado": true
+    "estado": "confirmacion_promocion",
+    "curso": "trenzas",
+    "createdAt": 1750263002809,
+    "lastActivity": 1750353173546,
+    "respuestasInesperadas": 5,
+    "followUpSent": true
   },
   "573224147301@c.us": {
     "estado": "seleccion_fechas",
@@ -7779,11 +7752,12 @@
     "estado": "seleccion_fechas",
     "curso": "trenzas",
     "createdAt": 1748713609477,
-    "lastActivity": 1748713651332,
+    "lastActivity": 1750359300379,
     "respuestasInesperadas": 0,
     "followUpSent": false,
     "finalizado": true,
-    "requiereAsesor": true
+    "requiereAsesor": true,
+    "handledManually": true
   },
   "573146427966@c.us": {
     "finalizado": true,
@@ -8620,14 +8594,6 @@
     "finalizado": true,
     "handledManually": true
   },
-  "573025479797@c.us": {
-    "estado": "confirmacion_promocion",
-    "curso": "barberia",
-    "createdAt": 1749762217948,
-    "lastActivity": 1749762343796,
-    "respuestasInesperadas": 0,
-    "finalizado": true
-  },
   "573132895599@c.us": {
     "estado": "confirmacion_promocion",
     "curso": "barberia",
@@ -8715,12 +8681,11 @@
   "573128981551@c.us": {
     "estado": "inicio",
     "curso": "trenzas",
-    "createdAt": 1749825845805,
-    "lastActivity": 1749916032466,
-    "respuestasInesperadas": 1,
+    "createdAt": 1750189241983,
+    "lastActivity": 1750189297062,
+    "respuestasInesperadas": 0,
     "finalizado": true,
-    "handledManually": true,
-    "followUpSent": true
+    "handledManually": true
   },
   "573182118474@c.us": {
     "estado": "confirmacion_promocion",
@@ -9296,13 +9261,6 @@
     "handledManually": true,
     "followUpSent": true
   },
-  "573217982235@c.us": {
-    "estado": "confirmacion_promocion",
-    "curso": "barberia",
-    "createdAt": 1749914281093,
-    "lastActivity": 1750085277672,
-    "respuestasInesperadas": 6
-  },
   "573117393881@c.us": {
     "estado": "confirmacion_promocion",
     "curso": "maquillaje",
@@ -9507,269 +9465,25 @@
     "lastActivity": 1750078227482,
     "handledManually": true
   },
-  "573148488304@c.us": {
-    "estado": "inicio",
-    "curso": "maquillaje",
-    "createdAt": 1750079478814,
-    "lastActivity": 1750079508409,
-    "respuestasInesperadas": 0
-  },
-  "573117028303@c.us": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "createdAt": 1750079605810,
-    "lastActivity": 1750079637915,
-    "respuestasInesperadas": 0
-  },
-  "573127189616@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "celulares",
-    "createdAt": 1750079885189,
-    "lastActivity": 1750080375993,
-    "respuestasInesperadas": 0
-  },
-  "573043260058@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "trenzas",
-    "createdAt": 1750080157743,
-    "lastActivity": 1750097502468,
-    "respuestasInesperadas": 7
-  },
-  "573128091405@c.us": {
-    "estado": "inicio",
-    "curso": "uñas",
-    "createdAt": 1750080223643,
-    "lastActivity": 1750080250523,
-    "respuestasInesperadas": 0
-  },
-  "573172122594@c.us": {
-    "estado": "inicio",
-    "curso": "uñas",
-    "createdAt": 1750080303759,
-    "lastActivity": 1750080330581,
-    "respuestasInesperadas": 0
-  },
   "573217286553@c.us": {
     "finalizado": true,
     "lastActivity": 1750080396429,
     "handledManually": true
-  },
-  "573133006915@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "cejas",
-    "createdAt": 1750080954837,
-    "lastActivity": 1750095480403,
-    "respuestasInesperadas": 0
-  },
-  "573104953476@c.us": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "createdAt": 1750081130871,
-    "lastActivity": 1750081156526,
-    "respuestasInesperadas": 0
-  },
-  "573237151110@c.us": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "createdAt": 1750081273257,
-    "lastActivity": 1750081300000,
-    "respuestasInesperadas": 0
-  },
-  "584127677029@c.us": {
-    "estado": "inicio",
-    "curso": "uñas",
-    "createdAt": 1750081329098,
-    "lastActivity": 1750081354290,
-    "respuestasInesperadas": 0
-  },
-  "573124021332@c.us": {
-    "estado": "inicio",
-    "curso": "celulares",
-    "createdAt": 1750081400444,
-    "lastActivity": 1750081426825,
-    "respuestasInesperadas": 0
-  },
-  "573105481926@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "trenzas",
-    "createdAt": 1750081499780,
-    "lastActivity": 1750084201453,
-    "respuestasInesperadas": 2
-  },
-  "573212556681@c.us": {
-    "estado": "inicio",
-    "curso": "melamina",
-    "createdAt": 1750081600552,
-    "lastActivity": 1750081628176,
-    "respuestasInesperadas": 0
-  },
-  "573104998605@c.us": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "createdAt": 1750082129403,
-    "lastActivity": 1750082156174,
-    "respuestasInesperadas": 0
-  },
-  "573128016786@c.us": {
-    "estado": "inicio",
-    "curso": "cejas",
-    "createdAt": 1750083035117,
-    "lastActivity": 1750083065275,
-    "respuestasInesperadas": 0
-  },
-  "573042897211@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "masajes",
-    "createdAt": 1750083243166,
-    "lastActivity": 1750083486617,
-    "respuestasInesperadas": 0,
-    "followUpSent": false
-  },
-  "573213893627@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "celulares",
-    "createdAt": 1750083249425,
-    "lastActivity": 1750083509026,
-    "respuestasInesperadas": 0
-  },
-  "573011922247@c.us": {
-    "estado": "confirmacion_promocion",
-    "curso": "cejas",
-    "createdAt": 1750085421401,
-    "lastActivity": 1750088431711,
-    "respuestasInesperadas": 5,
-    "followUpSent": false
-  },
-  "573142388809@c.us": {
-    "estado": "inicio",
-    "curso": "celulares",
-    "createdAt": 1750087771173,
-    "lastActivity": 1750087797712,
-    "respuestasInesperadas": 0
-  },
-  "573241465948@c.us": {
-    "estado": "inicio",
-    "curso": "uñas",
-    "createdAt": 1750087836761,
-    "lastActivity": 1750087862499,
-    "respuestasInesperadas": 0
-  },
-  "573116544576@c.us": {
-    "estado": "inicio",
-    "curso": "celulares",
-    "createdAt": 1750087920355,
-    "lastActivity": 1750087945271,
-    "respuestasInesperadas": 0
-  },
-  "573234706302@c.us": {
-    "estado": "inicio",
-    "curso": "celulares",
-    "createdAt": 1750088026992,
-    "lastActivity": 1750088052468,
-    "respuestasInesperadas": 0
-  },
-  "573133366884@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "maquillaje",
-    "createdAt": 1750089954664,
-    "lastActivity": 1750090052846,
-    "respuestasInesperadas": 0,
-    "followUpSent": false
-  },
-  "573143320859@c.us": {
-    "estado": "inicio",
-    "curso": "celulares",
-    "createdAt": 1750090146772,
-    "lastActivity": 1750090172685,
-    "respuestasInesperadas": 0
-  },
-  "573205862894@c.us": {
-    "estado": "inicio",
-    "curso": "uñas",
-    "createdAt": 1750090197637,
-    "lastActivity": 1750090197637,
-    "respuestasInesperadas": 0,
-    "followUpSent": false
-  },
-  "573011074908@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "uñas",
-    "createdAt": 1750091766423,
-    "lastActivity": 1750091847322,
-    "respuestasInesperadas": 1,
-    "followUpSent": false
-  },
-  "573127090898@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "maquillaje",
-    "createdAt": 1750094280673,
-    "lastActivity": 1750094403235,
-    "respuestasInesperadas": 2,
-    "followUpSent": false
-  },
-  "56937035067@c.us": {
-    "estado": "confirmacion_promocion",
-    "curso": "barberia",
-    "createdAt": 1750095273422,
-    "lastActivity": 1750095666971,
-    "respuestasInesperadas": 0,
-    "followUpSent": false
-  },
-  "573046782605@c.us": {
-    "estado": "inicio",
-    "curso": "cejas",
-    "createdAt": 1750097052937,
-    "lastActivity": 1750097052937,
-    "respuestasInesperadas": 0,
-    "followUpSent": false
   },
   "573015111211@c.us": {
     "finalizado": true,
     "lastActivity": 1750097788206,
     "handledManually": true
   },
-  "573117687381@c.us": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "createdAt": 1750098009147,
-    "lastActivity": 1750098033667,
-    "respuestasInesperadas": 0
-  },
-  "573015474037@c.us": {
-    "estado": "inicio",
-    "curso": "masajes",
-    "createdAt": 1750098191072,
-    "lastActivity": 1750098250203,
-    "respuestasInesperadas": 1
-  },
-  "573016914936@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "maquillaje",
-    "createdAt": 1750098405869,
-    "lastActivity": 1750098531731,
-    "respuestasInesperadas": 0,
-    "followUpSent": false
-  },
-  "573022643512@c.us": {
-    "estado": "inicio",
-    "curso": "masajes",
-    "createdAt": 1750098494518,
-    "lastActivity": 1750098521959,
-    "respuestasInesperadas": 0
-  },
-  "573113536796@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "masajes",
-    "createdAt": 1750098570665,
-    "lastActivity": 1750101004237,
-    "respuestasInesperadas": 0
-  },
   "573206477995@c.us": {
     "estado": "seleccion_fechas",
     "curso": "cejas",
     "createdAt": 1750098660089,
-    "lastActivity": 1750098815210,
-    "respuestasInesperadas": 0
+    "lastActivity": 1750186197966,
+    "respuestasInesperadas": 0,
+    "followUpSent": true,
+    "finalizado": true,
+    "handledManually": true
   },
   "573104546135@c.us": {
     "estado": "inicio",
@@ -9796,50 +9510,6 @@
     "finalizado": true,
     "handledManually": true
   },
-  "573150136926@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "trenzas",
-    "createdAt": 1750100925752,
-    "lastActivity": 1750101229267,
-    "respuestasInesperadas": 3,
-    "followUpSent": false
-  },
-  "573506244532@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "maquillaje",
-    "createdAt": 1750101841820,
-    "lastActivity": 1750103596247,
-    "respuestasInesperadas": 3,
-    "followUpSent": false
-  },
-  "573125159626@c.us": {
-    "estado": "inicio",
-    "curso": "masajes",
-    "createdAt": 1750102995784,
-    "lastActivity": 1750103021661,
-    "respuestasInesperadas": 0
-  },
-  "573043912030@c.us": {
-    "estado": "inicio",
-    "curso": "cejas",
-    "createdAt": 1750103140761,
-    "lastActivity": 1750103167538,
-    "respuestasInesperadas": 0
-  },
-  "573157595208@c.us": {
-    "estado": "inicio",
-    "curso": "celulares",
-    "createdAt": 1750103275848,
-    "lastActivity": 1750103303835,
-    "respuestasInesperadas": 0
-  },
-  "573122253465@c.us": {
-    "estado": "inicio",
-    "curso": "celulares",
-    "createdAt": 1750103423070,
-    "lastActivity": 1750103451233,
-    "respuestasInesperadas": 0
-  },
   "573226554819@c.us": {
     "estado": "confirmacion_promocion",
     "curso": "celulares",
@@ -9848,34 +9518,855 @@
     "respuestasInesperadas": 0,
     "finalizado": true
   },
-  "573137966565@c.us": {
-    "estado": "inicio",
-    "curso": "barberia",
-    "createdAt": 1750103630594,
-    "lastActivity": 1750103658835,
-    "respuestasInesperadas": 0
-  },
-  "573217794384@c.us": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "createdAt": 1750104077578,
-    "lastActivity": 1750104107147,
-    "respuestasInesperadas": 0
-  },
-  "573122009978@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "cejas",
-    "createdAt": 1750104396208,
-    "lastActivity": 1750105206829,
-    "respuestasInesperadas": 0,
-    "followUpSent": false
-  },
   "573013206123@c.us": {
-    "estado": "inicio",
+    "estado": "confirmacion_promocion",
     "curso": "trenzas",
     "createdAt": 1750105510856,
-    "lastActivity": 1750105510856,
+    "lastActivity": 1750105922580,
+    "respuestasInesperadas": 0,
+    "followUpSent": false,
+    "finalizado": true
+  },
+  "573136297319@c.us": {
+    "finalizado": true,
+    "lastActivity": 1750202793605,
+    "handledManually": true
+  },
+  "573126209842@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "masajes",
+    "createdAt": 1750107962971,
+    "lastActivity": 1750178500960,
+    "respuestasInesperadas": 3,
+    "followUpSent": false,
+    "finalizado": true,
+    "handledManually": true
+  },
+  "573008086735@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "barberia",
+    "createdAt": 1750125719130,
+    "lastActivity": 1750171523061,
+    "respuestasInesperadas": 0,
+    "followUpSent": false,
+    "finalizado": true
+  },
+  "573024682738@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "uñas",
+    "createdAt": 1750168006714,
+    "lastActivity": 1750169254503,
+    "respuestasInesperadas": 2,
+    "followUpSent": false,
+    "finalizado": true,
+    "handledManually": true
+  },
+  "573022658278@c.us": {
+    "finalizado": true,
+    "lastActivity": 1750172044389,
+    "handledManually": true
+  },
+  "573005011615@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "cejas",
+    "createdAt": 1750181883343,
+    "lastActivity": 1750188415397,
+    "respuestasInesperadas": 5,
+    "followUpSent": false,
+    "finalizado": true,
+    "handledManually": true
+  },
+  "573017776854@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "trenzas",
+    "createdAt": 1750186023032,
+    "lastActivity": 1750367573564,
+    "respuestasInesperadas": 5,
+    "followUpSent": true
+  },
+  "573136437877@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "trenzas",
+    "createdAt": 1750186940246,
+    "lastActivity": 1750187833783,
+    "respuestasInesperadas": 2,
+    "finalizado": true,
+    "handledManually": true
+  },
+  "573183640104@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "barberia",
+    "createdAt": 1750187031993,
+    "lastActivity": 1750187405490,
+    "respuestasInesperadas": 3,
+    "finalizado": true,
+    "handledManually": true
+  },
+  "573157944948@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "cejas",
+    "createdAt": 1750190258520,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 5,
+    "followUpSent": true
+  },
+  "573147349100@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "trenzas",
+    "createdAt": 1750202086637,
+    "lastActivity": 1750340069432,
+    "respuestasInesperadas": 6,
+    "followUpSent": true,
+    "finalizado": true,
+    "handledManually": true
+  },
+  "573014573260@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "melamina",
+    "createdAt": 1750248478553,
+    "lastActivity": 1750254385371,
+    "respuestasInesperadas": 0,
+    "finalizado": true
+  },
+  "573233344386@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "melamina",
+    "createdAt": 1750248907591,
+    "lastActivity": 1750343769126,
+    "respuestasInesperadas": 6
+  },
+  "573235909331@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "melamina",
+    "createdAt": 1750249271352,
+    "lastActivity": 1750344265566,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573011838853@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "uñas",
+    "createdAt": 1750259156433,
+    "lastActivity": 1750260100692,
+    "respuestasInesperadas": 0,
+    "followUpSent": false,
+    "finalizado": true
+  },
+  "573014186392@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "uñas",
+    "createdAt": 1750259755759,
+    "lastActivity": 1750262154623,
+    "respuestasInesperadas": 0,
+    "finalizado": true,
+    "handledManually": true
+  },
+  "573146418929@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "uñas",
+    "createdAt": 1750259772165,
+    "lastActivity": 1750260684446,
+    "respuestasInesperadas": 0,
+    "followUpSent": false,
+    "finalizado": true
+  },
+  "573234452603@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "trenzas",
+    "createdAt": 1750259867338,
+    "lastActivity": 1750353173546,
+    "respuestasInesperadas": 7,
+    "followUpSent": true
+  },
+  "573246707285@c.us": {
+    "estado": "inicio",
+    "curso": "uñas",
+    "createdAt": 1750261838184,
+    "lastActivity": 1750353173546,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573014014029@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "masajes",
+    "createdAt": 1750261899641,
+    "lastActivity": 1750347457715,
+    "respuestasInesperadas": 0,
+    "finalizado": true
+  },
+  "573193618168@c.us": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1750262079877,
+    "lastActivity": 1750353173546,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573045896912@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "barberia",
+    "createdAt": 1750262166951,
+    "lastActivity": 1750353173546,
+    "respuestasInesperadas": 4,
+    "followUpSent": true
+  },
+  "573137009596@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750262182921,
+    "lastActivity": 1750353173546,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573054866970@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750262420800,
+    "lastActivity": 1750353173546,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573012966024@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "cejas",
+    "createdAt": 1750262475494,
+    "lastActivity": 1750263101186,
+    "respuestasInesperadas": 0,
+    "followUpSent": false,
+    "finalizado": true
+  },
+  "573184931208@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750263161268,
+    "lastActivity": 1750353173546,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573019649837@c.us": {
+    "estado": "inicio",
+    "curso": "uñas",
+    "createdAt": 1750264269948,
+    "lastActivity": 1750353173546,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573002023052@c.us": {
+    "estado": "inicio",
+    "curso": "melamina",
+    "createdAt": 1750264458886,
+    "lastActivity": 1750353173546,
+    "respuestasInesperadas": 1,
+    "followUpSent": true
+  },
+  "573224265430@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "celulares",
+    "createdAt": 1750265183749,
+    "lastActivity": 1750353173546,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573004587277@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "barberia",
+    "createdAt": 1750270707651,
+    "lastActivity": 1750272209409,
+    "respuestasInesperadas": 0,
+    "followUpSent": false,
+    "finalizado": true
+  },
+  "573104883157@c.us": {
+    "estado": "inicio",
+    "curso": "maquillaje",
+    "createdAt": 1750271293796,
+    "lastActivity": 1750360373549,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573215640424@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "maquillaje",
+    "createdAt": 1750271412273,
+    "lastActivity": 1750360373549,
+    "respuestasInesperadas": 3,
+    "followUpSent": true
+  },
+  "573206486339@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "trenzas",
+    "createdAt": 1750272589746,
+    "lastActivity": 1750277802107,
+    "respuestasInesperadas": 0,
+    "finalizado": true
+  },
+  "573113224676@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750273184593,
+    "lastActivity": 1750360373549,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573205614560@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "cejas",
+    "createdAt": 1750273234919,
+    "lastActivity": 1750367573564,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573012590153@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "uñas",
+    "createdAt": 1750273752441,
+    "lastActivity": 1750360373549,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573215620093@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "trenzas",
+    "createdAt": 1750274139137,
+    "lastActivity": 1750364577989,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573128266852@c.us": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "createdAt": 1750277983590,
+    "lastActivity": 1750367573564,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573147221206@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "trenzas",
+    "createdAt": 1750278938764,
+    "lastActivity": 1750279676074,
+    "respuestasInesperadas": 0,
+    "followUpSent": false,
+    "finalizado": true
+  },
+  "573160852669@c.us": {
+    "estado": "inicio",
+    "curso": "uñas",
+    "createdAt": 1750281681570,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573148550366@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "masajes",
+    "createdAt": 1750286799624,
+    "lastActivity": 1750339981720,
+    "respuestasInesperadas": 1,
+    "followUpSent": false,
+    "finalizado": true,
+    "handledManually": true
+  },
+  "573046780812@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "cejas",
+    "createdAt": 1750290837855,
+    "lastActivity": 1750434783744,
+    "respuestasInesperadas": 20,
+    "followUpSent": false
+  },
+  "573124164685@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "masajes",
+    "createdAt": 1750291359821,
+    "lastActivity": 1750429763974,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573107186080@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "cejas",
+    "createdAt": 1750296575025,
+    "lastActivity": 1750349994594,
+    "respuestasInesperadas": 0,
+    "followUpSent": false,
+    "finalizado": true
+  },
+  "573205140471@c.us": {
+    "estado": "inicio",
+    "curso": "uñas",
+    "createdAt": 1750302339876,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 1,
+    "followUpSent": true
+  },
+  "573017013050@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "uñas",
+    "createdAt": 1750304183470,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 1,
+    "followUpSent": true
+  },
+  "573043299700@c.us": {
+    "estado": "inicio",
+    "curso": "melamina",
+    "createdAt": 1750307556838,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573135718926@c.us": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "createdAt": 1750309435526,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573242131825@c.us": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1750333641516,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573147613449@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750333911077,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573113089207@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "cejas",
+    "createdAt": 1750335263585,
+    "lastActivity": 1750429274331,
+    "respuestasInesperadas": 1,
+    "followUpSent": true
+  },
+  "573019051855@c.us": {
+    "estado": "inicio",
+    "curso": "melamina",
+    "createdAt": 1750335521374,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573203219314@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750340135464,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573003318415@c.us": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1750340324114,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573209284377@c.us": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1750340836748,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 0,
+    "followUpSent": true
+  },
+  "573007618846@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "masajes",
+    "createdAt": 1750341127443,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 2,
+    "followUpSent": true
+  },
+  "573166051144@c.us": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1750341976614,
+    "lastActivity": 1750429030869,
+    "respuestasInesperadas": 2,
+    "followUpSent": true
+  },
+  "573176192947@c.us": {
+    "estado": "inicio",
+    "curso": "melamina",
+    "createdAt": 1750343035540,
+    "lastActivity": 1750343061419,
+    "respuestasInesperadas": 0
+  },
+  "573113338870@c.us": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1750343806000,
+    "lastActivity": 1750343832907,
+    "respuestasInesperadas": 0
+  },
+  "573135830201@c.us": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "createdAt": 1750344027999,
+    "lastActivity": 1750345753379,
+    "respuestasInesperadas": 3
+  },
+  "573148093847@c.us": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "createdAt": 1750344160841,
+    "lastActivity": 1750344166171,
+    "respuestasInesperadas": 1,
+    "followUpSent": false
+  },
+  "573216278981@c.us": {
+    "finalizado": true,
+    "lastActivity": 1750344507154,
+    "handledManually": true
+  },
+  "573123290419@c.us": {
+    "estado": "inicio",
+    "curso": "melamina",
+    "createdAt": 1750345151499,
+    "lastActivity": 1750345180011,
+    "respuestasInesperadas": 0
+  },
+  "573017674659@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "maquillaje",
+    "createdAt": 1750345330511,
+    "lastActivity": 1750345516196,
+    "respuestasInesperadas": 0
+  },
+  "573008321438@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "cejas",
+    "createdAt": 1750346108163,
+    "lastActivity": 1750346400920,
+    "respuestasInesperadas": 1,
+    "followUpSent": false
+  },
+  "573022207520@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "barberia",
+    "createdAt": 1750350338385,
+    "lastActivity": 1750350644768,
     "respuestasInesperadas": 0,
     "followUpSent": false
+  },
+  "573044121641@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "barberia",
+    "createdAt": 1750359063819,
+    "lastActivity": 1750359552414,
+    "respuestasInesperadas": 0
+  },
+  "573012561626@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750359402151,
+    "lastActivity": 1750359431298,
+    "respuestasInesperadas": 0
+  },
+  "573002159298@c.us": {
+    "estado": "inicio",
+    "curso": "melamina",
+    "createdAt": 1750359470585,
+    "lastActivity": 1750359502880,
+    "respuestasInesperadas": 0
+  },
+  "573128821753@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "trenzas",
+    "createdAt": 1750359543123,
+    "lastActivity": 1750360691169,
+    "respuestasInesperadas": 3
+  },
+  "573017355186@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "melamina",
+    "createdAt": 1750360024222,
+    "lastActivity": 1750360165466,
+    "respuestasInesperadas": 0,
+    "followUpSent": false
+  },
+  "573054530361@c.us": {
+    "estado": "inicio",
+    "curso": "maquillaje",
+    "createdAt": 1750361368573,
+    "lastActivity": 1750361368573,
+    "respuestasInesperadas": 0,
+    "followUpSent": false
+  },
+  "573135017907@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750363785267,
+    "lastActivity": 1750363891979,
+    "respuestasInesperadas": 1,
+    "followUpSent": false
+  },
+  "573154745181@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "cejas",
+    "createdAt": 1750368776816,
+    "lastActivity": 1750369005588,
+    "respuestasInesperadas": 1,
+    "followUpSent": false
+  },
+  "573189086254@c.us": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1750423782045,
+    "lastActivity": 1750423782366,
+    "respuestasInesperadas": 1,
+    "followUpSent": false
+  },
+  "573024329881@c.us": {
+    "estado": "inicio",
+    "curso": "barberia",
+    "createdAt": 1750423783238,
+    "lastActivity": 1750423783456,
+    "respuestasInesperadas": 1,
+    "followUpSent": false
+  },
+  "573104949507@c.us": {
+    "estado": "inicio",
+    "curso": "uñas",
+    "createdAt": 1750423784102,
+    "lastActivity": 1750423784102,
+    "respuestasInesperadas": 0,
+    "followUpSent": false
+  },
+  "573117832606@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750423787632,
+    "lastActivity": 1750423787632,
+    "respuestasInesperadas": 0,
+    "followUpSent": false
+  },
+  "573237961231@c.us": {
+    "estado": "inicio",
+    "curso": "uñas",
+    "createdAt": 1750423791771,
+    "lastActivity": 1750423791771,
+    "respuestasInesperadas": 0,
+    "followUpSent": false
+  },
+  "573046391238@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "uñas",
+    "createdAt": 1750423798624,
+    "lastActivity": 1750425806597,
+    "respuestasInesperadas": 0,
+    "followUpSent": false
+  },
+  "573043093392@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750423804376,
+    "lastActivity": 1750423804381,
+    "respuestasInesperadas": 1,
+    "followUpSent": false
+  },
+  "573160409449@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750423806254,
+    "lastActivity": 1750423806254,
+    "respuestasInesperadas": 0,
+    "followUpSent": false
+  },
+  "573046210173@c.us": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "createdAt": 1750423809919,
+    "lastActivity": 1750423809954,
+    "respuestasInesperadas": 1,
+    "followUpSent": false
+  },
+  "573104063609@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "maquillaje",
+    "createdAt": 1750423828258,
+    "lastActivity": 1750423883199,
+    "respuestasInesperadas": 0,
+    "followUpSent": false
+  },
+  "573118127335@c.us": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1750425005760,
+    "lastActivity": 1750425033306,
+    "respuestasInesperadas": 0
+  },
+  "573019421550@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "celulares",
+    "createdAt": 1750426952609,
+    "lastActivity": 1750431133224,
+    "respuestasInesperadas": 0
+  },
+  "573046782800@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "trenzas",
+    "createdAt": 1750427079505,
+    "lastActivity": 1750434608387,
+    "respuestasInesperadas": 0
+  },
+  "573116584721@c.us": {
+    "estado": "inicio",
+    "curso": "uñas",
+    "createdAt": 1750427150239,
+    "lastActivity": 1750427175041,
+    "respuestasInesperadas": 0
+  },
+  "573202218057@c.us": {
+    "estado": "inicio",
+    "curso": "uñas",
+    "createdAt": 1750427209740,
+    "lastActivity": 1750427237422,
+    "respuestasInesperadas": 0
+  },
+  "573046009808@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750427602679,
+    "lastActivity": 1750434714699,
+    "respuestasInesperadas": 0
+  },
+  "573104181893@c.us": {
+    "estado": "inicio",
+    "curso": "barberia",
+    "createdAt": 1750427747047,
+    "lastActivity": 1750427778593,
+    "respuestasInesperadas": 0
+  },
+  "573013757328@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "melamina",
+    "createdAt": 1750428090113,
+    "lastActivity": 1750428623296,
+    "respuestasInesperadas": 0
+  },
+  "573227044490@c.us": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "createdAt": 1750428403332,
+    "lastActivity": 1750428431160,
+    "respuestasInesperadas": 0
+  },
+  "573215970614@c.us": {
+    "estado": "inicio",
+    "curso": "melamina",
+    "createdAt": 1750428466157,
+    "lastActivity": 1750428490318,
+    "respuestasInesperadas": 0
+  },
+  "573146851294@c.us": {
+    "estado": "confirmacion_promocion",
+    "curso": "uñas",
+    "createdAt": 1750428896465,
+    "lastActivity": 1750429308221,
+    "respuestasInesperadas": 2
+  },
+  "573013162269@c.us": {
+    "estado": "inicio",
+    "curso": "uñas",
+    "createdAt": 1750429018232,
+    "lastActivity": 1750429046025,
+    "respuestasInesperadas": 0
+  },
+  "573042139172@c.us": {
+    "estado": "seleccion_fechas",
+    "curso": "cejas",
+    "createdAt": 1750429254253,
+    "lastActivity": 1750429623667,
+    "respuestasInesperadas": 0,
+    "followUpSent": false
+  },
+  "573145555040@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750435125223,
+    "lastActivity": 1750435152120,
+    "respuestasInesperadas": 0
+  },
+  "573006739888@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750435170901,
+    "lastActivity": 1750435197005,
+    "respuestasInesperadas": 0
+  },
+  "573225412974@c.us": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1750435229410,
+    "lastActivity": 1750435258335,
+    "respuestasInesperadas": 0
+  },
+  "573046558974@c.us": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1750435270661,
+    "lastActivity": 1750435297286,
+    "respuestasInesperadas": 0
+  },
+  "573245694798@c.us": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1750435327149,
+    "lastActivity": 1750435353048,
+    "respuestasInesperadas": 0
+  },
+  "573505347431@c.us": {
+    "estado": "inicio",
+    "curso": "maquillaje",
+    "createdAt": 1750435583239,
+    "lastActivity": 1750435614545,
+    "respuestasInesperadas": 0
+  },
+  "573022218665@c.us": {
+    "estado": "inicio",
+    "curso": "uñas",
+    "createdAt": 1750435635496,
+    "lastActivity": 1750435663716,
+    "respuestasInesperadas": 0
+  },
+  "573012503259@c.us": {
+    "estado": "inicio",
+    "curso": "maquillaje",
+    "createdAt": 1750435709970,
+    "lastActivity": 1750435738115,
+    "respuestasInesperadas": 0
+  },
+  "573236665782@c.us": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1750435769147,
+    "lastActivity": 1750435796833,
+    "respuestasInesperadas": 0
+  },
+  "573143344561@c.us": {
+    "estado": "inicio",
+    "curso": "melamina",
+    "createdAt": 1750435903863,
+    "lastActivity": 1750435932510,
+    "respuestasInesperadas": 0
+  },
+  "573018567131@c.us": {
+    "estado": "inicio",
+    "curso": "barberia",
+    "createdAt": 1750435957972,
+    "lastActivity": 1750435988358,
+    "respuestasInesperadas": 0
   }
 }
