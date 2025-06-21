@@ -18,15 +18,15 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         presentacion: 'presentacionBarberia.mp3',
         fechas: `Fechas inicio BARBERÍA
 
-1 Julio 2025 | Martes y Jueves | 9:00 am a 12:00 pm
+8 Julio 2025 | Martes y Jueves | 9:00 am a 12:00 pm
 
 24 Junio 2025 | Martes y Jueves | 4:00 pm a 7:00 pm (este horario esta en promocion: 250.000)
 
-9 Julio 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
+16 Julio 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
 
 9 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
 
-26 Julio 2025 | Sábados | 1:00 pm a 5:00 pm
+2 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 13 Julio 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -152,7 +152,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         presentacion: 'presentacionMasajes.mp3',
         fechas: `Fechas inicio MASAJES CORPORALES
 
-25 Junio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
+2 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
 28 Junio 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -178,7 +178,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         presentacion: 'presentacionMelamina.mp3',
         fechas: `Fechas inicio Muebles & Cocinas Integrales
 
-24 Junio 2025 | Martes y Jueves | 6:00 pm a 9:00 pm (este horario esta en promocion: 350.000)
+1 Julio 2025 | Martes y Jueves | 6:00 pm a 9:00 pm (este horario esta en promocion: 350.000)
 
 21 Junio 2025 | Sábados | 8:00 am a 12:00 pm
 
@@ -206,9 +206,9 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
         presentacion: 'presentacionCelulares.mp3',
         fechas: `Fechas inicio REPARACIÓN DE CELULARES
 
-24 Junio 2025 | Martes a Viernes | 7:00 am a 9:00 am
+1 Julio 2025 | Martes a Viernes | 7:00 am a 9:00 am
 
-24 Junio 2025 | Miércoles y Viernes | 1:00 pm a 3:00 pm
+1 Julio 2025 | Miércoles y Viernes | 1:00 pm a 3:00 pm
 
 26 Julio 2025 | Sábados | 8:00 am a 1:00 pm
 
