@@ -10286,10 +10286,10 @@
     "handledManually": true
   },
   "573045938248@c.us": {
-    "estado": "inicio",
+    "estado": "seleccion_fechas",
     "curso": "celulares",
     "createdAt": 1750514628365,
-    "lastActivity": 1750514657049,
+    "lastActivity": 1750528794229,
     "respuestasInesperadas": 0
   },
   "573013793903@c.us": {
@@ -10374,5 +10374,12 @@
     "finalizado": true,
     "lastActivity": 1750527581168,
     "handledManually": true
+  },
+  "573054566881@c.us": {
+    "estado": "inicio",
+    "curso": "celulares",
+    "createdAt": 1750529067474,
+    "lastActivity": 1750529093049,
+    "respuestasInesperadas": 0
   }
 }
