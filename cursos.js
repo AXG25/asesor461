@@ -6,21 +6,21 @@ module.exports = {
 +30 Horas
 
 🎉 *Promoción especial:*
-Precio estándar: ~$500.000~
+~Precio estándar: $500.000~
 *Valor con descuento: _$350.000_*
-Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 30 de junio*_
+
+_Promoción disponible *solo hasta el 30 de junio*_
+_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
+
 
 📍 *Ubicación:*
-Estamos en el centro de *Medellín Cra 42 #49-34*`,
+Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
         pensum: 'barberia.jpeg',
         presentacion: 'presentacionBarberia.mp3',
         fechas: `Fechas inicio BARBERÍA
 
 8 Julio 2025 | Martes y Jueves | 9:00 am a 12:00 pm
-
-24 Junio 2025 | Martes y Jueves | 4:00 pm a 7:00 pm (este horario esta en promocion: 250.000)
 
 16 Julio 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
 
@@ -40,14 +40,15 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 (32 horas en total)
 
 🎉 *Promoción especial:*
-Precio estándar: ~$500.000~
+~Precio estándar: $500.000~
 *Valor con descuento: _$350.000_*
-Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 30 de junio*_
+
+_Promoción disponible *solo hasta el 30 de junio*_
+_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
 
 📍 *Ubicación:*
-Estamos en el centro de *Medellín Cra 42 #49-34*`,
+Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
         pensum: 'pestañas.jpg',
         presentacion: 'presentacionCejas.mp3',
         fechas: `Fechas inicio CEJAS & PESTAÑAS
@@ -56,13 +57,11 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 
 1 Julio 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
-25 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
-
-9 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
+16 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
 19 Julio 2025 | Sábados | 8:00 am a 12:00 pm
 
-21 Junio 2025 | Sábados | 1:00 pm a 5:00 pm
+16 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 3 Agosto 2025 | Domingos | 8:00 am a 12:00 pm`
     },
@@ -74,14 +73,15 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 (32 horas en total)
 
 🎉 *Promoción especial:*
-Precio estándar: ~$500.000~
+~Precio estándar: $500.000~
 *Valor con descuento: _$350.000_*
-Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 30 de junio*_
+
+_Promoción disponible *solo hasta el 30 de junio*_
+_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
 
 📍 *Ubicación:*
-Estamos en el centro de *Medellín Cra 42 #49-34*`,
+Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
         pensum: 'uñas.jpg',
         presentacion: 'presentacionUñas.mp3',
         fechas: `Fechas inicio MANICURE & PEDICURE
@@ -92,7 +92,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 
 2 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
-21 Junio 2025 | Sábados | 8:00 am a 12:00 pm
+28 Junio 2025 | Sábados | 8:00 am a 12:00 pm
 
 26 Julio 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -109,15 +109,16 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 (32 horas en total)
         
 🎉 *Promoción especial:*
-Precio estándar: ~$500.000~
+~Precio estándar: $500.000~
 *Valor con descuento: _$350.000_*
-Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 30 de junio*_
+
+_Promoción disponible *solo hasta el 30 de junio*_
+_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
  
         
 📍 *Ubicación:*
-Estamos en el centro de *Medellín Cra 42 #49-34*`,
+Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
         pensum: 'maquillaje.jpg',
         presentacion: 'presentacionMaquillaje.mp3',
         fechas: `Fechas inicio MAQUILLAJE PROFESIONAL
@@ -132,29 +133,32 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 
     },
     'masajes': {
-        palabrasClave: ['masajes', 'corporales', 'masajista', 'masaje', 'maderoterapia'],
+        palabrasClave: ['masajes', 'corporales', 'masajista', 'masaje', 'maderoterapia', 'masoterapia'],
         promocion:`
 📚 *Duración del curso:*
 5 clases de 4 horas cada una. 
 (20 horas en total)
         
 🎉 *Promoción especial:*
-Precio estándar: ~$500.000~
+~Precio estándar: $500.000~
 *Valor con descuento: _$350.000_*
-Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 30 de junio*_
+
+_Promoción disponible *solo hasta el 30 de junio*_
+_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
 
         
 📍 *Ubicación:*
-Estamos en el centro de *Medellín Cra 42 #49-34*`,
+Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
         pensum: 'masajes.jpg',
         presentacion: 'presentacionMasajes.mp3',
         fechas: `Fechas inicio MASAJES CORPORALES
 
+15 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm        
+
 2 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
-28 Junio 2025 | Sábados | 1:00 pm a 5:00 pm
+23 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 14 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm`
 
@@ -166,23 +170,22 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 +24 Horas
 
 🎉 *Promoción especial:*
-Precio estándar: ~$600.000~
+~Precio estándar: $600.000~
 *Valor con descuento: _$400.000_*
-Promoción super especial: *10% de descuento en segundo curso*
 
-_Promoción disponible *hasta el 30 de junio*_
+
+_Promoción disponible *solo hasta el 30 de junio*_
+_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
 
 📍 *Ubicación:*
-Estamos en el centro de *Medellín Cra 42 #49-34*`,
+Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
         pensum: 'melamina.jpg',
         presentacion: 'presentacionMelamina.mp3',
         fechas: `Fechas inicio Muebles & Cocinas Integrales
 
 1 Julio 2025 | Martes y Jueves | 6:00 pm a 9:00 pm (este horario esta en promocion: 350.000)
 
-21 Junio 2025 | Sábados | 8:00 am a 12:00 pm
-
-21 Junio 2025 | Sábados | 1:00 pm a 5:00 pm
+28 Junio 2025 | Sábados | 1:00 pm a 5:00 pm
 
 27 Julio 2025 | Domingos | 8:00 am a 12:00 pm`
 
@@ -194,14 +197,15 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 +50 Horas
 
 🎉 *Promoción especial:*
-Precio estándar: ~$500.000~
+~Precio estándar: $500.000~
 *Valor con descuento: _$350.000_*
-Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 30 de junio*_
+
+_Promoción disponible *solo hasta el 30 de junio*_
+_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
 
 📍 *Ubicación:*
-Estamos en el centro de *Medellín Cra 42 #49-34*`,
+Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
         pensum: 'celulares.jpg',
         presentacion: 'presentacionCelulares.mp3',
         fechas: `Fechas inicio REPARACIÓN DE CELULARES
@@ -223,14 +227,15 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 (32 horas en total)
 
 🎉 *Promoción especial:*
-Precio estándar: ~$500.000~
+~Precio estándar: $500.000~
 *Valor con descuento: _$350.000_*
-Promocion super especial: *2 cursos por $600.000*
 
-_Promoción disponible *hasta el 30 de junio*_
+
+_Promoción disponible *solo hasta el 30 de junio*_
+_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
 
 📍 *Ubicación:*
-Estamos en el centro de *Medellín Cra 42 #49-34*`,
+Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
         pensum: 'trenzas.jpg',
         presentacion: 'presentacionTrenzas.mp3',
         fechas: `Fechas inicio TRENZAS & PEINADOS
@@ -239,7 +244,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34*`,
 
 12 Julio 2025 | Sábados | 8:00 am a 12:00 pm
 
-26 Julio 2025 | Sábados | 1:00 pm a 5:00 pm
+2 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 13 Julio 2025 | Domingos | 8:00 am a 12:00 pm
 `

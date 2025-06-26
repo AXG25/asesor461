@@ -242,7 +242,7 @@ const handleNewConversation = async (chatId, text) => {
 
 // Manejar proceso de selección de fechas
 const handleDateSelection = async (chatId, text, usuario) => {
-    if (text.includes('cuando') || text.includes('cundo') || text.includes('si') || text.includes('ok') || text.includes('dale') || text.includes('siii') || text.includes('fechas') || text.includes('fecha') || text.includes('inicio') || text.includes('horario') || text.includes('horarios') || text.includes('bueno') || text.includes('bien') || text.includes('porfavor') || text.includes('gracias') || text.includes('favor') || text.includes('entre') || text.includes('entre semana') || text.includes('en semana') || text.includes('fines') || text.includes('fines de semana') || text.includes('dias') || text.includes('dia') || text.includes('empiezan') || text.includes('empiezas')  || text.includes('empezaría') || text.includes('inicia') || text.includes('inicias')) {
+    if (text.includes('cuando') || text.includes('cundo') || text.includes('si') || text.includes('gustaria') || text.includes('ok') || text.includes('dale') || text.includes('siii') || text.includes('fechas') || text.includes('fecha') || text.includes('inicio') || text.includes('horario') || text.includes('horarios') || text.includes('bueno') || text.includes('bien') || text.includes('porfavor') || text.includes('gracias') || text.includes('favor') || text.includes('entre') || text.includes('entre semana') || text.includes('en semana') || text.includes('fines') || text.includes('fines de semana') || text.includes('dias') || text.includes('dia') || text.includes('empiezan') || text.includes('empiezas')  || text.includes('empezaría') || text.includes('inicia') || text.includes('inicias')) {
         usuario.estado = 'seleccion_fechas';
         usuario.lastActivity = Date.now();
         usuario.respuestasInesperadas = 0;
@@ -331,7 +331,7 @@ const handleFechaEspecifica = async (chatId, text, usuario) => {
         usuario.respuestasInesperadas = 0;
         usuario.estado = 'confirmacion_promocion';
         await waitRandom();
-        await sendMessage(chatId, '¡Excelente! Entonces ¿Tienes alguna otra duda? yo con gusto la resuelvo 😊\n\n¿Te gustaría aprovechar la promoción? ¿Cómo te queda más fácil apartar el cupo, con una transferencia o pagando en efectivo?');
+        await sendMessage(chatId, 'Entonces si tienes alguna otra duda yo con gusto la resuelvo 😊\n\n¿Me puedes ir contando cómo te queda más fácil apartar el cupo, con una transferencia o pagando en efectivo?');
         saveUsers();
         console.log('AVANZA el flujo: se detectó fecha');
         return true;
