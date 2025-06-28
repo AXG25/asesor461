@@ -22,6 +22,8 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 8 Julio 2025 | Martes y Jueves | 9:00 am a 12:00 pm
 
+5 Agosto 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
+
 16 Julio 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
 
 9 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
@@ -55,7 +57,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 1 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
 
-1 Julio 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
+8 Julio 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
 16 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
@@ -92,8 +94,6 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 2 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
-28 Junio 2025 | Sábados | 8:00 am a 12:00 pm
-
 26 Julio 2025 | Sábados | 1:00 pm a 5:00 pm
 
 3 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
@@ -123,9 +123,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionMaquillaje.mp3',
         fechas: `Fechas inicio MAQUILLAJE PROFESIONAL
 
-1 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
-
-25 Junio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
+8 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
 9 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -184,8 +182,6 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         fechas: `Fechas inicio Muebles & Cocinas Integrales
 
 1 Julio 2025 | Martes y Jueves | 6:00 pm a 9:00 pm (este horario esta en promocion: 350.000)
-
-28 Junio 2025 | Sábados | 1:00 pm a 5:00 pm
 
 27 Julio 2025 | Domingos | 8:00 am a 12:00 pm`
 
