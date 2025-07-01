@@ -10,7 +10,7 @@ module.exports = {
 *Valor con descuento: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 30 de junio*_
+_Promoción disponible *solo hasta el 7 de Julio*_
 _*Reserva tu cupo y matriculate abonando 100.000 pesos*_
 
 
@@ -46,7 +46,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *Valor con descuento: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 30 de junio*_
+_Promoción disponible *solo hasta el 7 de Julio*_
 _*Reserva tu cupo y matriculate abonando 100.000 pesos*_
 
 📍 *Ubicación:*
@@ -79,7 +79,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *Valor con descuento: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 30 de junio*_
+_Promoción disponible *solo hasta el 7 de Julio*_
 _*Reserva tu cupo y matriculate abonando 100.000 pesos*_
 
 📍 *Ubicación:*
@@ -92,7 +92,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 16 Julio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-2 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
+9 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
 26 Julio 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -113,7 +113,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *Valor con descuento: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 30 de junio*_
+_Promoción disponible *solo hasta el 7 de Julio*_
 _*Reserva tu cupo y matriculate abonando 100.000 pesos*_
  
         
@@ -142,7 +142,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *Valor con descuento: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 30 de junio*_
+_Promoción disponible *solo hasta el 7 de Julio*_
 _*Reserva tu cupo y matriculate abonando 100.000 pesos*_
 
         
@@ -154,7 +154,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 15 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm        
 
-2 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
+2 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm (este horario esta en promocion: 250.000)
 
 23 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -172,7 +172,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *Valor con descuento: _$400.000_*
 
 
-_Promoción disponible *solo hasta el 30 de junio*_
+_Promoción disponible *solo hasta el 7 de Julio*_
 _*Reserva tu cupo y matriculate abonando 100.000 pesos*_
 
 📍 *Ubicación:*
@@ -181,7 +181,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionMelamina.mp3',
         fechas: `Fechas inicio Muebles & Cocinas Integrales
 
-1 Julio 2025 | Martes y Jueves | 6:00 pm a 9:00 pm (este horario esta en promocion: 350.000)
+8 Julio 2025 | Martes y Jueves | 6:00 pm a 9:00 pm (este horario esta en promocion: 350.000)
 
 27 Julio 2025 | Domingos | 8:00 am a 12:00 pm`
 
@@ -197,7 +197,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *Valor con descuento: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 30 de junio*_
+_Promoción disponible *solo hasta el 7 de Julio*_
 _*Reserva tu cupo y matriculate abonando 100.000 pesos*_
 
 📍 *Ubicación:*
@@ -227,7 +227,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *Valor con descuento: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 30 de junio*_
+_Promoción disponible *solo hasta el 7 de Julio*_
 _*Reserva tu cupo y matriculate abonando 100.000 pesos*_
 
 📍 *Ubicación:*
