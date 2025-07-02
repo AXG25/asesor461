@@ -30,8 +30,6 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 2 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
-13 Julio 2025 | Domingos | 8:00 am a 12:00 pm
-
 6 Julio 2025 | Domingos | 1:00 pm a 5:00 pm`
     },
     'cejas': {
@@ -55,11 +53,11 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionCejas.mp3',
         fechas: `Fechas inicio CEJAS & PESTAÑAS
 
-1 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 250.000)
+29 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm        
 
-8 Julio 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
+15 Julio 2025 | Martes y Jueves | 1:00 pm a 5:00 pm (este horario esta en promocion: 300.000)
 
-16 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
+23 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
 19 Julio 2025 | Sábados | 8:00 am a 12:00 pm
 
@@ -88,11 +86,11 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionUñas.mp3',
         fechas: `Fechas inicio MANICURE & PEDICURE
 
-8 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+8 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 300.000)
 
 16 Julio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-9 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
+9 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm (este horario esta en promocion: 300.000)
 
 26 Julio 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -123,7 +121,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionMaquillaje.mp3',
         fechas: `Fechas inicio MAQUILLAJE PROFESIONAL
 
-8 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+15 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 300.000)
 
 9 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
