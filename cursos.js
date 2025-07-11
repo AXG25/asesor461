@@ -7,11 +7,11 @@ module.exports = {
 
 🎉 *Promoción especial:*
 ~Precio estándar: $500.000~
-*Valor con descuento: _$350.000_*
+*VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 16 de Julio*_
-_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
+_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
 
 📍 *Ubicación:*
@@ -30,7 +30,10 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 7 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
-31 Agosto 2025 | Domingos | 1:00 pm a 5:00 pm`
+31 Agosto 2025 | Domingos | 1:00 pm a 5:00 pm
+
+
+*Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 5 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 8 semanas estudiando 1 dia por semana*`
     },
     'cejas': {
         palabrasClave: ['cejas y pestañas', 'pestañas', 'pestaña', 'pestanas', 'pestana', 'pestañina', 'laminado', 'laminados', 'volumen', 'volumenes'],
@@ -41,11 +44,11 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 🎉 *Promoción especial:*
 ~Precio estándar: $500.000~
-*Valor con descuento: _$350.000_*
+*VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 16 de Julio*_
-_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
+_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
 📍 *Ubicación:*
 Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
@@ -61,11 +64,12 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 23 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
-19 Julio 2025 | Sábados | 8:00 am a 12:00 pm
-
 16 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
-3 Agosto 2025 | Domingos | 8:00 am a 12:00 pm`
+3 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
+
+
+*Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 4 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 8 semanas estudiando 1 dia por semana*` 
     },
     'uñas': {
         palabrasClave: ['uñas', 'manicure', 'pedicure', 'manicurista', 'pedicure', 'manicura', 'pedicura'],
@@ -76,11 +80,11 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 🎉 *Promoción especial:*
 ~Precio estándar: $500.000~
-*Valor con descuento: _$350.000_*
+*VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 16 de Julio*_
-_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
+_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
 📍 *Ubicación:*
 Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
@@ -88,11 +92,9 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionUñas.mp3',
         fechas: `Fechas inicio MANICURE & PEDICURE
 
-8 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 300.000)
-
 16 Julio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-9 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm (este horario esta en promocion: 300.000)
+16 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm (este horario esta en promocion: 300.000)
 
 23 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
 
@@ -100,7 +102,9 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 10 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
 
-13 Julio 2025 | Domingos | 1:00 pm a 5:00 pm`
+13 Julio 2025 | Domingos | 1:00 pm a 5:00 pm
+
+*Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 4 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 8 semanas estudiando 1 dia por semana*` 
 
     },
     'maquillaje': {
@@ -112,11 +116,11 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         
 🎉 *Promoción especial:*
 ~Precio estándar: $500.000~
-*Valor con descuento: _$350.000_*
+*VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 16 de Julio*_
-_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
+_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
  
         
 📍 *Ubicación:*
@@ -129,7 +133,10 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 9 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
-27 Julio 2025 | Domingos | 8:00 am a 12:00 pm`
+27 Julio 2025 | Domingos | 8:00 am a 12:00 pm
+
+
+*Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 4 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 8 semanas estudiando 1 dia por semana*`
 
     },
     'masajes': {
@@ -141,11 +148,11 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         
 🎉 *Promoción especial:*
 ~Precio estándar: $500.000~
-*Valor con descuento: _$350.000_*
+*VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 16 de Julio*_
-_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
+_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
         
 📍 *Ubicación:*
@@ -158,7 +165,9 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 23 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
-14 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm`
+14 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
+
+*Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 3 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 5 semanas estudiando 1 dia por semana*`
 
     },
     'melamina': {
@@ -169,11 +178,11 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 🎉 *Promoción especial:*
 ~Precio estándar: $600.000~
-*Valor con descuento: _$400.000_*
+*VALOR CON DESCUENTO: _$400.000_*
 
 
-_Promoción disponible *solo hasta el 16 de Julio*_
-_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
+_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
 📍 *Ubicación:*
 Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
@@ -181,9 +190,15 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionMelamina.mp3',
         fechas: `Fechas inicio Muebles & Cocinas Integrales
 
-8 Julio 2025 | Martes y Jueves | 6:00 pm a 9:00 pm (este horario esta en promocion: 350.000)
+5 Agosto 2025 | Martes y Jueves | 6:00 pm a 9:00 pm
 
-27 Julio 2025 | Domingos | 8:00 am a 12:00 pm`
+9 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
+
+9 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
+
+27 Julio 2025 | Domingos | 8:00 am a 12:00 pm
+
+*Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 4 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 6 semanas estudiando 1 dia por semana*`
 
     },
     'celulares': {
@@ -194,11 +209,11 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 🎉 *Promoción especial:*
 ~Precio estándar: $500.000~
-*Valor con descuento: _$350.000_*
+*VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 16 de Julio*_
-_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
+_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
 📍 *Ubicación:*
 Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
@@ -212,7 +227,9 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 26 Julio 2025 | Sábados | 8:00 am a 1:00 pm
 
-3 Agosto 2025 | Domingos | 8:00 am a 1:00 pm`
+3 Agosto 2025 | Domingos | 8:00 am a 1:00 pm
+
+*Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 7 semanas estudiando 4 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 10 semanas estudiando 1 dia por semana*`
 
     },
     'trenzas': {
@@ -224,11 +241,11 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 🎉 *Promoción especial:*
 ~Precio estándar: $500.000~
-*Valor con descuento: _$350.000_*
+*VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo hasta el 16 de Julio*_
-_*Reserva tu cupo y matriculate abonando 100.000 pesos*_
+_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
 📍 *Ubicación:*
 Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
@@ -243,6 +260,8 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 2 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 13 Julio 2025 | Domingos | 8:00 am a 12:00 pm
+
+*Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 4 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 8 semanas estudiando 1 dia por semana*
 `
 
     },

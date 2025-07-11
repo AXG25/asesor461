@@ -153,6 +153,16 @@ const sendMessage = async (chatId, message, options = {}) => {
     }
 };
 
+// Función utilitaria para marcar chat como no leído
+const marcarNoLeido = async (chatId) => {
+    try {
+        const chat = await client.getChatById(chatId);
+        await chat.markUnread();
+    } catch (error) {
+        console.error(`Error al marcar como no leído el chat ${chatId}:`, error);
+    }
+};
+
 // Enviar media con manejo de errores
 const sendMedia = async (chatId, mediaPath, caption = '') => {
     try {
@@ -235,6 +245,7 @@ const handleNewConversation = async (chatId, text) => {
         await waitRandom();
         await sendMessage(chatId, '¿Le gustaria conocer las fechas de inicio con sus respectivos horarios?');
 
+        await marcarNoLeido(chatId);
         return true;
     }
     return false;
@@ -254,6 +265,7 @@ const handleDateSelection = async (chatId, text, usuario) => {
         await waitRandom();
         await sendMessage(chatId, '¿Cuál de estas fechas te gustaría más para comenzar con tu curso?');
         saveUsers();
+        await marcarNoLeido(chatId);
         return true;
     }
     return false;
@@ -333,6 +345,7 @@ const handleFechaEspecifica = async (chatId, text, usuario) => {
         await waitRandom();
         await sendMessage(chatId, 'Entonces si tienes alguna otra duda yo con gusto la resuelvo 😊\n\n¿Me puedes ir contando cómo te queda más fácil apartar el cupo, con una transferencia o pagando en efectivo?');
         saveUsers();
+        await marcarNoLeido(chatId);
         console.log('AVANZA el flujo: se detectó fecha');
         return true;
     }
@@ -349,6 +362,7 @@ const handleConfirmacionPromocion = async (chatId, text, usuario) => {
         await sendMessage(chatId, `Debemos llenar este formulario para hacer la matricula el formulario te va a pedir un codigo de asesor. *Mi codigo de asesor es _Abi_*\n\n https://docs.google.com/forms/d/e/1FAIpQLSeCzIyb-5ASy_vFDo71WEoVh27GtfKfS5DuOZKRqGjEafALtQ/viewform?usp=sf_linkh`);
         await waitRandom();
         await sendMessage(chatId, `Y podemos hacer la consignación a una de nuestras cuentas\n\n1.💳 BANCOLOMBIA \nCuenta de ahorros: Claudia Bolívar \n00896502867\n\n2.📱Nequi \nClaudia Bolívar \n3117367087`);
+        await marcarNoLeido(chatId);
         return true;
     }
     else if (text.includes('presencial') || text.includes('sede') || text.includes('direccion') || text.includes('ubicacion') || text.includes('ubicados') || text.includes('ubicado') || text.includes('encuentra') || text.includes('encuentras') || text.includes('efectivo') || text.includes('acercarme') || text.includes('acercar') || text.includes('encuentras') || text.includes('encuentran')) {
@@ -358,6 +372,7 @@ const handleConfirmacionPromocion = async (chatId, text, usuario) => {
         await sendMessage(chatId, `Aca te dejo la ubicacion: \nhttps://g.co/kgs/cc6o1RU`);
         await waitRandom();
         await sendMessage(chatId, `Seria posible que me digas que dia y a que hora puedes venir para poder agendarte la cita?\n\n Nosotros atendemos todos los dias de 8 a 5. Si puedes preguntar por mi me harias un enorme favor Yo me llamo Abi 😊`);
+        await marcarNoLeido(chatId);
         return true;
     }
     return false;
@@ -522,6 +537,7 @@ client.on('message_create', async msg => {
 
                     users[chatId].lastActivity = Date.now();
                     saveUsers();
+                    await marcarNoLeido(chatId);
                 }
             }
 
