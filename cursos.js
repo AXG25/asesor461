@@ -22,8 +22,6 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 5 Agosto 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
 
-16 Julio 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
-
 9 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
 
 2 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
@@ -71,7 +69,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 *Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 4 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 8 semanas estudiando 1 dia por semana*` 
     },
-    'uñas': {
+    'manicure': {
         palabrasClave: ['uñas', 'manicure', 'pedicure', 'manicurista', 'pedicure', 'manicura', 'pedicura'],
         promocion: `
 📚 *Duración del curso:*
@@ -170,7 +168,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 3 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 5 semanas estudiando 1 dia por semana*`
 
     },
-    'melamina': {
+    'muebles': {
         palabrasClave: ['melamina', 'mdf', 'muebles', 'cocinas', 'cocina', 'madera', 'carpinteria', 'carpintero', 'formaleta'],
         promocion:`
 📚 *Duración del curso:*
@@ -201,7 +199,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 4 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 6 semanas estudiando 1 dia por semana*`
 
     },
-    'celulares': {
+    'reparacion': {
         palabrasClave: ['celulares', 'celular'],
         promocion:`
 📚 *Duración del curso:*

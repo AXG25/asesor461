@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const cursos = require('./cursos.js');
 const { MessageMedia } = require('whatsapp-web.js');
+const { saveToDB } = require('./saveToDB.js');
 
 // Configuración del cliente de WhatsApp
 const client = new Client({
@@ -56,7 +57,7 @@ const cleanupInactiveUsers = async () => {
     for (const [userId, user] of Object.entries(users)) {
         if (!user.finalizado && user.lastActivity) {
             const timeSinceLastActivity = now - user.lastActivity;
-            
+
             // Si han pasado 24 horas y no se ha enviado el mensaje de seguimiento
             if (timeSinceLastActivity > FOLLOW_UP_TIMEOUT && !user.followUpSent && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
                 await waitRandom();
@@ -148,7 +149,7 @@ const sendMessage = async (chatId, message, options = {}) => {
         await client.sendMessage(chatId, message, options);
         return true;
     } catch (error) {
-        console.error(`Error al enviar mensaje a ${chatId}:`, error);
+        console.error(`Error al enviar mensaje a ${chatId}:`);
         return false;
     }
 };
@@ -176,7 +177,7 @@ const sendMedia = async (chatId, mediaPath, caption = '') => {
         await client.sendMessage(chatId, media, { caption });
         return true;
     } catch (error) {
-        console.error(`Error al enviar media a ${chatId}:`, error);
+        console.error(`Error al enviar media a ${chatId}:`);
         return false;
     }
 };
@@ -195,7 +196,7 @@ const sendAudio = async (chatId, audioPath) => {
         await client.sendMessage(chatId, audioMedia, { sendAudioAsVoice: true });
         return true;
     } catch (error) {
-        console.error(`Error al enviar audio a ${chatId}:`, error);
+        console.error(`Error al enviar audio a ${chatId}:`);
         // En caso de error, enviar un mensaje de texto alternativo
         return false;
     }
@@ -236,7 +237,7 @@ const handleNewConversation = async (chatId, text) => {
             respuestasInesperadas: 0,
             followUpSent: false
         };
-        saveUsers();
+
 
         await waitRandom();
         await sendMedia(chatId, cursos[cursoEncontrado].pensum, cursos[cursoEncontrado].promocion);
@@ -244,7 +245,15 @@ const handleNewConversation = async (chatId, text) => {
         await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
         await waitRandom();
         await sendMessage(chatId, '¿Le gustaria conocer las fechas de inicio con sus respectivos horarios?');
-
+        saveUsers();
+        let numeroLimpio = chatId?.replace('57', '')?.replace('@c.us', '')
+        let guardado = saveToDB(numeroLimpio, cursoEncontrado)
+        if (guardado) {
+            // Obtener todas las etiquetas existentes
+            const labels = await client.getLabels();
+            let etiqueta = labels.find(l => l.name === 'Base de datos')
+            await client.addOrRemoveLabels([etiqueta.id], [chatId]);
+        }
         await marcarNoLeido(chatId);
         return true;
     }
@@ -253,11 +262,11 @@ const handleNewConversation = async (chatId, text) => {
 
 // Manejar proceso de selección de fechas
 const handleDateSelection = async (chatId, text, usuario) => {
-    if (text.includes('cuando') || text.includes('cundo') || text.includes('si') || text.includes('gustaria') || text.includes('ok') || text.includes('dale') || text.includes('siii') || text.includes('fechas') || text.includes('fecha') || text.includes('inicio') || text.includes('horario') || text.includes('horarios') || text.includes('bueno') || text.includes('bien') || text.includes('porfavor') || text.includes('gracias') || text.includes('favor') || text.includes('entre') || text.includes('entre semana') || text.includes('en semana') || text.includes('fines') || text.includes('fines de semana') || text.includes('dias') || text.includes('dia') || text.includes('empiezan') || text.includes('empiezas')  || text.includes('empezaría') || text.includes('inicia') || text.includes('inicias')) {
+    if (text.includes('cuando') || text.includes('cundo') || text.includes('si') || text.includes('gustaria') || text.includes('ok') || text.includes('dale') || text.includes('siii') || text.includes('fechas') || text.includes('fecha') || text.includes('inicio') || text.includes('horario') || text.includes('horarios') || text.includes('bueno') || text.includes('bien') || text.includes('porfavor') || text.includes('gracias') || text.includes('favor') || text.includes('entre') || text.includes('entre semana') || text.includes('en semana') || text.includes('fines') || text.includes('fines de semana') || text.includes('dias') || text.includes('dia') || text.includes('empiezan') || text.includes('empiezas') || text.includes('empezaría') || text.includes('inicia') || text.includes('inicias')) {
         usuario.estado = 'seleccion_fechas';
         usuario.lastActivity = Date.now();
         usuario.respuestasInesperadas = 0;
-        
+
         await waitRandom();
         await sendMessage(chatId, cursos[usuario.curso].fechas);
         await waitRandom();
@@ -524,7 +533,6 @@ client.on('message_create', async msg => {
                         lastActivity: Date.now(),
                         respuestasInesperadas: 0
                     };
-                    saveUsers();
 
                     console.log(`Iniciando flujo automático para ${chatId} sobre el curso: ${cursoEncontrado}`);
 
@@ -537,6 +545,14 @@ client.on('message_create', async msg => {
 
                     users[chatId].lastActivity = Date.now();
                     saveUsers();
+                    let numeroLimpio = chatId?.replace('57', '')?.replace('@c.us', '')
+                    let guardado = saveToDB(numeroLimpio, cursoEncontrado)
+                    if (guardado) {
+                        // Obtener todas las etiquetas existentes
+                        const labels = await client.getLabels();
+                        let etiqueta = labels.find(l => l.name === 'Base de datos')
+                        await client.addOrRemoveLabels([etiqueta.id], [chatId]);
+                    }
                     await marcarNoLeido(chatId);
                 }
             }
