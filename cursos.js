@@ -1,7 +1,7 @@
 module.exports = {
     'barberia': {
         palabrasClave: ['barberia', 'barbería', 'barbero', 'peluqueria', 'peluquero', 'peluquiar', 'motilar'],
-        promocion:`
+        promocion: `
 📚 *Duración del curso:*
 +30 Horas
 
@@ -35,7 +35,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
     },
     'cejas': {
         palabrasClave: ['cejas y pestañas', 'pestañas', 'pestaña', 'pestanas', 'pestana', 'pestañina', 'laminado', 'laminados', 'volumen', 'volumenes'],
-        promocion:`
+        promocion: `
 📚 *Duración del curso:*
 8 clases de 4 horas cada una. 
 (32 horas en total)
@@ -67,7 +67,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 3 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
 
 
-*Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 4 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 8 semanas estudiando 1 dia por semana*` 
+*Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 4 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 8 semanas estudiando 1 dia por semana*`
     },
     'manicure': {
         palabrasClave: ['uñas', 'manicure', 'pedicure', 'manicurista', 'pedicure', 'manicura', 'pedicura'],
@@ -90,7 +90,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionUñas.mp3',
         fechas: `Fechas inicio MANICURE & PEDICURE
 
-16 Julio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+22 Julio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
 16 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm (este horario esta en promocion: 300.000)
 
@@ -100,14 +100,14 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 10 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
 
-13 Julio 2025 | Domingos | 1:00 pm a 5:00 pm
+20 Julio 2025 | Domingos | 1:00 pm a 5:00 pm
 
-*Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 4 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 8 semanas estudiando 1 dia por semana*` 
+*Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 4 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 8 semanas estudiando 1 dia por semana*`
 
     },
     'maquillaje': {
         palabrasClave: ['maquillaje', 'maquilladora', 'maquillar'],
-        promocion:  `
+        promocion: `
 📚 *Duración del curso:*
 8 clases de 4 horas cada una. 
 (32 horas en total)
@@ -139,7 +139,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
     },
     'masajes': {
         palabrasClave: ['masajes', 'corporales', 'masajista', 'masaje', 'maderoterapia', 'masoterapia'],
-        promocion:`
+        promocion: `
 📚 *Duración del curso:*
 5 clases de 4 horas cada una. 
 (20 horas en total)
@@ -159,7 +159,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionMasajes.mp3',
         fechas: `Fechas inicio MASAJES CORPORALES
 
-15 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm        
+22 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm       
 
 23 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -170,7 +170,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
     },
     'muebles': {
         palabrasClave: ['melamina', 'mdf', 'muebles', 'cocinas', 'cocina', 'madera', 'carpinteria', 'carpintero', 'formaleta'],
-        promocion:`
+        promocion: `
 📚 *Duración del curso:*
 +24 Horas
 
@@ -192,7 +192,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 9 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
 
-9 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
+30 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 27 Julio 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -201,7 +201,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
     },
     'reparacion': {
         palabrasClave: ['celulares', 'celular'],
-        promocion:`
+        promocion: `
 📚 *Duración del curso:*
 +50 Horas
 
@@ -232,7 +232,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
     },
     'trenzas': {
         palabrasClave: ['trenzas', 'trensa', 'trensas', 'peinados', 'peinado', 'trenzadora', 'trenza', 'peinado'],
-        promocion:`
+        promocion: `
 📚 *Duración del curso:*
 8 clases de 4 horas cada una. 
 (32 horas en total)
@@ -257,31 +257,80 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 2 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
-13 Julio 2025 | Domingos | 8:00 am a 12:00 pm
+20 Julio 2025 | Domingos | 8:00 am a 12:00 pm
 
 *Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 4 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 8 semanas estudiando 1 dia por semana*
 `
 
     },
+    'Estructuras': {
+        palabrasClave: ['estructuras', 'drywall', 'drywoll', 'drywal', 'daibol', 'yeso', 'driwal', 'draiwal', 'driwol'],
+        promocion: `
+📚 *Duración del curso:*
++24 Horas
+
+🎉 *Promoción especial:*
+~Precio estándar: $600.000~
+*VALOR CON DESCUENTO: _$400.000_*
+
+
+_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
+
+📍 *Ubicación:*
+Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
+        pensum: 'drywall.jpeg',
+        presentacion: 'presentacionDrywall.mp3',
+        fechas: `Fechas inicio Estructuras en Drywall
+
+19 Julio 2025 | Sábados | 8:00 am a 12:00 pm
+
+2 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
+
+27 Julio 2025 | Domingos | 8:00 am a 12:00 pm
+
+
+*Recordatorio si esocoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 6 semanas estudiando 1 dia por semana*`
+
+    },
+    'Micropigmentacion': {
+        palabrasClave: ['micro', 'micropigmentacion', 'labios', 'micropigmentar', 'pigmentacion'],
+        promocion: `
+📚 *Duración de cada curso:*
+24 Horas
+48 en total si haces los dos
+
+🎉 *Promoción especial:*
+~Precio estándar de cada curso: $600.000~
+*VALOR CON DESCUENTO: _$400.000_*
+el *SEGUNDO CURSO* tiene un *10%* de *DESCUENTO*
+
+
+_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos* por curso_
+
+📍 *Ubicación:*
+Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
+        pensum: 'micropigmentacion.jpeg',
+        presentacion: 'presentacionMicros.mp3',
+        fechas: `Fechas inicio MICROPIGMENTACIÓN DE LABIOS
+
+22 Julio 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
+
+30 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
+
+
+
+
+Fechas inicio MICROPIGMENTACIÓN DE CEJAS
+
+16 Julio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+
+10 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
+
+
+*Recordatorio si esocoge una fecha de inicio, para estudiar en semana la duracion del curso seria de 3 semanas estudiando 2 dias por semana, si escoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 6 semanas estudiando 1 dia por semana*`
+
+    },
+
 };
-
-
-// 'labios': {
-//     palabrasClave: ['labio', 'labios', 'lavio', 'lavios'],
-//         promocion: 'Te cuento que el curso cuesta ~$600.000~, pero con la promoción *hasta el 16 de Abril* queda en *$420.000* Puedes *apartar tu cupo con $50.000* y pagar los $370.000 restantes en efectivo.',
-//         duracion: 'Si estudia *entre semana*, el curso dura *3 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *6 semanas (1 clase por semana)*.',
-//         pensum: 'labios.jpg',
-//         presentacion: 'presentacionTrenzas.mp3',
-//         fechas: `Fechas inicio MICROPIGMENTACION LABIOS
-//
-// 6 Mayo 2025 | Martes y Jueves | 8:00 am a 12:00 pm
-//
-// 14 Mayo 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
-//
-// 3 Mayo 2025 | Sábados | 8:00 am a 12:00 pm
-//
-// 24 Mayo 2025 | Sábados | 1:00 pm a 5:00 pm
-//
-// 18 Mayo 2025 | Domingos | 8:00 am a 12:00 pm`
-//
-// },

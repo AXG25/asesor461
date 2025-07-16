@@ -372,6 +372,9 @@ const handleConfirmacionPromocion = async (chatId, text, usuario) => {
         await waitRandom();
         await sendMessage(chatId, `Y podemos hacer la consignación a una de nuestras cuentas\n\n1.💳 BANCOLOMBIA \nCuenta de ahorros: Claudia Bolívar \n00896502867\n\n2.📱Nequi \nClaudia Bolívar \n3117367087`);
         await marcarNoLeido(chatId);
+        const labels = await client.getLabels();
+        let etiqueta = labels.find(l => l.name === 'Importante')
+        await client.addOrRemoveLabels([etiqueta.id], [chatId]);
         return true;
     }
     else if (text.includes('presencial') || text.includes('sede') || text.includes('direccion') || text.includes('ubicacion') || text.includes('ubicados') || text.includes('ubicado') || text.includes('encuentra') || text.includes('encuentras') || text.includes('efectivo') || text.includes('acercarme') || text.includes('acercar') || text.includes('encuentras') || text.includes('encuentran')) {
@@ -382,6 +385,9 @@ const handleConfirmacionPromocion = async (chatId, text, usuario) => {
         await waitRandom();
         await sendMessage(chatId, `Seria posible que me digas que dia y a que hora puedes venir para poder agendarte la cita?\n\n Nosotros atendemos todos los dias de 8 a 5. Si puedes preguntar por mi me harias un enorme favor Yo me llamo Abi 😊`);
         await marcarNoLeido(chatId);
+        const labels = await client.getLabels();
+        let etiqueta = labels.find(l => l.name === 'Importante')
+        await client.addOrRemoveLabels([etiqueta.id], [chatId]);
         return true;
     }
     return false;
