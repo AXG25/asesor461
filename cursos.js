@@ -10,7 +10,7 @@ module.exports = {
 *VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_Promoción disponible *solo HASTA EL 21 DE JULIO*_
 _*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
 
@@ -45,7 +45,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_Promoción disponible *solo HASTA EL 21 DE JULIO*_
 _*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
 📍 *Ubicación:*
@@ -55,8 +55,6 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         fechas: `Fechas inicio CEJAS & PESTAÑAS
 
 29 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm        
-
-15 Julio 2025 | Martes y Jueves | 1:00 pm a 5:00 pm (este horario esta en promocion: 300.000)
 
 30 Julio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
@@ -81,7 +79,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_Promoción disponible *solo HASTA EL 21 DE JULIO*_
 _*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
 📍 *Ubicación:*
@@ -90,7 +88,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionUñas.mp3',
         fechas: `Fechas inicio MANICURE & PEDICURE
 
-22 Julio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+23 Julio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
 16 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm (este horario esta en promocion: 300.000)
 
@@ -117,7 +115,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_Promoción disponible *solo HASTA EL 21 DE JULIO*_
 _*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
  
         
@@ -127,7 +125,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionMaquillaje.mp3',
         fechas: `Fechas inicio MAQUILLAJE PROFESIONAL
 
-15 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 300.000)
+22 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 300.000)
 
 9 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -149,7 +147,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_Promoción disponible *solo HASTA EL 21 DE JULIO*_
 _*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
         
@@ -159,7 +157,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionMasajes.mp3',
         fechas: `Fechas inicio MASAJES CORPORALES
 
-22 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm       
+22 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion queda en 300.000)       
 
 23 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -179,7 +177,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *VALOR CON DESCUENTO: _$400.000_*
 
 
-_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_Promoción disponible *solo HASTA EL 21 DE JULIO*_
 _*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
 📍 *Ubicación:*
@@ -210,7 +208,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_Promoción disponible *solo HASTA EL 21 DE JULIO*_
 _*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
 📍 *Ubicación:*
@@ -242,7 +240,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *VALOR CON DESCUENTO: _$350.000_*
 
 
-_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_Promoción disponible *solo HASTA EL 21 DE JULIO*_
 _*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
 📍 *Ubicación:*
@@ -251,9 +249,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionTrenzas.mp3',
         fechas: `Fechas inicio TRENZAS & PEINADOS
 
-15 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
-
-12 Julio 2025 | Sábados | 8:00 am a 12:00 pm
+22 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
 2 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -274,7 +270,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 *VALOR CON DESCUENTO: _$400.000_*
 
 
-_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_Promoción disponible *solo HASTA EL 21 DE JULIO*_
 _*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
 
 📍 *Ubicación:*
@@ -283,7 +279,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionDrywall.mp3',
         fechas: `Fechas inicio Estructuras en Drywall
 
-19 Julio 2025 | Sábados | 8:00 am a 12:00 pm
+19 Julio 2025 | Sábados | 8:00 am a 12:00 pm (este horario esta en promocion queda en 350.000)
 
 2 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -306,7 +302,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 el *SEGUNDO CURSO* tiene un *10%* de *DESCUENTO*
 
 
-_Promoción disponible *solo HASTA EL 16 DE JULIO*_
+_Promoción disponible *solo HASTA EL 21 DE JULIO*_
 _*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos* por curso_
 
 📍 *Ubicación:*
@@ -315,7 +311,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
         presentacion: 'presentacionMicros.mp3',
         fechas: `Fechas inicio MICROPIGMENTACIÓN DE LABIOS
 
-22 Julio 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
+29 Julio 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
 30 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
 
@@ -324,7 +320,7 @@ Estamos en el centro de *Medellín Cra 42 #49-34 _diagonal a la estacion del tra
 
 Fechas inicio MICROPIGMENTACIÓN DE CEJAS
 
-16 Julio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+20 Agosto 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
 10 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -334,3 +330,12 @@ Fechas inicio MICROPIGMENTACIÓN DE CEJAS
     },
 
 };
+
+
+
+
+
+
+
+
+
