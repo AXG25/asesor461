@@ -5,6 +5,7 @@ const path = require('path');
 const cursos = require('./cursos.js');
 const { MessageMedia } = require('whatsapp-web.js');
 const { saveToDB } = require('./saveToDB.js');
+const { followUpDB } = require('./followUpDB.js');
 
 // Configuración del cliente de WhatsApp
 const client = new Client({
@@ -57,18 +58,45 @@ const cleanupInactiveUsers = async () => {
     for (const [userId, user] of Object.entries(users)) {
         if (!user.finalizado && user.lastActivity) {
             const timeSinceLastActivity = now - user.lastActivity;
+            // Inicializar etapa de seguimiento si no existe
+            if (user.followUpStage === undefined) user.followUpStage = 0;
 
-            // Si han pasado 24 horas y no se ha enviado el mensaje de seguimiento
-            if (timeSinceLastActivity > FOLLOW_UP_TIMEOUT && !user.followUpSent && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
+            // Declarar una sola vez el número limpio
+            let numeroLimpio = userId?.replace('57', '')?.replace('@c.us', '');
+            let curso = user.curso;
+
+            // 1. Primer seguimiento: 1 día
+            if (timeSinceLastActivity > 24 * 60 * 60 * 1000 && user.followUpStage === 0 && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
                 await waitRandom();
-                await sendMessage(userId, 'Hola 😊 Quería saber si pudiste ver la info que te mandé. *A varias personas les interesó el curso y ya se están matriculando*, ¿te gustaría aprovecharlo también? \n\n O ¿Quizas te gustaria conocer los otros 10 cursos que tenemos disponibles y que *le pueden servir a algun familiar o conocido?*');
-                user.followUpSent = true;
+                await sendMessage(userId, '¡Hola! 😊 Te escribo para saber si tuviste la oportunidad de *revisar la información del curso*. Si tienes dudas o necesitas ayuda para *apartar tu cupo, estoy aquí para ayudarte.* ¿Qué te pareció?');
+                user.followUpStage = 1;
                 user.lastActivity = now;
                 count++;
-                console.log(`Enviado mensaje de seguimiento a ${userId}`);
+                saveToDB(numeroLimpio, curso);
+                console.log(`Enviado mensaje de seguimiento 1 a ${userId}`);
             }
-            // Si han pasado más de 24 horas desde la última actividad, limpiar el usuario
-            else if (timeSinceLastActivity > INACTIVE_TIMEOUT) {
+            // 2. Segundo seguimiento: 3 días
+            else if (timeSinceLastActivity > 3 * 24 * 60 * 60 * 1000 && user.followUpStage === 1 && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
+                await waitRandom();
+                await sendMessage(userId, '¡Hola de nuevo! Solo quería recordarte que *los cupos* para el curso *son limitados* y muchas personas ya están reservando. Si tú o alguien cercano está interesado, este es un buen momento para *asegurar su lugar antes de que se llenen los grupos*. ¿Quieres que te ayude con eso?');
+                user.followUpStage = 2;
+                user.lastActivity = now;
+                count++;
+                saveToDB(numeroLimpio, curso);
+                console.log(`Enviado mensaje de seguimiento 2 a ${userId}`);
+            }
+            // 3. Tercer seguimiento: 7 días
+            else if (timeSinceLastActivity > 7 * 24 * 60 * 60 * 1000 && user.followUpStage === 2 && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
+                await waitRandom();
+                await sendMessage(userId, '¡Hola! Solo quería contarte que tenemos más cursos disponibles 😊. Si tú no puedes tomar uno en este momento, quizás conoces a alguien que sí le gustaría: un familiar, una amiga o alguien que quiera aprender algo útil y rentable.\n\nAdemás, *por cada persona que refieras* y se inscriba, *OBTIENES UN 10% DE DESCUENTO* en tu curso.\n\n¿Te gustaría conocer los otros 10 cursos que tenemos disponibles? Te puedo compartir la info o ayudarte a reservar un cupo para otra persona.');
+                user.followUpStage = 3;
+                user.lastActivity = now;
+                count++;
+                saveToDB(numeroLimpio, curso);
+                console.log(`Enviado mensaje de seguimiento 3 a ${userId}`);
+            }
+            // Eliminar usuario después de 8 días de inactividad
+            else if (timeSinceLastActivity > 8 * 24 * 60 * 60 * 1000) {
                 delete users[userId];
                 count++;
             }
@@ -229,6 +257,15 @@ const handleNewConversation = async (chatId, text) => {
     );
 
     if (cursoEncontrado) {
+
+        await waitRandom();
+        await sendMedia(chatId, cursos[cursoEncontrado].pensum, cursos[cursoEncontrado].promocion);
+        await waitRandom();
+        await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
+        await waitRandom();
+        await sendMessage(chatId, '¿Le gustaria conocer las fechas de inicio con sus respectivos horarios?');
+
+
         users[chatId] = {
             estado: 'inicio',
             curso: cursoEncontrado,
@@ -238,14 +275,8 @@ const handleNewConversation = async (chatId, text) => {
             followUpSent: false
         };
 
-
-        await waitRandom();
-        await sendMedia(chatId, cursos[cursoEncontrado].pensum, cursos[cursoEncontrado].promocion);
-        await waitRandom();
-        await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
-        await waitRandom();
-        await sendMessage(chatId, '¿Le gustaria conocer las fechas de inicio con sus respectivos horarios?');
         saveUsers();
+
         let numeroLimpio = chatId?.replace('57', '')?.replace('@c.us', '')
         let guardado = saveToDB(numeroLimpio, cursoEncontrado)
         if (guardado) {
@@ -266,13 +297,14 @@ const handleDateSelection = async (chatId, text, usuario) => {
         usuario.estado = 'seleccion_fechas';
         usuario.lastActivity = Date.now();
         usuario.respuestasInesperadas = 0;
-
+        
         await waitRandom();
         await sendMessage(chatId, cursos[usuario.curso].fechas);
         await waitRandom();
         await sendAudio(chatId, 'explicacion_fechas.mp3');
         await waitRandom();
         await sendMessage(chatId, '¿Cuál de estas fechas te gustaría más para comenzar con tu curso?');
+
         saveUsers();
         await marcarNoLeido(chatId);
         return true;
@@ -350,9 +382,9 @@ const handleFechaEspecifica = async (chatId, text, usuario) => {
 
     if (contieneFecha) {
         usuario.respuestasInesperadas = 0;
-        usuario.estado = 'confirmacion_promocion';
         await waitRandom();
         await sendMessage(chatId, 'Entonces si tienes alguna otra duda yo con gusto la resuelvo 😊\n\n¿Me puedes ir contando cómo te queda más fácil apartar el cupo, con una transferencia o pagando en efectivo?');
+        usuario.estado = 'confirmacion_promocion';
         saveUsers();
         await marcarNoLeido(chatId);
         console.log('AVANZA el flujo: se detectó fecha');

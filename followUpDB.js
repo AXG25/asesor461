@@ -1,8 +1,7 @@
 import puppeteer from 'puppeteer';
 // Or import puppeteer from 'puppeteer-core';
 
-export async function saveToDB(numberPhone, curso) {
-    console.log(numberPhone, curso)
+export async function followUpDB(numberPhone) {
     // Launch the browser and open a new blank page
     const browser = await puppeteer.launch({
         headless: true, // Para que se vea el navegador
@@ -29,7 +28,7 @@ export async function saveToDB(numberPhone, curso) {
     await page.waitForSelector('#pn_id_2-table > thead > tr:nth-child(2) > th:nth-child(2) > div > p-button:nth-child(1) > button > span')//boton buscar
     await page.click('#pn_id_2-table > thead > tr:nth-child(2) > th:nth-child(2) > div > p-button:nth-child(1) > button > span')
 
-    await new Promise(resolve => setTimeout(resolve, 5000)); // espera 2 segundos
+    await new Promise(resolve => setTimeout(resolve, 2000)); // espera 2 segundos
     let tbody = await page.$('#pn_id_2-table > tbody > tr > td:nth-child(6) > p-button > button > span')
 
     if (tbody) {
@@ -49,7 +48,7 @@ export async function saveToDB(numberPhone, curso) {
         const ultimoTextarea = textareas[textareas.length - 1];
 
         // 3. Escribir en el textarea
-        await ultimoTextarea.type(`Informacion de ${curso}`)
+        await ultimoTextarea.type(`Seguimiento`)
 
         //click tres puntos
         const observaciones = await page.$$('.input-observation');
@@ -64,34 +63,9 @@ export async function saveToDB(numberPhone, curso) {
             const items = await page.$$('.p-contextmenu ul li');
             await items[0].click(); // primer item = Guardar
         }
-        console.log('observacion para contacto ya guardada creada')
+        console.log('observacion de seguimiento creada')
         return true
-
-    } else {
-        //guardar nuevo contacto
-        await page.waitForSelector('#pn_id_2-table > thead > tr:nth-child(1) > th:nth-child(2) > p-button > button')// boton nuevo
-        await page.click('#pn_id_2-table > thead > tr:nth-child(1) > th:nth-child(2) > p-button > button')
-
-        await page.waitForSelector('body > app-root > div > app-clients > div > p-dialog.p-element.ng-tns-c2247072372-3.ng-star-inserted > div > div > div.ng-tns-c2247072372-3.p-dialog-content.ng-star-inserted > form > span > input')
-        await page.type('body > app-root > div > app-clients > div > p-dialog.p-element.ng-tns-c2247072372-3.ng-star-inserted > div > div > div.ng-tns-c2247072372-3.p-dialog-content.ng-star-inserted > form > span > input', numberPhone)
-
-        await page.type('#pn_id_7 > span', 'asesorado')
-        await page.keyboard.press('Enter');
-
-        await page.type('#pn_id_9 > span', curso)
-        await page.keyboard.press('Enter');
-
-        await page.type('#pn_id_11 > span', 'Abb')
-        await page.keyboard.press('Tab');
-        await page.keyboard.press('Enter');
-
-        await page.waitForSelector('#pn_id_2-table > thead > tr:nth-child(2) > th:nth-child(2) > div > p-button:nth-child(1) > button > span')//boton buscar
-        await page.click('#pn_id_2-table > thead > tr:nth-child(2) > th:nth-child(2) > div > p-button:nth-child(1) > button > span')
-        
-        console.log('nuevo contacto creado')
-        return true
-    }
-
+    } 
 }
 
 
