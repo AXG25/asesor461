@@ -14958,7 +14958,7 @@
     "estado": "confirmacion_promocion",
     "curso": "Micropigmentacion",
     "createdAt": 1753298461335,
-    "lastActivity": 1753303794702,
+    "lastActivity": 1753375351299,
     "respuestasInesperadas": 0,
     "followUpStage": 0
   },
@@ -15828,10 +15828,10 @@
     "followUpStage": 0
   },
   "573224949452@c.us": {
-    "estado": "inicio",
+    "estado": "seleccion_fechas",
     "curso": "maquillaje",
     "createdAt": 1753363744702,
-    "lastActivity": 1753363770186,
+    "lastActivity": 1753375461032,
     "respuestasInesperadas": 0,
     "followUpStage": 0
   },
