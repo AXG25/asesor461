@@ -181,6 +181,8 @@ _cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_<
         presentacion: 'presentacionMasajes.mp3',
         fechas: `Fechas inicio *MASAJES CORPORALES*
 
+19 Agosto 2025 | Martes y Jueves | 8:00 am a 12:00 pm        
+
 23 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 14 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
@@ -260,7 +262,7 @@ _cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
 3 Agosto 2025 | Domingos | 8:00 am a 1:00 pm
 
 
-🚨*Recordatorio*🚨
+🚨 *Recordatorio* 🚨
 si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso seria de *7 semanas estudiando 4 dias por semana*
 
 si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *10 semanas estudiando 1 dia por semana*`
