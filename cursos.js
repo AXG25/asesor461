@@ -33,7 +33,7 @@ _cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
 
 7 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
-31 Agosto 2025 | Domingos | 1:00 pm a 5:00 pm
+7 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -171,7 +171,7 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 
 _Promoción disponible *solo HASTA EL 31 DE JULIO*_
 _*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
-_cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_<
+_cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
 
 💝*SI RESERVA SU CUPO HOY MISMO OBTIENE UN 10% DE DESCUENTO*💝
         
@@ -295,7 +295,7 @@ _cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
 
 2 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
-20 Julio 2025 | Domingos | 8:00 am a 12:00 pm
+14 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
