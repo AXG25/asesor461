@@ -62,15 +62,13 @@ _cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
 *MEDELLIN Cra 42 #49-34* _diagonal a la estacion del tranvia Pabellon del agua_`,
         pensum: 'pestañas.jpg',
         presentacion: 'presentacionCejas.mp3',
-        fechas: `Fechas inicio *CEJAS & PESTAÑAS*
-
-29 Julio 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion: 300.000)       
+        fechas: `Fechas inicio *CEJAS & PESTAÑAS*   
 
 19 Agosto 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
 13 Agosto 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-30 Julio 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm (este horario esta en promocion: 300.000)
+6 Agosto 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm (este horario esta en promocion: 300.000)
 
 13 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
 
@@ -109,7 +107,7 @@ _cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
 
 12 Agosto 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-30 Julio 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+6 Agosto 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
 20 Agosto 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
@@ -150,7 +148,7 @@ _cancela *el resto tres dias antes de tu fecha de inicio*
 
 9 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
-27 Julio 2025 | Domingos | 8:00 am a 12:00 pm
+3 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -259,8 +257,6 @@ _cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
 
 6 Septiembre 2025 | Sábados | 8:00 am a 1:00 pm
 
-3 Agosto 2025 | Domingos | 8:00 am a 1:00 pm
-
 
 🚨 *Recordatorio* 🚨
 si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso seria de *7 semanas estudiando 4 dias por semana*
@@ -360,7 +356,7 @@ _cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
         presentacion: 'presentacionMicros.mp3',
         fechas: `Fechas inicio *MICROPIGMENTACIÓN DE LABIOS*
 
-29 Julio 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
+5 Agosto 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
 30 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
 
