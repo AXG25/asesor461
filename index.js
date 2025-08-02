@@ -146,7 +146,7 @@ const setupCleanup = () => {
 
 // Esperar un tiempo aleatorio para simular tipeo humano
 const waitRandom = async () => {
-    const delay = Math.floor(Math.random() * 3000) + 7000;
+    const delay = Math.floor(Math.random() * 2000) + 3000;
     return new Promise(resolve => setTimeout(resolve, delay));
 };
 
@@ -261,6 +261,11 @@ const handleNewConversation = async (chatId, text) => {
         await waitRandom();
         await sendMedia(chatId, cursos[cursoEncontrado].pensum, cursos[cursoEncontrado].promocion);
         await waitRandom();
+        await sendMedia(chatId, "ubicacion.jpeg", `📍 *UBICACION:*
+*MEDELLIN Cra 42 #49-33 PISO 3* _diagonal a la estacion del tranvia Pabellon del agua_
+
+_*Recuerda que los 50.000 pesos para apartar tu cupo los puedes pagar en transferencia o en efectivo*_ el restante lo debes pagar en efectivo si quieres que te quede mucho mas economico el curso`);
+        await waitRandom();
         await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
         await waitRandom();
         await sendMessage(chatId, '¿Le gustaria conocer las fechas de inicio con sus respectivos horarios?');
@@ -293,11 +298,11 @@ const handleNewConversation = async (chatId, text) => {
 
 // Manejar proceso de selección de fechas
 const handleDateSelection = async (chatId, text, usuario) => {
-    if (text.includes('cuando') || text.includes('cundo') || text.includes('si') || text.includes('gustaria') || text.includes('ok') || text.includes('dale') || text.includes('siii') || text.includes('fechas') || text.includes('fecha') || text.includes('inicio') || text.includes('horario') || text.includes('horarios') || text.includes('bueno') || text.includes('bien') || text.includes('porfavor') || text.includes('gracias') || text.includes('favor') || text.includes('entre') || text.includes('entre semana') || text.includes('en semana') || text.includes('fines') || text.includes('fines de semana') || text.includes('dias') || text.includes('dia') || text.includes('empiezan') || text.includes('empiezas') || text.includes('empezaría') || text.includes('inicia') || text.includes('inicias')) {
+    if (text.includes('cuando') || text.includes('cundo') || text.includes('si') || text.includes('gustaria') || text.includes('ok') || text.includes('dale') || text.includes('siii') || text.includes('fechas') || text.includes('fecha') || text.includes('inicio') || text.includes('horario') || text.includes('horarios') || text.includes('bueno') || text.includes('bien') || text.includes('porfavor') || text.includes('favor') || text.includes('entre') || text.includes('entre semana') || text.includes('en semana') || text.includes('fines') || text.includes('fines de semana') || text.includes('dias') || text.includes('dia') || text.includes('empiezan') || text.includes('empiezas') || text.includes('empezaría') || text.includes('inicia') || text.includes('inicias')) {
         usuario.estado = 'seleccion_fechas';
         usuario.lastActivity = Date.now();
         usuario.respuestasInesperadas = 0;
-        
+
         await waitRandom();
         await sendMessage(chatId, cursos[usuario.curso].fechas);
         await waitRandom();
@@ -576,6 +581,12 @@ client.on('message_create', async msg => {
 
                     await waitRandom();
                     await sendMedia(chatId, cursos[cursoEncontrado].pensum, cursos[cursoEncontrado].promocion);
+
+                    await waitRandom();
+                    await sendMedia(chatId, "ubicacion.jpeg", `📍 *UBICACION:*
+*MEDELLIN Cra 42 #49-33 PISO 3* _diagonal a la estacion del tranvia Pabellon del agua_
+
+_*Recuerda que los 50.000 pesos para apartar tu cupo los puedes pagar en transferencia o en efectivo*_ el restante lo debes pagar en efectivo si quieres que te quede mucho mas economico el curso`);
                     await waitRandom();
                     await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
                     await waitRandom();

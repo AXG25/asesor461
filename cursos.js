@@ -6,17 +6,14 @@ module.exports = {
 +30 Horas
 
 🎉 *Promoción especial:*
-~Precio estándar: $500.000~
-*VALOR CON DESCUENTO: _$350.000_*
+Pagando por TRANSFERENCIA: $499.000
+*Pagando en EFECTIVO: _$299.000_*
 
-_Promoción disponible *solo HASTA EL 31 DE JULIO*_
-_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
-_cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
+_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-💝*SI RESERVA SU CUPO HOY MISMO OBTIENE UN 10% DE DESCUENTO*💝
+_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-📍 *Ubicación:*
-*MEDELLIN Cra 42 #49-34* _diagonal a la estacion del tranvia Pabellon del agua_`,
+_cancela el resto *el dia que comience tu curso*_`,
         pensum: 'barberia.jpeg',
         presentacion: 'presentacionBarberia.mp3',
         fechas: `Fechas inicio *BARBERÍA*
@@ -33,7 +30,7 @@ _cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
 
 7 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
-7 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
+7 Agosto 2025 | Domingos | 1:00 pm a 5:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -49,26 +46,25 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 (32 horas en total)
 
 🎉 *Promoción especial:*
-~Precio estándar: $500.000~
-*VALOR CON DESCUENTO: _$350.000_*
+Pagando por TRANSFERENCIA: $499.000
+*Pagando en EFECTIVO: _$299.000_*
 
-_Promoción disponible *solo HASTA EL 31 DE JULIO*_
-_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
-_cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
+_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-💝*SI RESERVA SU CUPO HOY MISMO OBTIENE UN 10% DE DESCUENTO*💝
+_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-📍 *Ubicación:*
-*MEDELLIN Cra 42 #49-34* _diagonal a la estacion del tranvia Pabellon del agua_`,
+_cancela el resto *el dia que comience tu curso*_`,
         pensum: 'pestañas.jpg',
         presentacion: 'presentacionCejas.mp3',
         fechas: `Fechas inicio *CEJAS & PESTAÑAS*   
+
+26 Agosto 2025 | Martes y Jueves | 8:00 am a 12:00 pm        
 
 19 Agosto 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
 13 Agosto 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-6 Agosto 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm (este horario esta en promocion: 300.000)
+6 Agosto 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm 
 
 13 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
 
@@ -90,28 +86,27 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 (32 horas en total)
 
 🎉 *Promoción especial:*
-~Precio estándar: $500.000~
-*VALOR CON DESCUENTO: _$350.000_*
+Pagando por TRANSFERENCIA: $499.000
+*Pagando en EFECTIVO: _$299.000_*
 
-_Promoción disponible *solo HASTA EL 31 DE JULIO*_
-_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
-_cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
+_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-💝*SI RESERVA SU CUPO HOY MISMO OBTIENE UN 10% DE DESCUENTO*💝
+_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-📍 *Ubicación:*
-*MEDELLIN Cra 42 #49-34* _diagonal a la estacion del tranvia Pabellon del agua_`,
+_cancela el resto *el dia que comience tu curso*_`,
         pensum: 'uñas.jpg',
         presentacion: 'presentacionUñas.mp3',
         fechas: `Fechas inicio *MANICURE & PEDICURE*
 
 12 Agosto 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-6 Agosto 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+27 Agosto 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
 20 Agosto 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
 23 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
+
+20 Septiembre 2025 | Sábados | 1:00 pm a 5:00 pm
 
 10 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -129,17 +124,14 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 (32 horas en total)
         
 🎉 *Promoción especial:*
-~Precio estándar: $500.000~
-*VALOR CON DESCUENTO: _$350.000_*
+Pagando por TRANSFERENCIA: $499.000
+*Pagando en EFECTIVO: _$299.000_*
 
-_Promoción disponible *solo HASTA EL 31 DE JULIO*_
-_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
-_cancela *el resto tres dias antes de tu fecha de inicio* 
+_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-💝*SI RESERVA SU CUPO HOY MISMO OBTIENE UN 10% DE DESCUENTO*💝
-        
-📍 *Ubicación:*
-*MEDELLIN Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
+_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
+
+_cancela el resto *el dia que comience tu curso*_`,
         pensum: 'maquillaje.jpg',
         presentacion: 'presentacionMaquillaje.mp3',
         fechas: `Fechas inicio *MAQUILLAJE PROFESIONAL*
@@ -164,17 +156,14 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 (20 horas en total)
         
 🎉 *Promoción especial:*
-~Precio estándar: $500.000~
-*VALOR CON DESCUENTO: _$350.000_*
+Pagando por TRANSFERENCIA: $499.000
+*Pagando en EFECTIVO: _$299.000_*
 
-_Promoción disponible *solo HASTA EL 31 DE JULIO*_
-_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
-_cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
+_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-💝*SI RESERVA SU CUPO HOY MISMO OBTIENE UN 10% DE DESCUENTO*💝
-        
-📍 *Ubicación:*
-*MEDELLIN Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
+_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
+
+_cancela el resto *el dia que comience tu curso*_`,
         pensum: 'masajes.jpg',
         presentacion: 'presentacionMasajes.mp3',
         fechas: `Fechas inicio *MASAJES CORPORALES*
@@ -199,17 +188,14 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 +24 Horas
 
 🎉 *Promoción especial:*
-~Precio estándar: $600.000~
-*VALOR CON DESCUENTO: _$400.000_*
+Pagando por TRANSFERENCIA: $599.000
+*Pagando en EFECTIVO: _$399.000_*
 
-_Promoción disponible *solo HASTA EL 31 DE JULIO*_
-_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
-_cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
+_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-💝*SI RESERVA SU CUPO HOY MISMO OBTIENE UN 10% DE DESCUENTO*💝
+_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-📍 *Ubicación:*
-*MEDELLIN Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
+_cancela el resto *el dia que comience tu curso*_`,
         pensum: 'melamina.jpg',
         presentacion: 'presentacionMelamina.mp3',
         fechas: `Fechas inicio *Muebles & Cocinas Integrales*
@@ -218,9 +204,9 @@ _cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
 
 9 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
 
-30 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
-
 27 Julio 2025 | Domingos | 8:00 am a 12:00 pm
+
+30 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -236,17 +222,14 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 +50 Horas
 
 🎉 *Promoción especial:*
-~Precio estándar: $500.000~
-*VALOR CON DESCUENTO: _$350.000_*
+Pagando por TRANSFERENCIA: $499.000
+*Pagando en EFECTIVO: _$299.000_*
 
-_Promoción disponible *solo HASTA EL 31 DE JULIO*_
-_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
-_cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
+_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-💝*SI RESERVA SU CUPO HOY MISMO OBTIENE UN 10% DE DESCUENTO*💝
+_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-📍 *Ubicación:*
-*MEDELLIN Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
+_cancela el resto *el dia que comience tu curso*_`,
         pensum: 'celulares.jpg',
         presentacion: 'presentacionCelulares.mp3',
         fechas: `Fechas inicio *REPARACIÓN DE CELULARES*
@@ -256,6 +239,8 @@ _cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
 5 Agosto 2025 | Martes a Viernes | 1:00 pm a 3:00 pm
 
 6 Septiembre 2025 | Sábados | 8:00 am a 1:00 pm
+
+31 Agosto 2025 | Domingos | 8:00 am a 1:00 pm
 
 
 🚨 *Recordatorio* 🚨
@@ -272,22 +257,19 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 (32 horas en total)
 
 🎉 *Promoción especial:*
-~Precio estándar: $500.000~
-*VALOR CON DESCUENTO: _$350.000_*
+Pagando por TRANSFERENCIA: $499.000
+*Pagando en EFECTIVO: _$299.000_*
 
-_Promoción disponible *solo HASTA EL 31 DE JULIO*_
-_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
-_cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
+_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-💝*SI RESERVA SU CUPO HOY MISMO OBTIENE UN 10% DE DESCUENTO*💝
+_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-📍 *Ubicación:*
-*MEDELLIN Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
+_cancela el resto *el dia que comience tu curso*_`,
         pensum: 'trenzas.jpg',
         presentacion: 'presentacionTrenzas.mp3',
         fechas: `Fechas inicio *TRENZAS & PEINADOS*
 
-26 Agosto 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+2 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
 2 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -308,17 +290,14 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 +24 Horas
 
 🎉 *Promoción especial:*
-~Precio estándar: $600.000~
-*VALOR CON DESCUENTO: _$400.000_*
+Pagando por TRANSFERENCIA: $499.000
+*Pagando en EFECTIVO: _$299.000_*
 
-_Promoción disponible *solo HASTA EL 31 DE JULIO*_
-_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos*_
-_cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
+_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-💝*SI RESERVA SU CUPO HOY MISMO OBTIENE UN 10% DE DESCUENTO*💝
+_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-📍 *Ubicación:*
-*MEDELLIN Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
+_cancela el resto *el dia que comience tu curso*_`,
         pensum: 'drywall.jpeg',
         presentacion: 'presentacionDrywall.mp3',
         fechas: `Fechas inicio *Estructuras en Drywall*
@@ -329,7 +308,7 @@ _cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
 
 
 🚨*Recordatorio*🚨
-si esocoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de 6 semanas estudiando 1 dia por semana*`
+si esocoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de *6 semanas estudiando 1 dia por semana*`
 
     },
     'Micropigmentacion': {
@@ -340,18 +319,14 @@ si esocoge una fecha de inicio para estudiar en fin de semana la duracion del cu
 48 en total si haces los dos
 
 🎉 *Promoción especial:*
-~Precio estándar de cada curso: $600.000~
-*VALOR CON DESCUENTO: _$400.000_*
-el *SEGUNDO CURSO* tiene un *10%* de *DESCUENTO*
+Pagando por TRANSFERENCIA: $599.000 c/u
+*Pagando en EFECTIVO: _$399.000_* c/u
 
-_Promoción disponible *solo HASTA EL 31 DE JULIO*_
-_*RESERVA TU CUPO y matriculate ABONANDO 100.000 pesos* por curso_
-_cancela *el resto tres dias antes de tu fecha de inicio* seleccionada_
+_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-💝*SI RESERVA SU CUPO HOY MISMO OBTIENE UN 10% DE DESCUENTO*💝
+_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_ para cada uno
 
-📍 *Ubicación:*
-*MEDELLIN Cra 42 #49-34 _diagonal a la estacion del tranvia Pabellon del agua_*`,
+_cancela el resto *el dia que comience tu curso*_`,
         pensum: 'micropigmentacion.jpeg',
         presentacion: 'presentacionMicros.mp3',
         fechas: `Fechas inicio *MICROPIGMENTACIÓN DE LABIOS*
