@@ -18,15 +18,13 @@ _cancela el resto *el dia que comience tu curso*_`,
         presentacion: 'presentacionBarberia.mp3',
         fechas: `Fechas inicio *BARBERÍA*
 
-12 Agosto 2025 | Martes y Jueves | 9:00 am a 12:00 pm        
+19 Agosto 2025 | Martes y Jueves | 9:00 am a 12:00 pm        
 
 5 Agosto 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
 
 20 Agosto 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
 
 9 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
-
-2 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 7 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -58,7 +56,7 @@ _cancela el resto *el dia que comience tu curso*_`,
         presentacion: 'presentacionCejas.mp3',
         fechas: `Fechas inicio *CEJAS & PESTAÑAS*   
 
-26 Agosto 2025 | Martes y Jueves | 8:00 am a 12:00 pm        
+2 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
 19 Agosto 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
@@ -110,6 +108,8 @@ _cancela el resto *el dia que comience tu curso*_`,
 
 10 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
 
+14 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
+
 
 🚨*Recordatorio*🚨
 si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso seria de *4 semanas estudiando 2 dias por semana*
@@ -137,8 +137,6 @@ _cancela el resto *el dia que comience tu curso*_`,
         fechas: `Fechas inicio *MAQUILLAJE PROFESIONAL*
 
 19 Agosto 2025 | Martes y Jueves | 8:00 am a 12:00 pm
-
-9 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 3 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -203,8 +201,6 @@ _cancela el resto *el dia que comience tu curso*_`,
 5 Agosto 2025 | Martes y Jueves | 6:00 pm a 9:00 pm
 
 9 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
-
-27 Julio 2025 | Domingos | 8:00 am a 12:00 pm
 
 30 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -271,7 +267,7 @@ _cancela el resto *el dia que comience tu curso*_`,
 
 2 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-2 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
+9 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 14 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
