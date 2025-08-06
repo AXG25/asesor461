@@ -9407,7 +9407,7 @@
     "estado": "seleccion_fechas",
     "curso": "cejas",
     "createdAt": 1750181883343,
-    "lastActivity": 1750188415397,
+    "lastActivity": 1754519710061,
     "respuestasInesperadas": 5,
     "followUpSent": false,
     "finalizado": true,
@@ -16423,12 +16423,11 @@
     "handledManually": true
   },
   "573023187340@c.us": {
-    "estado": "inicio",
-    "curso": "cejas",
-    "createdAt": 1754319960400,
-    "lastActivity": 1754407110012,
-    "respuestasInesperadas": 0,
-    "followUpStage": 1
+    "estado": "seleccion_fechas",
+    "curso": "trenzas",
+    "createdAt": 1754518886628,
+    "lastActivity": 1754519110926,
+    "respuestasInesperadas": 0
   },
   "573218856361@c.us": {
     "estado": "inicio",
@@ -18452,11 +18451,12 @@
     "finalizado": true
   },
   "573113710581@c.us": {
-    "estado": "seleccion_fechas",
+    "estado": "confirmacion_promocion",
     "curso": "masajes",
     "createdAt": 1754518306691,
-    "lastActivity": 1754518563583,
-    "respuestasInesperadas": 0
+    "lastActivity": 1754518989094,
+    "respuestasInesperadas": 0,
+    "finalizado": true
   },
   "573014806511@c.us": {
     "estado": "seleccion_fechas",
