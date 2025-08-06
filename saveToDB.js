@@ -18,18 +18,19 @@ export async function saveToDB(numberPhone, curso) {
     await page.type('#email', 'asesorescuelaesme7@gmail.com')
     await page.type('#password', 'Esme2024**11')
     await page.click('body > app-root > div > app-login > div > div > div.card-body.ng-star-inserted > div > p-button > button') //boton de acceder
-
+   
     // ir a clientes
     await page.waitForSelector('body > app-root > app-sidebar-nav > p-sidebar > div > div.menu.ng-star-inserted > p-button:nth-child(4) > button > span')
     await page.click('body > app-root > app-sidebar-nav > p-sidebar > div > div.menu.ng-star-inserted > p-button:nth-child(4) > button > span') //boton de clientes
 
-    await page.waitForSelector('input[placeholder="Filtrar por celular"]')
-    await page.type('input[placeholder="Filtrar por celular"]', numberPhone) // insertar nuevo registro
+   
+    await page.waitForSelector('input[placeholder="Filtrar por celular"]', { timeout: 60000 })
+    await page.type('input[placeholder="Filtrar por celular"]', numberPhone)// insertar nuevo registro
 
     await page.waitForSelector('#pn_id_2-table > thead > tr:nth-child(2) > th:nth-child(2) > div > p-button:nth-child(1) > button > span')//boton buscar
     await page.click('#pn_id_2-table > thead > tr:nth-child(2) > th:nth-child(2) > div > p-button:nth-child(1) > button > span')
 
-    await new Promise(resolve => setTimeout(resolve, 5000)); // espera 2 segundos
+    await new Promise(resolve => setTimeout(resolve, 3000)); // espera 5 segundos
     let tbody = await page.$('#pn_id_2-table > tbody > tr > td:nth-child(6) > p-button > button > span')
 
     if (tbody) {
@@ -65,6 +66,7 @@ export async function saveToDB(numberPhone, curso) {
             await items[0].click(); // primer item = Guardar
         }
         console.log('observacion para contacto ya guardada creada')
+        browser.close()
         return true
 
     } else {
@@ -89,6 +91,7 @@ export async function saveToDB(numberPhone, curso) {
         await page.click('#pn_id_2-table > thead > tr:nth-child(2) > th:nth-child(2) > div > p-button:nth-child(1) > button > span')
         
         console.log('nuevo contacto creado')
+        browser.close()
         return true
     }
 

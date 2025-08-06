@@ -13,7 +13,7 @@ _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-_cancela el resto *el dia que comience tu curso*_`,
+_cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'barberia.jpeg',
         presentacion: 'presentacionBarberia.mp3',
         fechas: `Fechas inicio *BARBERÍA*
@@ -51,7 +51,7 @@ _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-_cancela el resto *el dia que comience tu curso*_`,
+_cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'pestañas.jpg',
         presentacion: 'presentacionCejas.mp3',
         fechas: `Fechas inicio *CEJAS & PESTAÑAS*   
@@ -91,7 +91,7 @@ _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-_cancela el resto *el dia que comience tu curso*_`,
+_cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'uñas.jpg',
         presentacion: 'presentacionUñas.mp3',
         fechas: `Fechas inicio *MANICURE & PEDICURE*
@@ -105,8 +105,6 @@ _cancela el resto *el dia que comience tu curso*_`,
 23 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
 
 20 Septiembre 2025 | Sábados | 1:00 pm a 5:00 pm
-
-10 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
 
 14 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
 
@@ -131,14 +129,14 @@ _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-_cancela el resto *el dia que comience tu curso*_`,
+_cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'maquillaje.jpg',
         presentacion: 'presentacionMaquillaje.mp3',
         fechas: `Fechas inicio *MAQUILLAJE PROFESIONAL*
 
 19 Agosto 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-3 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
+28 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -161,7 +159,7 @@ _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-_cancela el resto *el dia que comience tu curso*_`,
+_cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'masajes.jpg',
         presentacion: 'presentacionMasajes.mp3',
         fechas: `Fechas inicio *MASAJES CORPORALES*
@@ -193,7 +191,7 @@ _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-_cancela el resto *el dia que comience tu curso*_`,
+_cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'melamina.jpg',
         presentacion: 'presentacionMelamina.mp3',
         fechas: `Fechas inicio *Muebles & Cocinas Integrales*
@@ -225,14 +223,14 @@ _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-_cancela el resto *el dia que comience tu curso*_`,
+_cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'celulares.jpg',
         presentacion: 'presentacionCelulares.mp3',
         fechas: `Fechas inicio *REPARACIÓN DE CELULARES*
 
-5 Agosto 2025 | Martes a Viernes | 7:00 am a 9:00 am
+26 Agosto 2025 | Martes a Viernes | 7:00 am a 9:00 am
 
-5 Agosto 2025 | Martes a Viernes | 1:00 pm a 3:00 pm
+26 Agosto 2025 | Martes a Viernes | 1:00 pm a 3:00 pm
 
 6 Septiembre 2025 | Sábados | 8:00 am a 1:00 pm
 
@@ -260,7 +258,7 @@ _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-_cancela el resto *el dia que comience tu curso*_`,
+_cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'trenzas.jpg',
         presentacion: 'presentacionTrenzas.mp3',
         fechas: `Fechas inicio *TRENZAS & PEINADOS*
@@ -293,7 +291,7 @@ _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
 
-_cancela el resto *el dia que comience tu curso*_`,
+_cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'drywall.jpeg',
         presentacion: 'presentacionDrywall.mp3',
         fechas: `Fechas inicio *Estructuras en Drywall*
@@ -322,7 +320,7 @@ _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_ para cada uno
 
-_cancela el resto *el dia que comience tu curso*_`,
+_cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'micropigmentacion.jpeg',
         presentacion: 'presentacionMicros.mp3',
         fechas: `Fechas inicio *MICROPIGMENTACIÓN DE LABIOS*
