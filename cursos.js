@@ -6,12 +6,15 @@ module.exports = {
 +30 Horas
 
 🎉 *Promoción especial:*
-Pagando por TRANSFERENCIA: $499.000
-*Pagando en EFECTIVO: _$299.000_*
+Si paga por TRANSFERENCIA le queda en: $499.000
+
+*Si paga en EFECTIVO: _$349.000_*
+
+*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
 
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'barberia.jpeg',
@@ -25,6 +28,8 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 20 Agosto 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
 
 9 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
+
+27 Septiembre 2025 | Sábados | 1:00 pm a 5:00 pm
 
 7 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -44,12 +49,15 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 (32 horas en total)
 
 🎉 *Promoción especial:*
-Pagando por TRANSFERENCIA: $499.000
-*Pagando en EFECTIVO: _$299.000_*
+Si paga por TRANSFERENCIA le queda en: $499.000
+
+*Si paga en EFECTIVO: _$349.000_*
+
+*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
 
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'pestañas.jpg',
@@ -68,8 +76,6 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 16 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
-3 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
-
 
 🚨*Recordatorio*🚨
 si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso seria de *4 semanas estudiando 2 dias por semana*
@@ -84,12 +90,15 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 (32 horas en total)
 
 🎉 *Promoción especial:*
-Pagando por TRANSFERENCIA: $499.000
-*Pagando en EFECTIVO: _$299.000_*
+Si paga por TRANSFERENCIA le queda en: $499.000
+
+*Si paga en EFECTIVO: _$349.000_*
+
+*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
 
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'uñas.jpg',
@@ -122,12 +131,15 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 (32 horas en total)
         
 🎉 *Promoción especial:*
-Pagando por TRANSFERENCIA: $499.000
-*Pagando en EFECTIVO: _$299.000_*
+Si paga por TRANSFERENCIA le queda en: $499.000
+
+*Si paga en EFECTIVO: _$349.000_*
+
+*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
 
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'maquillaje.jpg',
@@ -135,6 +147,10 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         fechas: `Fechas inicio *MAQUILLAJE PROFESIONAL*
 
 19 Agosto 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+
+27 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
+
+4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
 28 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -152,12 +168,15 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 (20 horas en total)
         
 🎉 *Promoción especial:*
-Pagando por TRANSFERENCIA: $499.000
-*Pagando en EFECTIVO: _$299.000_*
+Si paga por TRANSFERENCIA le queda en: $499.000
+
+*Si paga en EFECTIVO: _$349.000_*
+
+*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
 
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'masajes.jpg',
@@ -184,19 +203,17 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 +24 Horas
 
 🎉 *Promoción especial:*
-Pagando por TRANSFERENCIA: $599.000
-*Pagando en EFECTIVO: _$399.000_*
+Si paga por TRANSFERENCIA le queda en: $599.000
+*Si paga en EFECTIVO: _$399.000_* 
 
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'melamina.jpg',
         presentacion: 'presentacionMelamina.mp3',
         fechas: `Fechas inicio *Muebles & Cocinas Integrales*
-
-5 Agosto 2025 | Martes y Jueves | 6:00 pm a 9:00 pm
 
 9 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
 
@@ -216,12 +233,15 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 +50 Horas
 
 🎉 *Promoción especial:*
-Pagando por TRANSFERENCIA: $499.000
-*Pagando en EFECTIVO: _$299.000_*
+Si paga por TRANSFERENCIA le queda en: $499.000
+
+*Si paga en EFECTIVO: _$349.000_*
+
+*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
 
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'celulares.jpg',
@@ -251,12 +271,15 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 (32 horas en total)
 
 🎉 *Promoción especial:*
-Pagando por TRANSFERENCIA: $499.000
-*Pagando en EFECTIVO: _$299.000_*
+Si paga por TRANSFERENCIA le queda en: $499.000
+
+*Si paga en EFECTIVO: _$349.000_*
+
+*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
 
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'trenzas.jpg',
@@ -264,6 +287,8 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         fechas: `Fechas inicio *TRENZAS & PEINADOS*
 
 2 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+
+6 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
 
 9 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -284,12 +309,15 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 +24 Horas
 
 🎉 *Promoción especial:*
-Pagando por TRANSFERENCIA: $499.000
-*Pagando en EFECTIVO: _$299.000_*
+Si paga por TRANSFERENCIA le queda en: $499.000
+
+*Si paga en EFECTIVO: _$349.000_*
+
+*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
 
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'drywall.jpeg',
@@ -297,8 +325,6 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         fechas: `Fechas inicio *Estructuras en Drywall*
 
 16 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
-
-3 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -313,19 +339,19 @@ si esocoge una fecha de inicio para estudiar en fin de semana la duracion del cu
 48 en total si haces los dos
 
 🎉 *Promoción especial:*
-Pagando por TRANSFERENCIA: $599.000 c/u
-*Pagando en EFECTIVO: _$399.000_* c/u
+Si paga por TRANSFERENCIA le quedan en: $599.000 c/u
+*Si paga en EFECTIVO: _$399.000_  c/u* (-33%)
 
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
-_*APARTA TU CUPO y matriculate ABONANDO 50.000 pesos*_ para cada uno
+_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_ para cada uno
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'micropigmentacion.jpeg',
         presentacion: 'presentacionMicros.mp3',
         fechas: `Fechas inicio *MICROPIGMENTACIÓN DE LABIOS*
 
-5 Agosto 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
+9 Septiembre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
 30 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
 
