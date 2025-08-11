@@ -23,11 +23,11 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 19 Agosto 2025 | Martes y Jueves | 9:00 am a 12:00 pm        
 
-5 Agosto 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
+12 Agosto 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
 
 20 Agosto 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
 
-9 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
+4 Octubre 2025 | Sábados | 8:00 am a 12:00 pm
 
 27 Septiembre 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -70,7 +70,7 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 13 Agosto 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-6 Agosto 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm 
+3 Septiembre 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm 
 
 13 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
 
@@ -214,10 +214,14 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'melamina.jpg',
         presentacion: 'presentacionMelamina.mp3',
         fechas: `Fechas inicio *Muebles & Cocinas Integrales*
+    
+12 Agosto 2025 | Martes y Jueves | 6:00 pm a 9:00 pm        
 
-9 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
+16 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
 
 30 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
+
+14 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -254,7 +258,7 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 6 Septiembre 2025 | Sábados | 8:00 am a 1:00 pm
 
-31 Agosto 2025 | Domingos | 8:00 am a 1:00 pm
+12 Octubre 2025 | Domingos | 8:00 am a 1:00 pm
 
 
 🚨 *Recordatorio* 🚨
@@ -290,7 +294,7 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 6 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
 
-9 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
+4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
 14 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -323,6 +327,8 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'drywall.jpeg',
         presentacion: 'presentacionDrywall.mp3',
         fechas: `Fechas inicio *Estructuras en Drywall*
+
+6 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm        
 
 16 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -360,9 +366,9 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 Fechas inicio *MICROPIGMENTACIÓN DE CEJAS*
 
-20 Agosto 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+24 Septiembre 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-10 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
+17 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨

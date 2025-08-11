@@ -5,7 +5,7 @@ const path = require('path');
 const cursos = require('./cursos.js');
 const { MessageMedia } = require('whatsapp-web.js');
 const { saveToDB } = require('./saveToDB.js');
-const { followUpDB } = require('./followUpDB.js');
+
 
 // Configuración del cliente de WhatsApp
 const client = new Client({
