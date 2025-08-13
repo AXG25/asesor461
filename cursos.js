@@ -10,8 +10,6 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
-
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
@@ -33,7 +31,7 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 7 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
-7 Agosto 2025 | Domingos | 1:00 pm a 5:00 pm
+7 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -52,8 +50,6 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
-
-*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
 
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
@@ -94,8 +90,6 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
-
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
@@ -135,8 +129,6 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
-
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
@@ -172,8 +164,6 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
-
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
@@ -204,6 +194,7 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 
 🎉 *Promoción especial:*
 Si paga por TRANSFERENCIA le queda en: $599.000
+
 *Si paga en EFECTIVO: _$399.000_* 
 
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
@@ -241,8 +232,6 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
-
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
@@ -279,8 +268,6 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
-
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
@@ -316,8 +303,6 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
-
-*SI SE MATRICULA HOY MISMO LE QUEDA EN 299.000*
 
 _Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
 

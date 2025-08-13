@@ -2,15 +2,18 @@ import puppeteer from 'puppeteer';
 // Or import puppeteer from 'puppeteer-core';
 
 export async function saveToDB(numberPhone, curso) {
-    console.log(numberPhone, curso)
+    console.log(numberPhone, curso, "desdeSaveToDB")
     // Launch the browser and open a new blank page
     const browser = await puppeteer.launch({
         headless: true, // Para que se vea el navegador
         defaultViewport: null, // Para que use el tamaño real
         args: ['--start-maximized'], // Maximiza la ventana
-        slowMo: 1
+        slowMo: 100
     });
     const page = await browser.newPage();
+        // Aumentar los timeouts por defecto
+        page.setDefaultTimeout(60000);
+        page.setDefaultNavigationTimeout(60000);
 
     // iniciar sesion
     await page.goto('https://master.escuelaesme.com/login');
@@ -21,7 +24,35 @@ export async function saveToDB(numberPhone, curso) {
     // ir a clientes
     await page.locator('body > app-root > app-sidebar-nav > p-sidebar > div > div.menu.ng-star-inserted > p-button:nth-child(4) > button > span').click() //boton de clientes
 
-    await page.locator('input[placeholder="Filtrar por celular"]').fill(numberPhone)// insertar nuevo registro
+    try {
+        await page.locator('input[placeholder="Filtrar por celular"]').setTimeout(10000).fill(numberPhone);
+    } catch (error) {
+        console.log('Primer selector falló, intentando alternativas...');
+        
+        // Intentar selectores alternativos
+        const alternativeSelectors = [
+            'input[formcontrolname="phone"]',
+            'input.p-inputtext[maxlength="15"]',
+            'span.p-input-icon-right input',
+            'input[pinputtext][placeholder*="celular"]'
+        ];
+        
+        let success = false;
+        for (const selector of alternativeSelectors) {
+            try {
+                await page.locator(selector).setTimeout(5000).fill(numberPhone);
+                success = true;
+                console.log(`Éxito con selector: ${selector}`);
+                break;
+            } catch (altError) {
+                console.log(`Falló selector: ${selector}`);
+            }
+        }
+        
+        if (!success) {
+            console.log('No se pudo encontrar el campo de filtro por teléfono');
+        }
+    }// insertar nuevo registro
 
     await page.locator('#pn_id_2-table > thead > tr:nth-child(2) > th:nth-child(2) > div > p-button:nth-child(1) > button > span').click()//boton de buscar
 
@@ -35,6 +66,7 @@ export async function saveToDB(numberPhone, curso) {
     }
    
     if (tbody) {
+        console.log(numberPhone, "entro en tbody")
         // agrega observacion
         await page.locator('#pn_id_2-table > tbody > tr > td:nth-child(6) > p-button > button > span').click() //boton de info
 
@@ -64,6 +96,7 @@ export async function saveToDB(numberPhone, curso) {
             const items = await page.$$('.p-contextmenu ul li');
             await items[0].click(); // primer item = Guardar
         }
+        await page.locator('#pn_id_2-table > thead > tr:nth-child(2) > th:nth-child(2) > div > p-button:nth-child(1) > button > span').click()//boton de buscar
         console.log('observacion para contacto ya guardado creada')
         browser.close()
         return true

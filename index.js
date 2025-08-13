@@ -64,6 +64,9 @@ const cleanupInactiveUsers = async () => {
             // Declarar una sola vez el número limpio
             let numeroLimpio = userId?.replace('57', '')?.replace('@c.us', '');
             let curso = user.curso;
+            console.log("numero:",numeroLimpio)
+            console.log("curso:",curso)
+            console.log(userId)
 
             // 1. Primer seguimiento: 1 día
             if (timeSinceLastActivity > 24 * 60 * 60 * 1000 && user.followUpStage === 0 && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
@@ -72,17 +75,30 @@ const cleanupInactiveUsers = async () => {
                 user.followUpStage = 1;
                 user.lastActivity = now;
                 count++;
-                saveToDB(numeroLimpio, curso);
+                let guardado = saveToDB(numeroLimpio, curso)
+                if (guardado) {
+                    // Obtener todas las etiquetas existentes
+                    const labels = await client.getLabels();
+                    let etiqueta = labels.find(l => l.name === 'seguimiento1')
+                    await client.addOrRemoveLabels([etiqueta?.id], [userId]);
+                }
                 console.log(`Enviado mensaje de seguimiento 1 a ${userId}`);
             }
             // 2. Segundo seguimiento: 3 días
             else if (timeSinceLastActivity > 3 * 24 * 60 * 60 * 1000 && user.followUpStage === 1 && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
                 await waitRandom();
-                await sendMessage(userId, '¡Hola! Solo quería contarte que tenemos más cursos disponibles 😊. Si tú no puedes tomar uno en este momento, quizás conoces a alguien que sí le gustaría: un familiar, una amiga o alguien que quiera aprender algo útil y rentable.\n\nAdemás, *por cada persona que refieras* y se inscriba, *OBTIENES UN 10% DE DESCUENTO* en tu curso.\n\n¿Te gustaría conocer los otros 10 cursos que tenemos disponibles? Te puedo compartir la info o ayudarte a reservar un cupo para otra persona.');
+                //await sendMessage(userId, '¡Hola! Solo quería contarte que tenemos más cursos disponibles 😊. Si tú no puedes tomar uno en este momento, quizás conoces a alguien que sí le gustaría: un familiar, una amiga o alguien que quiera aprender algo útil y rentable.\n\nAdemás, *por cada persona que refieras* y se inscriba, *OBTIENES UN 10% DE DESCUENTO* en tu curso.\n\n¿Te gustaría conocer los otros 10 cursos que tenemos disponibles? Te puedo compartir la info o ayudarte a reservar un cupo para otra persona.');
+                await sendMessage(userId, '¡Hola! Solo quería contarte DOS COSITAS \n\nQue tenemos más cursos disponibles \n\nY que tengo un regalo especial para ti 😊. \n\nSi tú no puedes tomar un curso en este momento, quizás conoces a alguien que sí le gustaría: un familiar, una amiga o alguien que quiera aprender algo útil y rentable.\n\nAdemás, *por cada persona que refieras* y se inscriba, *OBTIENES UN 10% DE DESCUENTO* en tu curso.\n\n¿Te gustaría conocer los otros 10 cursos que tenemos disponibles?');
                 user.followUpStage = 2;
                 user.lastActivity = now;
                 count++;
-                saveToDB(numeroLimpio, curso);
+                let guardado = saveToDB(numeroLimpio, curso)
+                if (guardado) {
+                    // Obtener todas las etiquetas existentes
+                    const labels = await client.getLabels();
+                    let etiqueta = labels.find(l => l.name === 'seguimiento2')
+                    await client.addOrRemoveLabels([etiqueta?.id], [userId]);
+                }
                 console.log(`Enviado mensaje de seguimiento 2 a ${userId}`);
             }
             // 3. Tercer seguimiento: 7 días
@@ -92,7 +108,13 @@ const cleanupInactiveUsers = async () => {
                 user.followUpStage = 3;
                 user.lastActivity = now;
                 count++;
-                saveToDB(numeroLimpio, curso);
+                let guardado = saveToDB(numeroLimpio, curso)
+                if (guardado) {
+                    // Obtener todas las etiquetas existentes
+                    const labels = await client.getLabels();
+                    let etiqueta = labels.find(l => l.name === 'seguimiento3')
+                    await client.addOrRemoveLabels([etiqueta?.id], [userId]);
+                }
                 console.log(`Enviado mensaje de seguimiento 3 a ${userId}`);
             }
             // Eliminar usuario después de 8 días de inactividad
@@ -112,7 +134,7 @@ const cleanupInactiveUsers = async () => {
 // Limpiar todos los usuarios periódicamente
 const setupCleanup = () => {
     // Verificar usuarios inactivos cada hora para enviar mensajes de seguimiento
-    setInterval(cleanupInactiveUsers, 60 * 60 * 1000); // 1 hora en milisegundos
+    setInterval(cleanupInactiveUsers, 5 * 60 * 1000); // 10 minutos en milisegundos
 
     // Limpiar usuarios completamente inactivos cada 24 horas
     setInterval(() => {
@@ -149,6 +171,12 @@ const waitRandom = async () => {
     const delay = Math.floor(Math.random() * 2000) + 3000;
     return new Promise(resolve => setTimeout(resolve, delay));
 };
+
+const waitAMinute = async () => {
+    const delay = Math.floor(Math.random() * 10000) + 20000;
+    return new Promise(resolve => setTimeout(resolve, delay));
+};
+
 
 // Normalizar texto para comparaciones
 const normalizeText = (text) => {
@@ -264,7 +292,9 @@ const handleNewConversation = async (chatId, text) => {
         await sendMedia(chatId, "ubicacion.jpeg", `📍 *UBICACION:*
 *MEDELLIN Cra 42 #49-33 PISO 3* _diagonal a la estacion del tranvia Pabellon del agua_
 
-_*Recuerda que los 50.000 pesos para apartar tu cupo los puedes pagar en transferencia o en efectivo*_ el restante lo debes pagar en efectivo si quieres que te quede mucho mas economico el curso`);
+_*Recuerda que los 50.000 pesos para apartar tu cupo los puedes pagar en transferencia o en efectivo*_ 
+
+🚨 *EL RESTANTE SE DEBE PAGAR EN EFECTIVO* si quieres que te quede mucho mas economico el curso`);
         await waitRandom();
         await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
         await waitRandom();
@@ -602,7 +632,7 @@ _*Recuerda que los 50.000 pesos para apartar tu cupo los puedes pagar en transfe
                         // Obtener todas las etiquetas existentes
                         const labels = await client.getLabels();
                         let etiqueta = labels.find(l => l.name === 'Base de datos')
-                        await client.addOrRemoveLabels([etiqueta.id], [chatId]);
+                        await client.addOrRemoveLabels([etiqueta?.id], [chatId]);
                     }
                     await marcarNoLeido(chatId);
                 }
@@ -612,6 +642,7 @@ _*Recuerda que los 50.000 pesos para apartar tu cupo los puedes pagar en transfe
             if (msg.body.includes(STOP_EMOJI) || msg.body.toLowerCase() === 'well') {
                 if (!users[chatId]) users[chatId] = {};
                 users[chatId].finalizado = true; // Marcar como finalizada
+                users[chatId].followUpStage = 0
                 users[chatId].lastActivity = Date.now();
                 users[chatId].handledManually = true;
                 saveUsers();
