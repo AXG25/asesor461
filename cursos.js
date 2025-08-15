@@ -64,13 +64,15 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 19 Agosto 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
-13 Agosto 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+20 Agosto 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
 3 Septiembre 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm 
 
 13 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
 
 16 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
+
+5 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -99,7 +101,7 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         presentacion: 'presentacionUñas.mp3',
         fechas: `Fechas inicio *MANICURE & PEDICURE*
 
-12 Agosto 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+9 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
 27 Agosto 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
@@ -108,6 +110,8 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 23 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
 
 20 Septiembre 2025 | Sábados | 1:00 pm a 5:00 pm
+
+5 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
 
 14 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
 
@@ -144,7 +148,7 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
-28 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
+5 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -206,9 +210,9 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         presentacion: 'presentacionMelamina.mp3',
         fechas: `Fechas inicio *Muebles & Cocinas Integrales*
     
-12 Agosto 2025 | Martes y Jueves | 6:00 pm a 9:00 pm        
+4 Septiembre 2025 | Martes y Jueves | 6:00 pm a 9:00 pm      
 
-16 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
+27 Septiembre2025 | Sábados | 8:00 am a 12:00 pm
 
 30 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -316,6 +320,8 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 6 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm        
 
 16 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
+
+14 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
