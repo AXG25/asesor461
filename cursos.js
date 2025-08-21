@@ -10,7 +10,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
@@ -51,7 +51,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
@@ -92,7 +92,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
@@ -133,7 +133,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
@@ -168,7 +168,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
@@ -201,7 +201,7 @@ Si paga por TRANSFERENCIA le queda en: $599.000
 
 *Si paga en EFECTIVO: _$399.000_* 
 
-_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
@@ -236,7 +236,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
@@ -272,7 +272,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
@@ -308,7 +308,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
 
@@ -339,7 +339,7 @@ si esocoge una fecha de inicio para estudiar en fin de semana la duracion del cu
 Si paga por TRANSFERENCIA le quedan en: $599.000 c/u
 *Si paga en EFECTIVO: _$399.000_  c/u* (-33%)
 
-_Promoción disponible *solo HASTA EL 15 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_ para cada uno
 
