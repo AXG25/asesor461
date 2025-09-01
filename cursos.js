@@ -19,17 +19,15 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         presentacion: 'presentacionBarberia.mp3',
         fechas: `Fechas inicio *BARBERÍA*
 
-19 Agosto 2025 | Martes y Jueves | 9:00 am a 12:00 pm        
+23 Octubre 2025 | Martes y Jueves | 9:00 am a 12:00 pm     
 
-12 Agosto 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
+16 Septiembre 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
 
-20 Agosto 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
+24 Septiembre 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
 
 4 Octubre 2025 | Sábados | 8:00 am a 12:00 pm
 
 27 Septiembre 2025 | Sábados | 1:00 pm a 5:00 pm
-
-7 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
 7 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
 
@@ -60,17 +58,13 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         presentacion: 'presentacionCejas.mp3',
         fechas: `Fechas inicio *CEJAS & PESTAÑAS*   
 
-2 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+9 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-19 Agosto 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
+16 Septiembre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
-20 Agosto 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
-
-3 Septiembre 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm 
+17 Septiembre 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
 13 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
-
-16 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 5 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -103,11 +97,9 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 9 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-27 Agosto 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+3 Septiembre 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-20 Agosto 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
-
-23 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
+17 Septiembre 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
 20 Septiembre 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -142,7 +134,7 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         presentacion: 'presentacionMaquillaje.mp3',
         fechas: `Fechas inicio *MAQUILLAJE PROFESIONAL*
 
-19 Agosto 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+16 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
 27 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
 
@@ -177,9 +169,9 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         presentacion: 'presentacionMasajes.mp3',
         fechas: `Fechas inicio *MASAJES CORPORALES*
 
-19 Agosto 2025 | Martes y Jueves | 8:00 am a 12:00 pm        
+23 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm       
 
-23 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
+30 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
 14 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
 
@@ -210,9 +202,9 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         presentacion: 'presentacionMelamina.mp3',
         fechas: `Fechas inicio *Muebles & Cocinas Integrales*
     
-4 Septiembre 2025 | Martes y Jueves | 6:00 pm a 9:00 pm      
+9 Septiembre 2025 | Martes y Jueves | 6:00 pm a 9:00 pm
 
-27 Septiembre2025 | Sábados | 8:00 am a 12:00 pm
+4 Octubre 2025 | Sábados | 8:00 am a 2:00 pm
 
 30 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -245,9 +237,9 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         presentacion: 'presentacionCelulares.mp3',
         fechas: `Fechas inicio *REPARACIÓN DE CELULARES*
 
-26 Agosto 2025 | Martes a Viernes | 7:00 am a 9:00 am
+2 Septiembre 2025 | Martes a Viernes | 7:00 am a 9:00 am
 
-26 Agosto 2025 | Martes a Viernes | 1:00 pm a 3:00 pm
+2 Septiembre 2025 | Martes a Viernes | 1:00 pm a 3:00 pm
 
 6 Septiembre 2025 | Sábados | 8:00 am a 1:00 pm
 
@@ -281,7 +273,7 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         presentacion: 'presentacionTrenzas.mp3',
         fechas: `Fechas inicio *TRENZAS & PEINADOS*
 
-2 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+30 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm        
 
 6 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
 
@@ -317,11 +309,9 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         presentacion: 'presentacionDrywall.mp3',
         fechas: `Fechas inicio *Estructuras en Drywall*
 
-6 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm        
+6 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm   
 
-16 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
-
-14 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
+4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -359,7 +349,7 @@ Fechas inicio *MICROPIGMENTACIÓN DE CEJAS*
 
 24 Septiembre 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-17 Agosto 2025 | Domingos | 8:00 am a 12:00 pm
+19 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
