@@ -10,9 +10,9 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'barberia.jpeg',
@@ -28,8 +28,6 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 4 Octubre 2025 | Sábados | 8:00 am a 12:00 pm
 
 27 Septiembre 2025 | Sábados | 1:00 pm a 5:00 pm
-
-7 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -49,9 +47,9 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'pestañas.jpg',
@@ -86,9 +84,9 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'uñas.jpg',
@@ -125,22 +123,20 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'maquillaje.jpg',
         presentacion: 'presentacionMaquillaje.mp3',
         fechas: `Fechas inicio *MAQUILLAJE PROFESIONAL*
 
-16 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+30 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
 27 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
 
 4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
-
-5 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -160,9 +156,9 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'masajes.jpg',
@@ -171,7 +167,7 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 23 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm       
 
-30 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
+25 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
 14 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
 
@@ -193,9 +189,9 @@ Si paga por TRANSFERENCIA le queda en: $599.000
 
 *Si paga en EFECTIVO: _$399.000_* 
 
-_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'melamina.jpg',
@@ -228,20 +224,20 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'celulares.jpg',
         presentacion: 'presentacionCelulares.mp3',
         fechas: `Fechas inicio *REPARACIÓN DE CELULARES*
 
-2 Septiembre 2025 | Martes a Viernes | 7:00 am a 9:00 am
+30 Septiembre 2025 | Martes a Viernes | 7:00 am a 9:00 am
 
-2 Septiembre 2025 | Martes a Viernes | 1:00 pm a 3:00 pm
+30 Septiembre 2025 | Martes a Viernes | 1:00 pm a 3:00 pm
 
-6 Septiembre 2025 | Sábados | 8:00 am a 1:00 pm
+4 Octubre 2025 | Sábados | 8:00 am a 1:00 pm
 
 12 Octubre 2025 | Domingos | 8:00 am a 1:00 pm
 
@@ -264,9 +260,9 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'trenzas.jpg',
@@ -300,16 +296,16 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_
+_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'drywall.jpeg',
         presentacion: 'presentacionDrywall.mp3',
         fechas: `Fechas inicio *Estructuras en Drywall*
 
-6 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm   
+18 Octubre 2025 | Sábados | 8:00 am a 12:00 pm 
 
 4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -329,18 +325,18 @@ si esocoge una fecha de inicio para estudiar en fin de semana la duracion del cu
 Si paga por TRANSFERENCIA le quedan en: $599.000 c/u
 *Si paga en EFECTIVO: _$399.000_  c/u* (-33%)
 
-_Promoción disponible *solo HASTA EL 30 DE AGOSTO*_
+_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 50.000 pesos*_ para cada uno
+_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_ para cada uno
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'micropigmentacion.jpeg',
         presentacion: 'presentacionMicros.mp3',
         fechas: `Fechas inicio *MICROPIGMENTACIÓN DE LABIOS*
 
-9 Septiembre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
+16 Septiembre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
-30 Agosto 2025 | Sábados | 8:00 am a 12:00 pm
+6 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
 
 
 

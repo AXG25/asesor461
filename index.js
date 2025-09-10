@@ -11,7 +11,8 @@ const { saveToDB } = require('./saveToDB.js');
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
-               args: [
+        headless: true,
+        args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',
             '--disable-dev-shm-usage',
@@ -301,7 +302,7 @@ const handleNewConversation = async (chatId, text) => {
         await sendMedia(chatId, "ubicacion.jpeg", `📍 *UBICACION:*
 *MEDELLIN Cra 42 #49-33 PISO 3* _diagonal a la estacion del tranvia Pabellon del agua_
 
-_*Recuerda que los 50.000 pesos para apartar tu cupo los puedes pagar en transferencia o en efectivo*_ 
+_*Recuerda que los 100.000 pesos para apartar tu cupo los puedes pagar en transferencia o en efectivo*_ 
 
 🚨 *EL RESTANTE SE DEBE PAGAR EN EFECTIVO* si quieres que te quede mucho mas economico el curso`);
         await waitRandom();
@@ -517,6 +518,14 @@ client.on('authenticated', () => {
 
 client.on('auth_failure', (error) => {
     console.error('Error de autenticación:', error);
+});
+
+client.on('change_state', (state) => {
+    console.log('Estado del cliente:', state);
+});
+
+client.on('loading_screen', (percent, message) => {
+    console.log('Cargando:', percent, message);
 });
 
 client.on('ready', () => {
