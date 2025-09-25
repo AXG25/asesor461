@@ -636,7 +636,7 @@ client.on('message_create', async msg => {
                     await sendMedia(chatId, "ubicacion.jpeg", `📍 *UBICACION:*
 *MEDELLIN Cra 42 #49-33 PISO 3* _diagonal a la estacion del tranvia Pabellon del agua_
 
-_*Recuerda que los 50.000 pesos para apartar tu cupo los puedes pagar en transferencia o en efectivo*_ el restante lo debes pagar en efectivo si quieres que te quede mucho mas economico el curso`);
+_*Recuerda que los 100.000 pesos para apartar tu cupo los puedes pagar en transferencia o en efectivo*_ el restante lo debes pagar en efectivo si quieres que te quede mucho mas economico el curso`);
                     await waitRandom();
                     await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
                     await waitRandom();

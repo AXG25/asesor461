@@ -10,7 +10,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
+_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
@@ -21,13 +21,17 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 23 Octubre 2025 | Martes y Jueves | 9:00 am a 12:00 pm     
 
-16 Septiembre 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
+23 Septiembre 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
 
 24 Septiembre 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
 
 4 Octubre 2025 | Sábados | 8:00 am a 12:00 pm
 
 27 Septiembre 2025 | Sábados | 1:00 pm a 5:00 pm
+
+9 Noviembre 2025 | Domingos | 8:00 am a 12:00 pm
+
+9 Noviembre 2025 | Domingos | 1:00 pm a 5:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -47,7 +51,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
+_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
@@ -56,13 +60,13 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         presentacion: 'presentacionCejas.mp3',
         fechas: `Fechas inicio *CEJAS & PESTAÑAS*   
 
-9 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+7 Octubre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-16 Septiembre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
+23 Septiembre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
-17 Septiembre 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
+1 Octubre 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-13 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
+11 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
 5 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -84,7 +88,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
+_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
@@ -93,17 +97,17 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         presentacion: 'presentacionUñas.mp3',
         fechas: `Fechas inicio *MANICURE & PEDICURE*
 
-9 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+23 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-3 Septiembre 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+1 Octubre 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
-17 Septiembre 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
+18 Octubre 2025 | Sábados | 8:00 am a 12:00 pm
 
 20 Septiembre 2025 | Sábados | 1:00 pm a 5:00 pm
 
-5 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
+12 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
 
-14 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
+21 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -123,7 +127,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
+_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
@@ -156,7 +160,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
+_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
@@ -169,7 +173,6 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 25 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
-14 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -189,7 +192,7 @@ Si paga por TRANSFERENCIA le queda en: $599.000
 
 *Si paga en EFECTIVO: _$399.000_* 
 
-_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
+_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
@@ -198,13 +201,13 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         presentacion: 'presentacionMelamina.mp3',
         fechas: `Fechas inicio *Muebles & Cocinas Integrales*
     
-9 Septiembre 2025 | Martes y Jueves | 6:00 pm a 9:00 pm
+14 Octubre 2025 | Martes y Jueves | 6:00 pm a 9:00 pm
 
 4 Octubre 2025 | Sábados | 8:00 am a 2:00 pm
 
-30 Agosto 2025 | Sábados | 1:00 pm a 5:00 pm
+18 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
-14 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
+21 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -224,7 +227,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
+_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
@@ -260,7 +263,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
+_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
@@ -271,11 +274,9 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 
 30 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm        
 
-6 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
-
 4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
-14 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
+21 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -296,7 +297,7 @@ Si paga por TRANSFERENCIA le queda en: $499.000
 
 *Si paga en EFECTIVO: _$349.000_*
 
-_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
+_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
@@ -325,7 +326,7 @@ si esocoge una fecha de inicio para estudiar en fin de semana la duracion del cu
 Si paga por TRANSFERENCIA le quedan en: $599.000 c/u
 *Si paga en EFECTIVO: _$399.000_  c/u* (-33%)
 
-_Promoción disponible *solo HASTA EL 15 DE SEPTIEMBRE*_
+_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_ para cada uno
 
@@ -333,17 +334,14 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'micropigmentacion.jpeg',
         presentacion: 'presentacionMicros.mp3',
         fechas: `Fechas inicio *MICROPIGMENTACIÓN DE LABIOS*
+        
 
-16 Septiembre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
-
-6 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
+8 Noviembre 2025 | Sábados | 8:00 am a 12:00 pm
 
 
 
 
 Fechas inicio *MICROPIGMENTACIÓN DE CEJAS*
-
-24 Septiembre 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
 19 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
 
