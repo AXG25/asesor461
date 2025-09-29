@@ -16,18 +16,17 @@ _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'barberia.jpeg',
-        presentacion: 'presentacionBarberia.mp3',
-        fechas: `Fechas inicio *BARBERÍA*
+        video: 'VideoBarberia.mp4',
+        presentacion: 'presentacionBarberia.ogg',
+        fechas: `Fechas inicio *BARBERÍA*    
 
-23 Octubre 2025 | Martes y Jueves | 9:00 am a 12:00 pm     
+30 Septiembre 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
 
-23 Septiembre 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
+1 Octubre 2025 | Miércoles y Viernes | 9:00 pm a 12:00 pm
 
-24 Septiembre 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
+18 Octubre 2025 | Sábados | 8:00 am a 12:00 pm
 
-4 Octubre 2025 | Sábados | 8:00 am a 12:00 pm
-
-27 Septiembre 2025 | Sábados | 1:00 pm a 5:00 pm
+4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
 9 Noviembre 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -57,14 +56,16 @@ _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'pestañas.jpg',
-        presentacion: 'presentacionCejas.mp3',
+        presentacion: 'presentacionCejas.ogg',
         fechas: `Fechas inicio *CEJAS & PESTAÑAS*   
 
 7 Octubre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-23 Septiembre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
+28 Octubre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
-1 Octubre 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+8 Octubre 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+
+8 Noviembre 2025 | Sábados | 8:00 am a 12:00 pm
 
 11 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -94,20 +95,20 @@ _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'uñas.jpg',
-        presentacion: 'presentacionUñas.mp3',
+        presentacion: 'presentacionManicure.ogg',
         fechas: `Fechas inicio *MANICURE & PEDICURE*
 
-23 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+7 Octubre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-1 Octubre 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
+28 Octubre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
 
-18 Octubre 2025 | Sábados | 8:00 am a 12:00 pm
+8 Octubre 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-20 Septiembre 2025 | Sábados | 1:00 pm a 5:00 pm
+8 Noviembre 2025 | Sábados | 8:00 am a 12:00 pm
 
-12 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
+11 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
-21 Septiembre 2025 | Domingos | 1:00 pm a 5:00 pm
+5 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -133,12 +134,12 @@ _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'maquillaje.jpg',
-        presentacion: 'presentacionMaquillaje.mp3',
+        presentacion: 'presentacionMaquillaje.ogg',
         fechas: `Fechas inicio *MAQUILLAJE PROFESIONAL*
 
 30 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-27 Septiembre 2025 | Sábados | 8:00 am a 12:00 pm
+4 Octubre 2025 | Sábados | 8:00 am a 12:00 pm
 
 4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -166,10 +167,10 @@ _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'masajes.jpg',
-        presentacion: 'presentacionMasajes.mp3',
+        presentacion: 'presentacionMasajes.ogg',
         fechas: `Fechas inicio *MASAJES CORPORALES*
 
-23 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm       
+7 Octubre 2025 | Martes y Jueves | 8:00 am a 12:00 pm      
 
 25 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
@@ -198,7 +199,7 @@ _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'melamina.jpg',
-        presentacion: 'presentacionMelamina.mp3',
+        presentacion: 'presentacionMelamina.ogg',
         fechas: `Fechas inicio *Muebles & Cocinas Integrales*
     
 14 Octubre 2025 | Martes y Jueves | 6:00 pm a 9:00 pm
@@ -206,8 +207,6 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 4 Octubre 2025 | Sábados | 8:00 am a 2:00 pm
 
 18 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
-
-21 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -233,12 +232,12 @@ _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'celulares.jpg',
-        presentacion: 'presentacionCelulares.mp3',
+        presentacion: 'presentacionCelulares.ogg',
         fechas: `Fechas inicio *REPARACIÓN DE CELULARES*
 
-30 Septiembre 2025 | Martes a Viernes | 7:00 am a 9:00 am
+7 Octubre 2025 | Martes a Viernes | 7:00 am a 9:00 am
 
-30 Septiembre 2025 | Martes a Viernes | 1:00 pm a 3:00 pm
+7 Octubre 2025 | Martes a Viernes | 7:00 am a 9:00 am
 
 4 Octubre 2025 | Sábados | 8:00 am a 1:00 pm
 
@@ -269,14 +268,16 @@ _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'trenzas.jpg',
-        presentacion: 'presentacionTrenzas.mp3',
+        presentacion: 'presentacionTrenzas.ogg',
         fechas: `Fechas inicio *TRENZAS & PEINADOS*
 
-30 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm        
+30 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm   
+
+8 Noviembre 2025 | Sábados | 8:00 am a 12:00 pm
 
 4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
-21 Septiembre 2025 | Domingos | 8:00 am a 12:00 pm
+16 Noviembre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -303,12 +304,14 @@ _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'drywall.jpeg',
-        presentacion: 'presentacionDrywall.mp3',
+        presentacion: 'presentacionDrywall.ogg',
         fechas: `Fechas inicio *Estructuras en Drywall*
 
 18 Octubre 2025 | Sábados | 8:00 am a 12:00 pm 
 
-4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
+15 Noviembre 2025 | Sábados | 1:00 pm a 5:00 pm
+
+12 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -332,16 +335,19 @@ _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_ para cada uno
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
         pensum: 'micropigmentacion.jpeg',
-        presentacion: 'presentacionMicros.mp3',
+        presentacion: 'presentacionMicros.ogg',
         fechas: `Fechas inicio *MICROPIGMENTACIÓN DE LABIOS*
         
 
-8 Noviembre 2025 | Sábados | 8:00 am a 12:00 pm
+28 Octubre 2025 | Martes y Jueves | 1:00 pm a 5:00 
 
+25 Octubre 2025 | Sábados | 8:00 am a 12:00 pm
 
 
 
 Fechas inicio *MICROPIGMENTACIÓN DE CEJAS*
+
+29 Octubre 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
 19 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
 

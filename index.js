@@ -11,6 +11,7 @@ const { saveToDB } = require('./saveToDB.js');
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
+        executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
         headless: true,
         args: [
             '--no-sandbox',
@@ -18,9 +19,7 @@ const client = new Client({
             '--disable-dev-shm-usage',
             '--disable-accelerated-2d-canvas',
             '--no-first-run',
-            '--no-zygote',
-            '--single-process',
-            '--disable-gpu'
+            '--no-zygote'
         ]
     }
 });
@@ -74,8 +73,8 @@ const cleanupInactiveUsers = async () => {
             // Declarar una sola vez el número limpio
             let numeroLimpio = userId?.replace('57', '')?.replace('@c.us', '');
             let curso = user.curso;
-            console.log("numero:",numeroLimpio)
-            console.log("curso:",curso)
+            console.log("numero:", numeroLimpio)
+            console.log("curso:", curso)
             console.log(userId)
 
             // 1. Primer seguimiento: 1 día
@@ -346,7 +345,7 @@ const handleDateSelection = async (chatId, text, usuario) => {
         await waitRandom();
         await sendMessage(chatId, cursos[usuario.curso].fechas);
         await waitRandom();
-        await sendAudio(chatId, 'explicacion_fechas.mp3');
+        await sendAudio(chatId, 'explicacion_fechas.ogg');
         await waitRandom();
         await sendMessage(chatId, '¿Cuál de estas fechas te gustaría más para comenzar con tu curso?');
 
