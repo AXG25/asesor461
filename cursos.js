@@ -1,32 +1,26 @@
 module.exports = {
-    'Barberia': {
-        palabrasClave: ['barberia', 'barbería', 'barbero', 'peluqueria', 'peluquero', 'peluquiar', 'motilar'],
-        promocion: `
-📚 *Duración del curso:*
-+30 Horas
+        'Barberia': {
+                palabrasClave: ['barberia', 'barbería', 'barbero', 'peluqueria', 'peluquero', 'peluquiar', 'motilar'],
+                pensum: 'barberia.jpeg',
+                promocion: `El curso cuesta ~$500.000~, pero *hasta el 15 de Octubre* tiene un *descuento del 30%* y queda en *$350.000* Puede *apartar su cupo con solo $100.000* y pagar los $250.000 restantes *en EFECTIVO* tres dias antes de comenzar clases. 
 
-🎉 *Promoción especial:*
-Si paga por TRANSFERENCIA le queda en: $499.000
+Si estudia *entre semana*, el curso dura *5 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *8 semanas (1 clase por semana)*.
 
-*Si paga en EFECTIVO: _$349.000_*
+Estamos en el centro de *Medellin* Cra 42 #49-34 
+https://g.co/kgs/cc6o1RU`,
+                presentacion: 'presentacionBarberia.ogg',
+                video: 'VideoBarberia.mp4',
+                fechas: `Fechas inicio *BARBERÍA*    
 
-_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
+21 Octubre 2025 | Martes y Jueves | 9:00 am a 12:00 pm                
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
+4 Noviembre 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
 
-_cancela el resto *tres dias antes de que comience tu curso*_`,
-        pensum: 'barberia.jpeg',
-        video: 'VideoBarberia.mp4',
-        presentacion: 'presentacionBarberia.ogg',
-        fechas: `Fechas inicio *BARBERÍA*    
-
-30 Septiembre 2025 | Martes y Jueves | 4:00 pm a 7:00 pm
-
-1 Octubre 2025 | Miércoles y Viernes | 9:00 pm a 12:00 pm
+5 Noviembre 2025 | Miércoles y Viernes | 9:00 am a 12:00 pm
 
 18 Octubre 2025 | Sábados | 8:00 am a 12:00 pm
 
-4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
+29 Noviembre 2025 | Sábados | 1:00 pm a 5:00 pm
 
 9 Noviembre 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -36,246 +30,207 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 🚨*Recordatorio*🚨
 si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso seria de *5 semanas estudiando 2 dias por semana*
 
-si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *8 semanas estudiando 1 dia por semana*`
-    },
-    'cejas': {
-        palabrasClave: ['cejas y pestañas', 'pestañas', 'pestaña', 'pestanas', 'pestana', 'pestañina', 'laminado', 'laminados', 'volumen', 'volumenes'],
-        promocion: `
-📚 *Duración del curso:*
-8 clases de 4 horas cada una. 
-(32 horas en total)
+si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *8 semanas estudiando 1 dia por semana*
 
-🎉 *Promoción especial:*
-Si paga por TRANSFERENCIA le queda en: $499.000
+_*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transferencia o en efectivo*_ el restante lo debemos pagar en *efectivo* si queremos que nos quede mucho mas economico el curso
+`
+        },
+        'cejas': {
+                palabrasClave: ['cejas y pestañas', 'pestañas', 'pestaña', 'pestanas', 'pestana', 'pestañina', 'laminado', 'laminados', 'volumen', 'volumenes'],
+                pensum: 'pestañas.jpg',
+                promocion: `El curso cuesta ~$500.000~, pero *hasta el 15 de Octubre* tiene un *descuento del 30%* y queda en *$350.000* Puede *apartar su cupo con solo $100.000* y pagar los $250.000 restantes *en EFECTIVO* tres dias antes de comenzar clases. 
 
-*Si paga en EFECTIVO: _$349.000_*
+Son 8 clases. Si estudia *entre semana*, el curso dura *4 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *8 semanas (1 clase por semana)*.
 
-_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
+Estamos en el centro de *Medellin* Cra 42 #49-34 
+https://g.co/kgs/cc6o1RU`,
+                presentacion: 'presentacionCejas.ogg',
+                video: 'VideoCejas.mp4',
+                fechas: `Fechas inicio *CEJAS & PESTAÑAS*   
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
+21 Octubre 2025 | Martes y Jueves | 8:00 am a 12:00 pm (este horario esta en promocion $280.000)
 
-_cancela el resto *tres dias antes de que comience tu curso*_`,
-        pensum: 'pestañas.jpg',
-        presentacion: 'presentacionCejas.ogg',
-        fechas: `Fechas inicio *CEJAS & PESTAÑAS*   
-
-7 Octubre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
-
-28 Octubre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
-
-8 Octubre 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
+28 Octubre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm (este horario esta en promocion $280.000)
 
 8 Noviembre 2025 | Sábados | 8:00 am a 12:00 pm
 
-11 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
+18 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm (este horario esta en promocion $320.000)
 
-5 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
-
-
-🚨*Recordatorio*🚨
-si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso seria de *4 semanas estudiando 2 dias por semana*
-
-si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *8 semanas estudiando 1 dia por semana*`
-    },
-    'manicure': {
-        palabrasClave: ['uñas', 'manicure', 'pedicure', 'manicurista', 'pedicure', 'manicura', 'pedicura'],
-        promocion: `
-📚 *Duración del curso:*
-8 clases de 4 horas cada una. 
-(32 horas en total)
-
-🎉 *Promoción especial:*
-Si paga por TRANSFERENCIA le queda en: $499.000
-
-*Si paga en EFECTIVO: _$349.000_*
-
-_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
-
-_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
-
-_cancela el resto *tres dias antes de que comience tu curso*_`,
-        pensum: 'uñas.jpg',
-        presentacion: 'presentacionManicure.ogg',
-        fechas: `Fechas inicio *MANICURE & PEDICURE*
-
-7 Octubre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
-
-28 Octubre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
-
-8 Octubre 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
-
-8 Noviembre 2025 | Sábados | 8:00 am a 12:00 pm
-
-11 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
-
-5 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
+12 Octubre 2025 | Domingos | 8:00 am a 12:00 pm (este horario esta en promocion $320.000)
 
 
 🚨*Recordatorio*🚨
 si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso seria de *4 semanas estudiando 2 dias por semana*
 
-si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *8 semanas estudiando 1 dia por semana*`
-    },
-    'maquillaje': {
-        palabrasClave: ['maquillaje', 'maquilladora', 'maquillar'],
-        promocion: `
-📚 *Duración del curso:*
-8 clases de 4 horas cada una. 
-(32 horas en total)
-        
-🎉 *Promoción especial:*
-Si paga por TRANSFERENCIA le queda en: $499.000
+si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *8 semanas estudiando 1 dia por semana*
 
-*Si paga en EFECTIVO: _$349.000_*
+_*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transferencia o en efectivo*_ el restante lo debemos pagar en *efectivo* si queremos que nos quede mucho mas economico el curso
+`
+        },
+        'manicure': {
+                palabrasClave: ['uñas', 'manicure', 'pedicure', 'manicurista', 'pedicure', 'manicura', 'pedicura'],
+                pensum: 'uñas.jpg',
+                promocion: `El curso cuesta ~$500.000~, pero *hasta el 15 de Octubre* tiene un *descuento del 30%* y queda en *$350.000* Puede *apartar su cupo con solo $100.000* y pagar los $250.000 restantes *en EFECTIVO* tres dias antes de comenzar clases. 
 
-_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
+Son 8 clases. Si estudia *entre semana*, el curso dura *4 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *8 semanas (1 clase por semana)*.
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
+Estamos en el centro de *Medellin* Cra 42 #49-34 
+https://g.co/kgs/cc6o1RU`,
+                presentacion: 'presentacionManicure.ogg',
+                video: 'VideoManicure.mp4',
+                fechas: `Fechas inicio *MANICURE & PEDICURE*
 
-_cancela el resto *tres dias antes de que comience tu curso*_`,
-        pensum: 'maquillaje.jpg',
-        presentacion: 'presentacionMaquillaje.ogg',
-        fechas: `Fechas inicio *MAQUILLAJE PROFESIONAL*
+15 Octubre 2025 | Miércoles y Viernes | 8:00 am a 12:00 pmB
 
-30 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
+5 Noviembre 2025 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
-4 Octubre 2025 | Sábados | 8:00 am a 12:00 pm
+18 Octubre 2025 | Sábados | 8:00 am a 12:00 pm
 
-4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
+12 Octubre 2025 | Domingos | 8:00 am a 12:00 pm  (este horario esta en promocion $320.000)
 
 
 🚨*Recordatorio*🚨
 si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso seria de *4 semanas estudiando 2 dias por semana*
 
-si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *8 semanas estudiando 1 dia por semana*`
-    },
-    'masajes': {
-        palabrasClave: ['masajes', 'corporales', 'masajista', 'masaje', 'maderoterapia', 'masoterapia'],
-        promocion: `
-📚 *Duración del curso:*
-5 clases de 4 horas cada una. 
-(20 horas en total)
-        
-🎉 *Promoción especial:*
-Si paga por TRANSFERENCIA le queda en: $499.000
+si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *8 semanas estudiando 1 dia por semana*
 
-*Si paga en EFECTIVO: _$349.000_*
+_*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transferencia o en efectivo*_ el restante lo debemos pagar en *efectivo* si queremos que nos quede mucho mas economico el curso
+`
+        },
+        'maquillaje': {
+                palabrasClave: ['maquillaje', 'maquilladora', 'maquillar'],
+                pensum: 'maquillaje.jpg',
+                promocion: `El curso cuesta ~$500.000~, pero *hasta el 15 de Octubre* tiene un *descuento del 30%* y queda en *$350.000* Puede *apartar su cupo con solo $100.000* y pagar los $250.000 restantes *en EFECTIVO* tres dias antes de comenzar clases. 
 
-_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
+Son 8 clases. Si estudia *entre semana*, el curso dura *4 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *8 semanas (1 clase por semana)*.
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
+Estamos en el centro de *Medellin* Cra 42 #49-34 
+https://g.co/kgs/cc6o1RU`,
+                presentacion: 'presentacionMaquillaje.ogg',
+                video: 'VideoMaquillaje.mp4',
+                fechas: `Fechas inicio *MAQUILLAJE PROFESIONAL*
 
-_cancela el resto *tres dias antes de que comience tu curso*_`,
-        pensum: 'masajes.jpg',
-        presentacion: 'presentacionMasajes.ogg',
-        fechas: `Fechas inicio *MASAJES CORPORALES*
+28 Octubre 2025 | Martes y Jueves | 8:00 am a 12:00 pm
 
-7 Octubre 2025 | Martes y Jueves | 8:00 am a 12:00 pm      
+29 Noviembre 2025 | Sábados | 8:00 am a 12:00 pm
+
+29 Noviembre 2025 | Sábados | 1:00 pm a 5:00 pm
+
+23 Noviembre 2025 | Domingos | 8:00 am a 12:00 pm
+
+
+🚨*Recordatorio*🚨
+si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso seria de *4 semanas estudiando 2 dias por semana*
+
+si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *8 semanas estudiando 1 dia por semana*
+
+_*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transferencia o en efectivo*_ el restante lo debemos pagar en *efectivo* si queremos que nos quede mucho mas economico el curso
+`
+        },
+        'masajes': {
+                palabrasClave: ['masajes', 'corporales', 'masajista', 'masaje', 'maderoterapia', 'masoterapia'],
+                pensum: 'masajes.jpg',
+                promocion: `El curso cuesta ~$500.000~, pero *hasta el 15 de Octubre* tiene un *descuento del 30%* y queda en *$350.000* Puedes *apartar tu cupo con solo $100.000* y pagar los $250.000 restantes tres dias antes de comenzar clases en *EFECTIVO*. 
+
+Son 5 clases. Si estudia *entre semana*, el curso dura *3 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *5 semanas (1 clase por semana)*.`,
+                presentacion: 'presentacionMasajes.ogg',
+                video: 'VideoMasajes.mp4',
+                fechas: `Fechas inicio *MASAJES CORPORALES*
+
+4 Noviembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm                
 
 25 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
+26 Octubre 2025 | Domingos | 1:00 pm a 5:00 pm
 
 
 🚨*Recordatorio*🚨
 si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso seria de *3 semanas estudiando 2 dias por semana*
 
-si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *5 semanas estudiando 1 dia por semana*`
+si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *5 semanas estudiando 1 dia por semana*
 
-    },
-    'muebles': {
-        palabrasClave: ['melamina', 'mdf', 'muebles', 'cocinas', 'cocina', 'madera', 'carpinteria', 'carpintero', 'formaleta'],
-        promocion: `
-📚 *Duración del curso:*
-+24 Horas
+_*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transferencia o en efectivo*_ el restante lo debemos pagar en *efectivo* si queremos que nos quede mucho mas economico el curso
+`
 
-🎉 *Promoción especial:*
-Si paga por TRANSFERENCIA le queda en: $599.000
+        },
+        'muebles': {
+                palabrasClave: ['melamina', 'mdf', 'muebles', 'cocinas', 'cocina', 'madera', 'carpinteria', 'carpintero', 'formaleta'],
+                pensum: 'melamina.jpg',
+                promocion: `El curso cuesta ~$600.000~, pero *hasta el 15 de Octubre* tiene un *descuento del 33%* y queda en *$400.000* Puede *apartar su cupo con solo $100.000* y pagar los $300.000 restantes *en EFECTIVO* tres dias antes de comenzar clases. 
 
-*Si paga en EFECTIVO: _$399.000_* 
+Si estudia *entre semana*, el curso dura *4 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *6 semanas (1 clase por semana)*.
 
-_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
-
-_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
-
-_cancela el resto *tres dias antes de que comience tu curso*_`,
-        pensum: 'melamina.jpg',
-        presentacion: 'presentacionMelamina.ogg',
-        fechas: `Fechas inicio *Muebles & Cocinas Integrales*
+Estamos en el centro de *Medellin* Cra 42 #49-34 
+https://g.co/kgs/cc6o1RU`,
+                presentacion: 'presentacionMelamina.ogg',
+                video: 'VideoMelamina.mp4',
+                fechas: `Fechas inicio *Muebles & Cocinas Integrales*
     
-14 Octubre 2025 | Martes y Jueves | 6:00 pm a 9:00 pm
+11 Noviembre 2025 | Martes y Jueves | 6:00 pm a 9:00 pm
 
-4 Octubre 2025 | Sábados | 8:00 am a 2:00 pm
+22 Noviembre 2025 | Sábados | 8:00 am a 12:00 pm
 
-18 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
+25 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
 
 
 🚨*Recordatorio*🚨
 si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso seria de *4 semanas estudiando 2 dias por semana*
 
-si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *6 semanas estudiando 1 dia por semana*`
+si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *6 semanas estudiando 1 dia por semana*
 
-    },
-    'Reparacion': {
-        palabrasClave: ['celulares', 'celular'],
-        promocion: `
-📚 *Duración del curso:*
-+50 Horas
+_*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transferencia o en efectivo*_ el restante lo debemos pagar en *efectivo* si queremos que nos quede mucho mas economico el curso
+`
 
-🎉 *Promoción especial:*
-Si paga por TRANSFERENCIA le queda en: $499.000
+        },
+        'Reparacion': {
+                palabrasClave: ['celulares', 'celular'],
+                pensum: 'celulares.jpg',
+                promocion: `El curso cuesta ~$500.000~, pero *hasta el 15 de Octubre* tiene un *descuento del 30%* y queda en *$350.000* Puede *apartar su cupo con solo $100.000* y pagar los $250.000 restantes *en EFECTIVO* tres dias antes de comenzar clases. 
 
-*Si paga en EFECTIVO: _$349.000_*
+Si estudia *entre semana*, el curso dura *7 semanas (4 clases por semana)*. Si estudia los *sábados o domingos*, dura *10 semanas (1 clase por semana)*.
 
-_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
+Estamos en el centro de *Medellin* Cra 42 #49-34 
+https://g.co/kgs/cc6o1RU`,
+                presentacion: 'presentacionCelulares.ogg',
+                video: 'VideoCelulares.mp4',
+                fechas: `Fechas inicio *REPARACIÓN DE CELULARES*
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
+28 Octubre 2025 | Martes a Viernes | 7:00 am a 9:00 am
 
-_cancela el resto *tres dias antes de que comience tu curso*_`,
-        pensum: 'celulares.jpg',
-        presentacion: 'presentacionCelulares.ogg',
-        fechas: `Fechas inicio *REPARACIÓN DE CELULARES*
+28 Octubre 2025 | Martes a Viernes | 1:00 pm a 3:00 pm                
 
-7 Octubre 2025 | Martes a Viernes | 7:00 am a 9:00 am
+15 Noviembre 2025 | Sábados | 8:00 am a 1:00 pm
 
-7 Octubre 2025 | Martes a Viernes | 7:00 am a 9:00 am
-
-4 Octubre 2025 | Sábados | 8:00 am a 1:00 pm
-
-12 Octubre 2025 | Domingos | 8:00 am a 1:00 pm
+9 Noviembre 2025 | Domingos | 8:00 am a 1:00 pm
 
 
 🚨 *Recordatorio* 🚨
 si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso seria de *7 semanas estudiando 4 dias por semana*
 
-si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *10 semanas estudiando 1 dia por semana*`
+si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *10 semanas estudiando 1 dia por semana*
 
-    },
-    'trenzas': {
-        palabrasClave: ['trenzas', 'trensa', 'trensas', 'peinados', 'peinado', 'trenzadora', 'trenza', 'peinado'],
-        promocion: `
-📚 *Duración del curso:*
-8 clases de 4 horas cada una. 
-(32 horas en total)
+_*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transferencia o en efectivo*_ el restante lo debemos pagar en *efectivo* si queremos que nos quede mucho mas economico el curso
+`
 
-🎉 *Promoción especial:*
-Si paga por TRANSFERENCIA le queda en: $499.000
+        },
+        'trenzas': {
+                palabrasClave: ['trenzas', 'trensa', 'trensas', 'peinados', 'peinado', 'trenzadora', 'trenza', 'peinado'],
+                pensum: 'trenzas.jpg',
+                promocion: `El curso cuesta ~$500.000~, pero *hasta el 15 de Octubre* tiene un *descuento del 30%* y queda en *$350.000* Puede *apartar su cupo con solo $100.000* y pagar los $250.000 restantes *en EFECTIVO* tres dias antes de comenzar clases. 
 
-*Si paga en EFECTIVO: _$349.000_*
+Son 8 clases. Si estudia *entre semana*, el curso dura *4 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *8 semanas (1 clase por semana)*.
 
-_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
+Estamos en el centro de *Medellin* Cra 42 #49-34 
+https://g.co/kgs/cc6o1RU`,
+                presentacion: 'presentacionTrenzas.ogg',
+                video: 'VideoTrenzas.mp4',
+                fechas: `Fechas inicio *TRENZAS & PEINADOS*
 
-_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
-
-_cancela el resto *tres dias antes de que comience tu curso*_`,
-        pensum: 'trenzas.jpg',
-        presentacion: 'presentacionTrenzas.ogg',
-        fechas: `Fechas inicio *TRENZAS & PEINADOS*
-
-30 Septiembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm   
+4 Noviembre 2025 | Martes y Jueves | 8:00 am a 12:00 pm  
 
 8 Noviembre 2025 | Sábados | 8:00 am a 12:00 pm
 
-4 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm
+11 Octubre 2025 | Sábados | 1:00 pm a 5:00 pm  (este horario esta en promocion $300.000)
 
 16 Noviembre 2025 | Domingos | 8:00 am a 12:00 pm
 
@@ -284,43 +239,40 @@ _cancela el resto *tres dias antes de que comience tu curso*_`,
 si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso seria de *4 semanas estudiando 2 dias por semana*
 
 si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *8 semanas estudiando 1 dia por semana*
+
+_*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transferencia o en efectivo*_ el restante lo debemos pagar en *efectivo* si queremos que nos quede mucho mas economico el curso
 `
 
-    },
-    'estructuras': {
-        palabrasClave: ['estructuras', 'drywall', 'drywoll', 'drywal', 'draibol', 'yeso', 'driwal', 'draiwal', 'driwol'],
-        promocion: `
-📚 *Duración del curso:*
-+24 Horas
+        },
+        'estructuras': {
+                palabrasClave: ['estructuras', 'drywall', 'drywoll', 'drywal', 'draibol', 'yeso', 'driwal', 'draiwal', 'driwol'],
+                pensum: 'drywall.jpeg',
+                promocion: `El curso cuesta ~$500.000~, pero *hasta el 15 de Octubre* tiene un *descuento del 30%* y queda en *$350.000* Puede *apartar su cupo con solo $100.000* y pagar los $250.000 restantes *en EFECTIVO* tres dias antes de comenzar clases. 
 
-🎉 *Promoción especial:*
-Si paga por TRANSFERENCIA le queda en: $499.000
+Si estudia los *sábados o domingos*, dura *6 semanas (1 clase por semana)*.
 
-*Si paga en EFECTIVO: _$349.000_*
+Estamos en el centro de *Medellin* Cra 42 #49-34 
+https://g.co/kgs/cc6o1RU`,
+                presentacion: 'presentacionDrywall.ogg',
+                video: 'VideoDrywall.mp4',
+                fechas: `Fechas inicio *Estructuras en Drywall*
 
-_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
-
-_*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_
-
-_cancela el resto *tres dias antes de que comience tu curso*_`,
-        pensum: 'drywall.jpeg',
-        presentacion: 'presentacionDrywall.ogg',
-        fechas: `Fechas inicio *Estructuras en Drywall*
-
-18 Octubre 2025 | Sábados | 8:00 am a 12:00 pm 
+29 Noviembre 2025 | Sábados | 8:00 am a 12:00 pm
 
 15 Noviembre 2025 | Sábados | 1:00 pm a 5:00 pm
 
-12 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
+19 Octubre 2025 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
-si esocoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de *6 semanas estudiando 1 dia por semana*`
+si esocoge una fecha de inicio para estudiar en fin de semana la duracion del curso seria de *6 semanas estudiando 1 dia por semana*
 
-    },
-    'Micropigmentacion': {
-        palabrasClave: ['micro', 'micropigmentacion', 'labios', 'micropigmentar', 'pigmentacion'],
-        promocion: `
+_*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transferencia o en efectivo*_ el restante lo debemos pagar en *efectivo* si queremos que nos quede mucho mas economico el curso
+`
+        },
+        'Micropigmentacion': {
+                palabrasClave: ['micro', 'micropigmentacion', 'labios', 'micropigmentar', 'pigmentacion'],
+                promocion: `
 📚 *Duración de cada curso:*
 24 Horas por curso
 48 en total si haces los dos
@@ -329,15 +281,14 @@ si esocoge una fecha de inicio para estudiar en fin de semana la duracion del cu
 Si paga por TRANSFERENCIA le quedan en: $599.000 c/u
 *Si paga en EFECTIVO: _$399.000_  c/u* (-33%)
 
-_Promoción disponible *solo HASTA EL 30 DE SEPTIEMBRE*_
+_Promoción disponible *solo HASTA EL 15 DE OCTUBRE*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_ para cada uno
 
 _cancela el resto *tres dias antes de que comience tu curso*_`,
-        pensum: 'micropigmentacion.jpeg',
-        presentacion: 'presentacionMicros.ogg',
-        fechas: `Fechas inicio *MICROPIGMENTACIÓN DE LABIOS*
-        
+                pensum: 'micropigmentacion.jpeg',
+                presentacion: 'presentacionMicros.ogg',
+                fechas: `Fechas inicio *MICROPIGMENTACIÓN DE LABIOS*
 
 28 Octubre 2025 | Martes y Jueves | 1:00 pm a 5:00 
 
@@ -357,7 +308,7 @@ si esocoge una fecha de inicio, para estudiar *en semana* la duracion del curso 
 
 si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del curso seria de *6 semanas estudiando 1 dia por semana*`
 
-    },
+        },
 };
 
 

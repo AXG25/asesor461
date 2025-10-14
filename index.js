@@ -97,7 +97,7 @@ const cleanupInactiveUsers = async () => {
             else if (timeSinceLastActivity > 3 * 24 * 60 * 60 * 1000 && user.followUpStage === 1 && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
                 await waitRandom();
                 //await sendMessage(userId, '¡Hola! Solo quería contarte que tenemos más cursos disponibles 😊. Si tú no puedes tomar uno en este momento, quizás conoces a alguien que sí le gustaría: un familiar, una amiga o alguien que quiera aprender algo útil y rentable.\n\nAdemás, *por cada persona que refieras* y se inscriba, *OBTIENES UN 10% DE DESCUENTO* en tu curso.\n\n¿Te gustaría conocer los otros 10 cursos que tenemos disponibles? Te puedo compartir la info o ayudarte a reservar un cupo para otra persona.');
-                await sendMessage(userId, '¡Hola! Solo quería contarte DOS COSITAS \n\nQue tenemos más cursos disponibles \n\nY que tengo un regalo especial para ti 😊. \n\nSi tú no puedes tomar un curso en este momento, quizás conoces a alguien que sí le gustaría: un familiar, una amiga o alguien que quiera aprender algo útil y rentable.\n\nAdemás, *por cada persona que refieras* y se inscriba, *OBTIENES UN 10% DE DESCUENTO* en tu curso.\n\n¿Te gustaría conocer los otros 10 cursos que tenemos disponibles?');
+                await sendMessage(userId, '¡Hola! Solo quería contarte \n\nQue tenemos más cursos disponibles  \n\nSi tú no puedes tomar un curso en este momento, quizás conoces a alguien que sí le gustaría: un familiar, una amiga o alguien que quiera aprender algo útil y rentable.\n\nAdemás, *por cada persona que refieras* y se inscriba, *OBTIENES UN 10% DE DESCUENTO* en tu curso.\n\n¿Te gustaría conocer los otros 10 cursos que tenemos disponibles?');
                 user.followUpStage = 2;
                 user.lastActivity = now;
                 count++;
@@ -268,22 +268,6 @@ const sendAudio = async (chatId, audioPath) => {
 };
 
 // Notificar al asistente y cerrar el flujo automático
-const finalizarConversacionAutomatica = async (chatId, mensaje) => {
-    try {
-        await sendMessage(ASISTENTE_NUMERO, mensaje);
-
-        // Marcar la conversación como finalizada para el bot
-        if (!users[chatId]) users[chatId] = {};
-        users[chatId].finalizado = true;
-        users[chatId].lastActivity = Date.now();
-        users[chatId].requiereAsesor = true;
-        saveUsers();
-
-        console.log(`Conversación automática finalizada con ${chatId}: ${mensaje}`);
-    } catch (error) {
-        console.error('Error al notificar al asistente:', error);
-    }
-};
 
 // Manejar inicio de nueva conversación
 const handleNewConversation = async (chatId, text) => {
@@ -297,17 +281,14 @@ const handleNewConversation = async (chatId, text) => {
 
         await waitRandom();
         await sendMedia(chatId, cursos[cursoEncontrado].pensum, cursos[cursoEncontrado].promocion);
-        await waitRandom();
-        await sendMedia(chatId, "ubicacion.jpeg", `📍 *UBICACION:*
-*MEDELLIN Cra 42 #49-33 PISO 3* _diagonal a la estacion del tranvia Pabellon del agua_
 
-_*Recuerda que los 100.000 pesos para apartar tu cupo los puedes pagar en transferencia o en efectivo*_ 
-
-🚨 *EL RESTANTE SE DEBE PAGAR EN EFECTIVO* si quieres que te quede mucho mas economico el curso`);
         await waitRandom();
         await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
+
+        await sendMedia(chatId, cursos[cursoEncontrado].video)
+
         await waitRandom();
-        await sendMessage(chatId, '¿Le gustaria conocer las fechas de inicio con sus respectivos horarios?');
+        await sendMessage(chatId, 'Le gustaria conocer las fechas de inicio con sus respectivos horarios?');
 
 
         users[chatId] = {
@@ -453,7 +434,7 @@ const handleConfirmacionPromocion = async (chatId, text, usuario) => {
         await client.addOrRemoveLabels([etiqueta.id], [chatId]);
         return true;
     }
-    else if (text.includes('presencial') || text.includes('personalmente') || text.includes('sede') || text.includes('direccion') || text.includes('ubicacion') || text.includes('ubicados') || text.includes('ubicado') || text.includes('encuentra') || text.includes('encuentras') || text.includes('efectivo') || text.includes('acercarme') || text.includes('acercar') || text.includes('encuentras') || text.includes('encuentran')) {
+    else if (text.includes('presencial') || text.includes('personalmente') || text.includes('sede') || text.includes('direccion') || text.includes('ubicacion') || text.includes('ubicados') || text.includes('ubicado') || text.includes('encuentra') || text.includes('encuentras') || text.includes('efectivo') || text.includes('efetivo') || text.includes('acercarme') || text.includes('acercar') || text.includes('encuentras') || text.includes('encuentran')) {
         usuario.respuestasInesperadas = 0;
         users[chatId].finalizado = true;
         await waitRandom();
@@ -638,6 +619,9 @@ client.on('message_create', async msg => {
 _*Recuerda que los 100.000 pesos para apartar tu cupo los puedes pagar en transferencia o en efectivo*_ el restante lo debes pagar en efectivo si quieres que te quede mucho mas economico el curso`);
                     await waitRandom();
                     await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
+
+                    await sendMedia(chatId, cursos[cursoEncontrado].video);
+
                     await waitRandom();
                     await sendMessage(chatId, 'Le gustaria conocer las fechas de inicio con sus respectivos horarios?');
 
