@@ -6,6 +6,40 @@ const cursos = require('./cursos.js');
 const { MessageMedia } = require('whatsapp-web.js');
 const { saveToDB } = require('./saveToDB.js');
 
+async function getPhoneFromLid(client, chatId) {
+    try {
+        // Si ya tiene formato de número (no es LID)
+        if (chatId.endsWith('@c.us')) {
+            return chatId;
+        }
+
+        // Si es LID, intentar resolverlo
+        if (chatId.endsWith('@lid')) {
+            const contact = await client.getContactById(chatId);
+            if (contact?.id?._serialized?.endsWith('@c.us')) {
+                // En algunos casos el cliente lo resuelve automáticamente
+                return contact.id.user;
+            }
+
+            // 📞 Forzar obtención desde WhatsApp API interna
+            const result = await client.pupPage.evaluate(async (lid) => {
+                const wid = window.Store?.WidFactory?.createWid?.(lid);
+                if (!wid) return null;
+
+                const contact = await window.Store?.queryExists?.(wid);
+                return contact?.wid?.user || null;
+            }, chatId);
+
+            return result || null;
+        }
+
+        return null;
+    } catch (err) {
+        console.error('Error obteniendo número desde LID:', err);
+        return null;
+    }
+}
+
 
 // Configuración del cliente de WhatsApp
 const client = new Client({
@@ -71,7 +105,8 @@ const cleanupInactiveUsers = async () => {
             if (user.followUpStage === undefined) user.followUpStage = 0;
 
             // Declarar una sola vez el número limpio
-            let numeroLimpio = userId?.replace('57', '')?.replace('@c.us', '');
+            let phone = await getPhoneFromLid(client, userId);
+            let numeroLimpio = phone?.replace('57', '')?.replace('@c.us', '')
             let curso = user.curso;
             console.log("numero:", numeroLimpio)
             console.log("curso:", curso)
@@ -301,8 +336,8 @@ const handleNewConversation = async (chatId, text) => {
         };
 
         saveUsers();
-
-        let numeroLimpio = chatId?.replace('57', '')?.replace('@c.us', '')
+        let phone = await getPhoneFromLid(client, chatId);
+        let numeroLimpio = phone?.replace('57', '')?.replace('@c.us', '')
         let guardado = saveToDB(numeroLimpio, cursoEncontrado)
         if (guardado) {
             // Obtener todas las etiquetas existentes
@@ -613,11 +648,6 @@ client.on('message_create', async msg => {
                     await sendMedia(chatId, cursos[cursoEncontrado].pensum, cursos[cursoEncontrado].promocion);
 
                     await waitRandom();
-                    await sendMedia(chatId, "ubicacion.jpeg", `📍 *UBICACION:*
-*MEDELLIN Cra 42 #49-33 PISO 3* _diagonal a la estacion del tranvia Pabellon del agua_
-
-_*Recuerda que los 100.000 pesos para apartar tu cupo los puedes pagar en transferencia o en efectivo*_ el restante lo debes pagar en efectivo si quieres que te quede mucho mas economico el curso`);
-                    await waitRandom();
                     await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
 
                     await sendMedia(chatId, cursos[cursoEncontrado].video);
@@ -627,7 +657,8 @@ _*Recuerda que los 100.000 pesos para apartar tu cupo los puedes pagar en transf
 
                     users[chatId].lastActivity = Date.now();
                     saveUsers();
-                    let numeroLimpio = chatId?.replace('57', '')?.replace('@c.us', '')
+                    let phone = await getPhoneFromLid(client, chatId);
+                    let numeroLimpio = phone?.replace('57', '')?.replace('@c.us', '')
                     let guardado = saveToDB(numeroLimpio, cursoEncontrado)
                     if (guardado) {
                         // Obtener todas las etiquetas existentes
