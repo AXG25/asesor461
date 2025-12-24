@@ -12,7 +12,7 @@ https://g.co/kgs/cc6o1RU`,
                 video: 'VideoBarberia.mp4',
                 fechas: `Fechas inicio *BARBERÍA*    
 
-9 Diciembre 2025 | Martes y Jueves | 9:00 am a 12:00 am
+10 Febrero 2026 | Martes y Jueves | 9:00 am a 12:00 pm
 
 13 Enero 2026 | Martes y Jueves | 4:00 pm a 7:00 pm
 
@@ -20,7 +20,7 @@ https://g.co/kgs/cc6o1RU`,
 
 17 Enero 2026 | Sábados | 8:00 am a 12:00 pm
 
-6 Diciembre 2025 | Sábados | 1:00 pm a 5:00 pm
+21 Febrero 2026 | Sábados | 1:00 pm a 5:00 pm
 
 1 Febrero 2026 | Domingos | 8:00 am a 12:00 pm
 
@@ -50,7 +50,7 @@ https://g.co/kgs/cc6o1RU`,
 
 13 Enero 2026 | Martes y Jueves | 8:00 am a 12:00 pm
 
-9 Diciembre 2025 | Martes y Jueves | 1:00 pm a 5:00 pm
+27 Enero 2026 | Martes y Jueves | 1:00 pm a 5:00 pm
 
 14 Enero 2026 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
@@ -58,7 +58,7 @@ https://g.co/kgs/cc6o1RU`,
 
 17 Enero 2026 | Sábados | 1:00 pm a 5:00 pm
 
-14 Diciembre 2025 | Domingos | 8:00 am a 12:00 pm
+22 Febrero 2026 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -82,17 +82,17 @@ https://g.co/kgs/cc6o1RU`,
                 video: 'VideoManicure.mp4',
                 fechas: `Fechas inicio *MANICURE & PEDICURE*
 
-9 Diciembre 2026 | Martes y Jueves | 8:00 am a 12:00 am
+3 Febrero 2026 | Martes y Jueves | 8:00 am a 12:00 pm
 
 14 Enero 2026 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
 14 Enero 2026 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
-13 Diciembre 2025 | Sábados | 8:00 am a 12:00 pm
+10 Enero 2026 | Sábados | 8:00 am a 12:00 pm
 
 24 Enero 2026 | Sábados | 1:00 pm a 5:00 pm
 
-7 Diciembre 2025 | Domingos | 8:00 am a 12:00 pm
+22 Febrero 2026 | Domingos | 8:00 am a 12:00 pm
 
 11 Enero 2026 | Domingos | 1:00 pm a 5:00 pm
 
@@ -120,11 +120,9 @@ https://g.co/kgs/cc6o1RU`,
 
 13 Enero 2026 | Martes y Jueves | 8:00 am a 12:00 pm
 
-6 Diciembre 2025 | Sábados | 8:00 am a 12:00 pm
+14 Febrero 2026 | Sábados | 8:00 am a 12:00 pm
 
-6 Diciembre 2025 | Sábados | 1:00 pm a 5:00 pm
-
-7 Diciembre 2025 | Domingos | 8:00 am a 12:00 pm
+8 Febrero 2026 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -148,13 +146,12 @@ https://g.co/kgs/cc6o1RU`,
                 video: 'VideoMasajes.mp4',
                 fechas: `Fechas inicio *MASAJES CORPORALES*
 
-13 Enero 2026 | Martes y Jueves | 6:00 pm a 9:00 pm
+13 Enero 2026 | Martes y Jueves | 8:00 am a 12:00 pm
 
-31 Enero 2026 | Sábados | 8:00 am a 12:00 pm
+10 Enero 2026 | Sábados | 1:00 pm a 5:00 pm
 
-17 Enero 2026 | Sábados | 1:00 pm a 5:00 pm
+11 Enero 2026 | Domingos | 1:00 pm a 5:00 pm
 
-1 Febrero 2026 | Domingos | 8:00 am a 12:00 pm
 
              
 
@@ -180,13 +177,13 @@ https://g.co/kgs/cc6o1RU`,
                 video: 'VideoMelamina.mp4',
                 fechas: `Fechas inicio *Muebles & Cocinas Integrales*
 
-13 Enero 2026 | Martes y Jueves | 6:00 pm a 9:00 pm
+10 Febrero 2026 | Martes y Jueves | 6:00 pm a 9:00 pm
 
 31 Enero 2026 | Sábados | 8:00 am a 12:00 pm
 
 17 Enero 2026 | Sábados | 1:00 pm a 5:00 pm
 
-1 Febrero 2026 | Domingos | 8:00 am a 12:00 pm
+8 Febrero 2026 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -211,14 +208,13 @@ https://g.co/kgs/cc6o1RU`,
                 video: 'VideoCelulares.mp4',
                 fechas: `Fechas inicio *REPARACIÓN DE CELULARES*         
 
-9 Diciembre 2025 | Martes a Viernes | 7:00 am a 9:00 am
+27 Enero 2026 | Martes a Viernes | 7:00 am a 9:00 am
 
-9 Diciembre 2025 | Martes a Viernes | 1:00 pm a 3:00 pm
+27 Enero 2026 | Martes a Viernes | 1:00 pm a 3:00 pm
 
-13 Diciembre 2025 | Sábados | 8:00 am a 1:00 pm
+7 Febrero 2026 | Sábados | 8:00 am a 1:00 pm
 
 11 Enero 2026 | Domingos | 8:00 am a 1:00 pm
-
 
 
 🚨 *Recordatorio* 🚨
@@ -247,10 +243,9 @@ https://g.co/kgs/cc6o1RU`,
 
 17 Enero 2026 | Sábados | 8:00 am a 12:00 pm
 
-13 Diciembre 2025 | Sábados | 1:00 pm a 5:00 pm
+27 Diciembre 2025 | Sábados | 1:00 pm a 5:00 pm
 
 1 Febrero 2026 | Domingos | 8:00 am a 12:00 pm
-
 
 
 🚨*Recordatorio*🚨
@@ -275,9 +270,11 @@ https://g.co/kgs/cc6o1RU`,
                 video: 'VideoDrywall.mp4',
                 fechas: `Fechas inicio *Estructuras en Drywall*
 
-10 Enero 2025 | Sábados | 1:00 pm a 5:00 pm
+17 Diciembre 2026 | Sábados | 8:00 am a 12:00 pm
 
-7 Diciembre 2025 | Domingos | 8:00 am a 12:00 pm
+10 Enero 2026 | Sábados | 1:00 pm a 5:00 pm
+
+25 Enero 2026 | Domingos | 8:00 am a 12:00 pm
 
 
 🚨*Recordatorio*🚨
@@ -315,7 +312,7 @@ _cancela el resto *tres dias antes de que comience tu curso o antes del 28 de Di
 
 Fechas inicio *MICROPIGMENTACIÓN DE CEJAS*
 
-14 Enero 2026 | Miércoles y Viernes | 8:00 am a 12:00 pm
+18 Febrero 2025 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
 11 Enero 2026 | Domingos | 8:00 am a 12:00 pm
 
