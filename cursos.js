@@ -244,7 +244,7 @@ _*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transfe
 
 🎉 *Promoción especial:*
 Valor normal: $600.000 c/u
-*Valor promocional: _$500.000_  c/u* 
+*Valor promocional: _$450.000_  c/u* 
 
 
 _Promoción disponible *Hasta el 31 de Marzo*_
@@ -281,15 +281,15 @@ si escoge una fecha de inicio para estudiar en *fin de semana* la duracion del c
 };
 
 const sinonimos = {
-    'cuesta': ['cuesta', 'vale', 'tiene un valor de', 'su precio es', 'cuesta aproximadamente', 'su costo es'],
-    'descuento del': ['descuento del', 'con un', 'rebaja del', 'promoción de', 'ahorro del'],
-    'queda en': ['queda en', 'te queda en', 'obtienes en', 'obtendrías en', 'está en', 'se reduce a'],
-    'puede': ['puede', 'podés', 'puedes', 'podrás'],
+    'cuesta': ['cuesta', 'vale', 'tiene un valor de', 'su precio es', 'cuesta aproximadamente', 'su costo es de'],
+    'descuento del': ['descuento del', 'con', 'rebaja del', 'promoción de', 'ahorro del'],
+    'queda en': ['queda en', 'te queda en', 'lo obtienes en', 'obtendrías en', 'está en', 'se reduce a'],
+    'puede': ['puede', 'podés', 'puedes', 'podrá'],
     'apartar': ['apartar', 'reservar', 'separar', 'asegurar'],
     'tres dias': ['tres dias', '3 días', '72 horas', 'tres días'],
-    'antes de': ['antes de', 'previo a', 'con anticipación a', 'antes del'],
+    'antes de': ['antes del', 'previo al', 'con anticipación al', 'antes del'],
     'el curso': ['el curso', 'este curso', 'la formación', 'el taller'],
-    'tiene un': ['tiene un', 'cuenta con un', 'incluye un', 'brinda un'],
+    'tiene un': ['tiene un', 'cuenta con', 'incluye', 'brinda'],
     'y queda': ['y queda', 'y te queda', 'y obtienes', 'y se reduce'],
     'con solo': ['con solo', 'apartando solo', 'separando solo', 'reservando solo'],
     'pagando los': ['pagando los', 'cancelando los', 'abonado los', 'consignando los'],

@@ -8,29 +8,66 @@ const { saveToDB } = require('./saveToDB.js');
 
 async function getPhoneFromLid(client, chatId) {
     try {
+        if (!chatId) return null;
+
+        let numero = null;
+
         // Si ya tiene formato de número (no es LID)
         if (chatId.endsWith('@c.us')) {
-            return chatId;
+            numero = chatId.replace('@c.us', '').replace('57', '');
+            return numero || null;
         }
 
         // Si es LID, intentar resolverlo
         if (chatId.endsWith('@lid')) {
-            const contact = await client.getContactById(chatId);
-            if (contact?.id?._serialized?.endsWith('@c.us')) {
-                // En algunos casos el cliente lo resuelve automáticamente
-                return contact.id.user;
+            try {
+                // Método 1: Intentar con getContactById
+                const contact = await client.getContactById(chatId);
+                if (contact?.id?.user) {
+                    numero = contact.id.user.replace('57', '');
+                    return numero;
+                }
+            } catch (e) {
+                console.log('getContactById no funcionó:', e.message);
             }
 
-            // 📞 Forzar obtención desde WhatsApp API interna
-            const result = await client.pupPage.evaluate(async (lid) => {
-                const wid = window.Store?.WidFactory?.createWid?.(lid);
-                if (!wid) return null;
+            try {
+                // Método 2: Intentar con Store interno de WhatsApp Web
+                const result = await client.pupPage.evaluate(async (lid) => {
+                    try {
+                        const wid = window.Store?.WidFactory?.createWid?.(lid);
+                        if (!wid) return null;
 
-                const contact = await window.Store?.queryExists?.(wid);
-                return contact?.wid?.user || null;
-            }, chatId);
+                        const contact = await window.Store?.queryExists?.(wid);
+                        return contact?.wid?.user || null;
+                    } catch (e) {
+                        return null;
+                    }
+                }, chatId);
 
-            return result || null;
+                if (result) {
+                    numero = result.replace('57', '');
+                    return numero;
+                }
+            } catch (e) {
+                console.log('pupPage.evaluate no funcionó:', e.message);
+            }
+
+            try {
+                // Método 3: Extraer directamente del LID si es posible
+                const lidMatch = chatId.match(/^(\d+)@lid$/);
+                if (lidMatch) {
+                    return lidMatch[1];
+                }
+            } catch (e) {
+                console.log('Extracción directa de LID no funcionó');
+            }
+        }
+
+        // Si el chatId parece ser un número directo
+        const numeroDirecto = chatId.match(/^(\d+)$/);
+        if (numeroDirecto) {
+            return numeroDirecto[1].replace('57', '');
         }
 
         return null;
@@ -93,83 +130,129 @@ const saveUsers = () => {
     }
 };
 
-// Limpiar usuarios inactivos
+// Limpiar usuarios inactivos y enviar seguimientos
 const cleanupInactiveUsers = async () => {
+    // Verificar que el cliente esté conectado
+    if (!client.info || !client.info.me) {
+        console.log('Cliente no conectado, saltando cleanup');
+        return;
+    }
+
     const now = Date.now();
     let count = 0;
+    let usuariosModificados = false;
 
-    for (const [userId, user] of Object.entries(users)) {
-        if (!user.finalizado && user.lastActivity) {
-            const timeSinceLastActivity = now - user.lastActivity;
-            // Inicializar etapa de seguimiento si no existe
-            if (user.followUpStage === undefined) user.followUpStage = 0;
+    const userIds = Object.keys(users); // Copia para evitar problemas al eliminar
 
-            // Declarar una sola vez el número limpio
-            let phone = await getPhoneFromLid(client, userId);
-            let numeroLimpio = phone?.replace('57', '')?.replace('@c.us', '')
-            let curso = user.curso;
-            console.log("numero:", numeroLimpio)
-            console.log("curso:", curso)
-            console.log(userId)
+    for (const userId of userIds) {
+        const user = users[userId];
+        if (!user || !user.lastActivity) continue;
 
-            // 1. Primer seguimiento: 1 día
-            if (timeSinceLastActivity > 24 * 60 * 60 * 1000 && user.followUpStage === 0 && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
+        // Omitir usuarios ya finalizados
+        if (user.finalizado) {
+            // Eliminar finalizados después de 2 días
+            if (now - user.lastActivity > 2 * 24 * 60 * 60 * 1000) {
+                delete users[userId];
+                count++;
+                usuariosModificados = true;
+            }
+            continue;
+        }
+
+        const timeSinceLastActivity = now - user.lastActivity;
+        
+        // Inicializar etapa de seguimiento si no existe
+        if (user.followUpStage === undefined) user.followUpStage = 0;
+
+        // Estados válidos para seguimientos
+        const estadosValidos = ['seleccion_fechas', 'inicio', 'confirmacion_promocion'];
+        const estadoValido = estadosValidos.includes(user.estado);
+
+        // 1. Primer seguimiento: 1 día (24 horas)
+        if (estadoValido && timeSinceLastActivity > 24 * 60 * 60 * 1000 && user.followUpStage === 0) {
+            try {
                 await waitRandom();
                 await sendMessage(userId, '¡Hola! 😊 Te escribo para saber si tuviste la oportunidad de *revisar la información del curso*. Si tienes dudas o necesitas ayuda para *apartar tu cupo, estoy aquí para ayudarte.* ¿Qué te pareció?');
                 user.followUpStage = 1;
                 user.lastActivity = now;
                 count++;
-                let guardado = saveToDB(numeroLimpio, curso)
-                if (guardado) {
-                    // Obtener todas las etiquetas existentes
-                    const labels = await client.getLabels();
-                    let etiqueta = labels.find(l => l.name === 'seguimiento1')
-                    await client.addOrRemoveLabels([etiqueta?.id], [userId]);
+                usuariosModificados = true;
+
+                let phone = await getPhoneFromLid(client, userId);
+                let numeroLimpio = phone?.replace('57', '');
+                if (numeroLimpio) {
+                    saveToDB(numeroLimpio, user.curso);
+                    try {
+                        const labels = await client.getLabels();
+                        let etiqueta = labels.find(l => l.name === 'seguimiento1');
+                        if (etiqueta?.id) await client.addOrRemoveLabels([etiqueta.id], [userId]);
+                    } catch (e) { /* ignore label errors */ }
                 }
                 console.log(`Enviado mensaje de seguimiento 1 a ${userId}`);
+            } catch (e) {
+                console.error(`Error en seguimiento 1 para ${userId}:`, e.message);
             }
-            // 2. Segundo seguimiento: 3 días
-            else if (timeSinceLastActivity > 3 * 24 * 60 * 60 * 1000 && user.followUpStage === 1 && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
+        }
+        // 2. Segundo seguimiento: 3 días (desde el último mensaje, no desde el inicio)
+        else if (estadoValido && timeSinceLastActivity > 3 * 24 * 60 * 60 * 1000 && user.followUpStage === 1) {
+            try {
                 await waitRandom();
-                //await sendMessage(userId, '¡Hola! Solo quería contarte que tenemos más cursos disponibles 😊. Si tú no puedes tomar uno en este momento, quizás conoces a alguien que sí le gustaría: un familiar, una amiga o alguien que quiera aprender algo útil y rentable.\n\nAdemás, *por cada persona que refieras* y se inscriba, *OBTIENES UN 10% DE DESCUENTO* en tu curso.\n\n¿Te gustaría conocer los otros 10 cursos que tenemos disponibles? Te puedo compartir la info o ayudarte a reservar un cupo para otra persona.');
-                await sendMessage(userId, '¡Hola! Solo quería contarte \n\nQue tenemos más cursos disponibles  \n\nSi tú no puedes tomar un curso en este momento, quizás conoces a alguien que sí le gustaría: un familiar, una amiga o alguien que quiera aprender algo útil y rentable.\n\nAdemás, *por cada persona que refieras* y se inscriba, *OBTIENES UN 10% DE DESCUENTO* en tu curso.\n\n¿Te gustaría conocer los otros 10 cursos que tenemos disponibles?');
+                await sendMessage(userId, '¡Hola! Solo quería contarte \n\nQue tenemos más cursos disponibles \n\nSi tú no puedes tomar un curso en este momento, quizás conoces a alguien que sí le gustaría: un familiar, una amiga o alguien que quiera aprender algo útil y rentable.\n\nAdemás, *por cada persona que refieras* y se inscriba, *OBTIENES UN 10% DE DESCUENTO* en tu curso.\n\n¿Te gustaría conocer los otros 10 cursos que tenemos disponibles?');
                 user.followUpStage = 2;
                 user.lastActivity = now;
                 count++;
-                let guardado = saveToDB(numeroLimpio, curso)
-                if (guardado) {
-                    // Obtener todas las etiquetas existentes
-                    const labels = await client.getLabels();
-                    let etiqueta = labels.find(l => l.name === 'seguimiento2')
-                    await client.addOrRemoveLabels([etiqueta?.id], [userId]);
+                usuariosModificados = true;
+
+                let phone = await getPhoneFromLid(client, userId);
+                let numeroLimpio = phone?.replace('57', '');
+                if (numeroLimpio) {
+                    saveToDB(numeroLimpio, user.curso);
+                    try {
+                        const labels = await client.getLabels();
+                        let etiqueta = labels.find(l => l.name === 'seguimiento2');
+                        if (etiqueta?.id) await client.addOrRemoveLabels([etiqueta.id], [userId]);
+                    } catch (e) { /* ignore label errors */ }
                 }
                 console.log(`Enviado mensaje de seguimiento 2 a ${userId}`);
+            } catch (e) {
+                console.error(`Error en seguimiento 2 para ${userId}:`, e.message);
             }
-            // 3. Tercer seguimiento: 7 días
-            else if (timeSinceLastActivity > 7 * 24 * 60 * 60 * 1000 && user.followUpStage === 2 && (user.estado === 'seleccion_fechas' || user.estado === 'inicio' || user.estado === 'confirmacion_promocion')) {
+        }
+        // 3. Tercer seguimiento: 7 días
+        else if (estadoValido && timeSinceLastActivity > 7 * 24 * 60 * 60 * 1000 && user.followUpStage === 2) {
+            try {
                 await waitRandom();
                 await sendMessage(userId, '¡Hola de nuevo! Solo quería recordarte que *los cupos* para el curso *son limitados* y muchas personas ya están reservando. Si tú o alguien cercano está interesado, este es un buen momento para *asegurar su lugar antes de que se llenen los grupos*. ¿Quieres que te ayude con eso?');
                 user.followUpStage = 3;
                 user.lastActivity = now;
                 count++;
-                let guardado = saveToDB(numeroLimpio, curso)
-                if (guardado) {
-                    // Obtener todas las etiquetas existentes
-                    const labels = await client.getLabels();
-                    let etiqueta = labels.find(l => l.name === 'seguimiento3')
-                    await client.addOrRemoveLabels([etiqueta?.id], [userId]);
+                usuariosModificados = true;
+
+                let phone = await getPhoneFromLid(client, userId);
+                let numeroLimpio = phone?.replace('57', '');
+                if (numeroLimpio) {
+                    saveToDB(numeroLimpio, user.curso);
+                    try {
+                        const labels = await client.getLabels();
+                        let etiqueta = labels.find(l => l.name === 'seguimiento3');
+                        if (etiqueta?.id) await client.addOrRemoveLabels([etiqueta.id], [userId]);
+                    } catch (e) { /* ignore label errors */ }
                 }
                 console.log(`Enviado mensaje de seguimiento 3 a ${userId}`);
+            } catch (e) {
+                console.error(`Error en seguimiento 3 para ${userId}:`, e.message);
             }
-            // Eliminar usuario después de 8 días de inactividad
-            else if (timeSinceLastActivity > 8 * 24 * 60 * 60 * 1000) {
-                delete users[userId];
-                count++;
-            }
+        }
+        // Eliminar usuario después de 8 días de inactividad (sin importar el estado)
+        else if (timeSinceLastActivity > 8 * 24 * 60 * 60 * 1000) {
+            delete users[userId];
+            count++;
+            usuariosModificados = true;
+            console.log(`Eliminado usuario inactivo: ${userId}`);
         }
     }
 
-    if (count > 0) {
+    if (usuariosModificados) {
         console.log(`Procesados ${count} usuarios inactivos.`);
         saveUsers();
     }
@@ -177,47 +260,68 @@ const cleanupInactiveUsers = async () => {
 
 // Limpiar todos los usuarios periódicamente
 const setupCleanup = () => {
-    // Verificar usuarios inactivos cada hora para enviar mensajes de seguimiento
-    setInterval(cleanupInactiveUsers, 5 * 60 * 1000); // 10 minutos en milisegundos
+    // Verificar usuarios inactivos cada 5 minutos para enviar mensajes de seguimiento
+    setInterval(cleanupInactiveUsers, 5 * 60 * 1000); // 5 minutos en milisegundos
 
-    // Limpiar usuarios completamente inactivos cada 24 horas
+    // Limpiar usuarios muy antiguos (más de 15 días) o con errores cada 15 días
     setInterval(() => {
         const now = Date.now();
         let count = 0;
+        const DIAS_MAXIMOS = 15 * 24 * 60 * 60 * 1000;
 
         for (const [userId, user] of Object.entries(users)) {
-            if (!user.finalizado && user.lastActivity) {
-                const timeSinceLastActivity = now - user.lastActivity;
-                if (timeSinceLastActivity > INACTIVE_TIMEOUT) {
-                    delete users[userId];
-                    count++;
-                }
+            if (!user.lastActivity) {
+                delete users[userId];
+                count++;
+                continue;
+            }
+
+            const antiguedad = now - user.lastActivity;
+
+            // Eliminar si tiene más de 15 días sin importar el estado
+            if (antiguedad > DIAS_MAXIMOS) {
+                delete users[userId];
+                count++;
             }
         }
 
         if (count > 0) {
-            console.log(`Eliminados ${count} usuarios completamente inactivos.`);
+            console.log(`Eliminados ${count} usuarios muy antiguos.`);
             saveUsers();
         }
-    }, INACTIVE_TIMEOUT);
-
-    // Limpiar todos los usuarios cada 15 días
-    setInterval(() => {
-        users = {};
-        processedMessages.clear();
-        saveUsers();
-        console.log('Todos los usuarios limpiados.');
     }, CLEANUP_INTERVAL);
 };
 
-// Esperar un tiempo aleatorio para simular tipeo humano
+// Comportamientos humanos para los delays
+const estadosHumanos = {
+    concentrado: { min: 4000, max: 7000, peso: 0.3 },    // Pensando en la respuesta
+    normal: { min: 2500, max: 4500, peso: 0.4 },         // Respuesta normal
+    ansioso: { min: 1000, max: 2500, peso: 0.15 },      // Queriendo responder rápido
+    distraido: { min: 6000, max: 12000, peso: 0.15 },   // Distraído, ocupado
+};
+
+function seleccionarEstado() {
+    const rand = Math.random();
+    let acumulado = 0;
+    for (const [estado, config] of Object.entries(estadosHumanos)) {
+        acumulado += config.peso;
+        if (rand < acumulado) return estado;
+    }
+    return 'normal';
+}
+
 const waitRandom = async () => {
-    const delay = Math.floor(Math.random() * 2000) + 3000;
+    const estado = seleccionarEstado();
+    const config = estadosHumanos[estado];
+    const delay = Math.floor(Math.random() * (config.max - config.min)) + config.min;
     return new Promise(resolve => setTimeout(resolve, delay));
 };
 
 const waitAMinute = async () => {
-    const delay = Math.floor(Math.random() * 10000) + 20000;
+    const estado = seleccionarEstado();
+    const config = estadosHumanos[estado];
+    const baseDelay = Math.floor(Math.random() * 10000) + 20000;
+    const delay = Math.floor(baseDelay * (config.max / 5000));
     return new Promise(resolve => setTimeout(resolve, delay));
 };
 
@@ -306,11 +410,15 @@ const sendAudio = async (chatId, audioPath) => {
 
 // Manejar inicio de nueva conversación
 const handleNewConversation = async (chatId, text) => {
+    console.log('🔍 Buscando curso para:', text);
+    
     const cursoEncontrado = Object.keys(cursos).find(curso =>
         cursos[curso].palabrasClave.some(palabra =>
             text.includes(normalizeText(palabra))
         )
     );
+
+    console.log('🎯 Curso encontrado:', cursoEncontrado);
 
     if (cursoEncontrado) {
 
@@ -528,36 +636,48 @@ client.on('qr', qr => {
 });
 
 client.on('authenticated', () => {
-    console.log('Autenticación exitosa!');
+    console.log('✅ Autenticación exitosa!');
 });
 
 client.on('auth_failure', (error) => {
-    console.error('Error de autenticación:', error);
+    console.error('❌ Error de autenticación:', error);
 });
 
 client.on('change_state', (state) => {
-    console.log('Estado del cliente:', state);
+    console.log('⚠️ Estado del cliente:', state);
 });
 
 client.on('loading_screen', (percent, message) => {
-    console.log('Cargando:', percent, message);
+    console.log('📱 Cargando:', percent, message);
 });
 
 client.on('ready', () => {
-    console.log('Bot listo y conectado!');
+    console.log('🤖 Bot listo y conectado! ✅');
     loadUsers();
     setupCleanup();
 });
 
 client.on('disconnected', (reason) => {
-    console.log('Bot desconectado:', reason);
+    console.log('❌ Bot desconectado:', reason);
+});
+
+// Agregar evento para saber cuando se carga el servicio de mensajes
+client.on('message_ack', (msg, ack) => {
+    // ack: 1 = servidor, 2 = dispositivo, 3 = leido, 4 = reproducido
+});
+
+client.on('incoming_call', (call) => {
+    console.log('📞 Llamada recibida:', call);
 });
 
 // Procesar mensajes entrantes
 client.on('message', async msg => {
     try {
+        console.log('📩 Mensaje recibido de:', msg.from, '-', msg.body.substring(0, 50));
+
         // Evitar procesar mensajes duplicados
         if (processedMessages.has(msg.id.id)) {
+            console.log('⏭️ Mensaje duplicado, ignorando');
             return;
         }
         processedMessages.add(msg.id.id);
@@ -570,6 +690,7 @@ client.on('message', async msg => {
 
         const chatId = msg.from;
         const text = normalizeText(msg.body);
+        console.log('Mensaje entrante:', chatId, '->', msg.body);
 
         // Verificar si el mensaje proviene de un grupo
         if (await isGroup(chatId)) {
