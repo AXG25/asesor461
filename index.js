@@ -315,7 +315,7 @@ const handleNewConversation = async (chatId, text) => {
     if (cursoEncontrado) {
 
         await waitRandom();
-        await sendMedia(chatId, cursos[cursoEncontrado].pensum, cursos[cursoEncontrado].promocion);
+        await sendMedia(chatId, cursos[cursoEncontrado].pensum, cursos.obtenerPromocionAleatoria(cursoEncontrado));
 
         await waitRandom();
         await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
@@ -645,7 +645,7 @@ client.on('message_create', async msg => {
                     console.log(`Iniciando flujo automático para ${chatId} sobre el curso: ${cursoEncontrado}`);
 
                     await waitRandom();
-                    await sendMedia(chatId, cursos[cursoEncontrado].pensum, cursos[cursoEncontrado].promocion);
+                    await sendMedia(chatId, cursos[cursoEncontrado].pensum, cursos.obtenerPromocionAleatoria(cursoEncontrado));
 
                     await waitRandom();
                     await sendAudio(chatId, cursos[cursoEncontrado].presentacion);
