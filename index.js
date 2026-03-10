@@ -130,6 +130,33 @@ const saveUsers = () => {
     }
 };
 
+// Mensajes de seguimiento
+const mensajesSeguimiento = [
+    {
+        // 1. Despertar emoción
+        mensaje: '¡Hola! 😊 Te pregunto algo\n\nSi en 3 meses estuvieras generando ingresos desde casa, ¿crees que eso tendría un impacto positivo en tu vida?'
+    },
+    {
+        // 2. Beneficio práctico
+        mensaje: 'Este es un curso práctico 📚\n\nDesde la primera semana empiezas a ganar técnica y confianza.\n\nLas personas que salen de aquí salen preparadas para aumentar sus ingresos.\n\n¿Te gustaría ver las fechas disponibles?'
+    },
+    {
+        // 3. Propuesta de valor
+        mensaje: 'Algo importante que debes saber 💡\n\nHay cursos más costosos pero no incluyen prácticas reales.\n\nNosotros trabajamos en grupos pequeños para que realmente aprendas y salgas ready para trabajar.\n\n¿Qué es más importante para ti: pagar de más o aprender mejor?'
+    },
+    {
+        // 4. Testimonios
+        mensaje: '¿Te gustaría ver un testimonio para ver qué piensan otras personas de nuestro curso? 👀\n\nTenemos personas que ya están trabajando y generando ingresos después de terminar.\n\n¿Te lo comparto?'
+    },
+    {
+        // 5. Urgencia
+        mensaje: 'Ya nos estamos quedando sin cupos ⚠️\n\nSi realmente quieres empezar este camino, este es el momento ideal.\n\n ¿Avanzamos con tu inscripción o prefieres esperar al próximo grupo?\n\nCuéntame 😊'
+    }
+];
+
+const SEGUIMIENTO_INTERVAL = 24 * 60 * 60 * 1000; // 24 horas entre cada seguimiento
+const MAX_SEGUIMIENTOS = 5;
+
 // Limpiar usuarios inactivos y enviar seguimientos
 const cleanupInactiveUsers = async () => {
     // Verificar que el cliente esté conectado
@@ -148,8 +175,9 @@ const cleanupInactiveUsers = async () => {
         const user = users[userId];
         if (!user || !user.lastActivity) continue;
 
-        // Omitir usuarios ya finalizados
-        if (user.finalizado) {
+        // Omitir usuarios que ya completaron el pago (finalizado = true pero no detenidoManualmente)
+        // Solo se saltan si tienen finalizado = true Y NO fue detenido manualmente con ✨
+        if (user.finalizado && user.handledManually !== true) {
             // Eliminar finalizados después de 2 días
             if (now - user.lastActivity > 2 * 24 * 60 * 60 * 1000) {
                 delete users[userId];
@@ -164,87 +192,64 @@ const cleanupInactiveUsers = async () => {
         // Inicializar etapa de seguimiento si no existe
         if (user.followUpStage === undefined) user.followUpStage = 0;
 
-        // Estados válidos para seguimientos
-        const estadosValidos = ['seleccion_fechas', 'inicio', 'confirmacion_promocion'];
-        const estadoValido = estadosValidos.includes(user.estado);
+        // Estados válidos para seguimientos (ya no ограниamos por estado, todos reciben seguimientos)
+        // Solo NO se hace seguimiento si el usuario detuvo manualmente con ✨
+        const detenidoManualmente = user.handledManually === true;
 
-        // 1. Primer seguimiento: 1 día (24 horas)
-        if (estadoValido && timeSinceLastActivity > 24 * 60 * 60 * 1000 && user.followUpStage === 0) {
-            try {
-                await waitRandom();
-                await sendMessage(userId, '¡Hola! 😊 Te escribo para saber si tuviste la oportunidad de *revisar la información del curso*. Si tienes dudas o necesitas ayuda para *apartar tu cupo, estoy aquí para ayudarte.* ¿Qué te pareció?');
-                user.followUpStage = 1;
-                user.lastActivity = now;
+        // Si el usuario detuvo manualmente con ✨, no hacer seguimientos
+        if (detenidoManualmente) {
+            // Eliminar después de 2 días de inactividad
+            if (timeSinceLastActivity > 2 * 24 * 60 * 60 * 1000) {
+                delete users[userId];
                 count++;
                 usuariosModificados = true;
-
-                let phone = await getPhoneFromLid(client, userId);
-                let numeroLimpio = phone?.replace('57', '');
-                if (numeroLimpio) {
-                    saveToDB(numeroLimpio, user.curso);
-                    try {
-                        const labels = await client.getLabels();
-                        let etiqueta = labels.find(l => l.name === 'seguimiento1');
-                        if (etiqueta?.id) await client.addOrRemoveLabels([etiqueta.id], [userId]);
-                    } catch (e) { /* ignore label errors */ }
-                }
-                console.log(`Enviado mensaje de seguimiento 1 a ${userId}`);
-            } catch (e) {
-                console.error(`Error en seguimiento 1 para ${userId}:`, e.message);
             }
+            continue;
         }
-        // 2. Segundo seguimiento: 3 días (desde el último mensaje, no desde el inicio)
-        else if (estadoValido && timeSinceLastActivity > 3 * 24 * 60 * 60 * 1000 && user.followUpStage === 1) {
-            try {
-                await waitRandom();
-                await sendMessage(userId, '¡Hola! Solo quería contarte \n\nQue tenemos más cursos disponibles \n\nSi tú no puedes tomar un curso en este momento, quizás conoces a alguien que sí le gustaría: un familiar, una amiga o alguien que quiera aprender algo útil y rentable.\n\nAdemás, *por cada persona que refieras* y se inscriba, *OBTIENES UN 10% DE DESCUENTO* en tu curso.\n\n¿Te gustaría conocer los otros 10 cursos que tenemos disponibles?');
-                user.followUpStage = 2;
-                user.lastActivity = now;
+
+        // Si ya se alcanzaron los 5 seguimientos, eliminar usuario
+        if (user.followUpStage >= MAX_SEGUIMIENTOS) {
+            if (timeSinceLastActivity > 2 * 24 * 60 * 60 * 1000) {
+                delete users[userId];
                 count++;
                 usuariosModificados = true;
+                console.log(`Eliminado usuario tras completar 5 seguimientos: ${userId}`);
+            }
+            continue;
+        }
 
-                let phone = await getPhoneFromLid(client, userId);
-                let numeroLimpio = phone?.replace('57', '');
-                if (numeroLimpio) {
-                    saveToDB(numeroLimpio, user.curso);
-                    try {
-                        const labels = await client.getLabels();
-                        let etiqueta = labels.find(l => l.name === 'seguimiento2');
-                        if (etiqueta?.id) await client.addOrRemoveLabels([etiqueta.id], [userId]);
-                    } catch (e) { /* ignore label errors */ }
+        // Verificar si es momento de enviar el siguiente seguimiento (cada 24 horas)
+        if (timeSinceLastActivity > SEGUIMIENTO_INTERVAL && user.followUpStage < MAX_SEGUIMIENTOS) {
+            const idxSeg = user.followUpStage; // 0 = primer seguimiento, 1 = segundo, etc.
+            const mensaje = mensajesSeguimiento[idxSeg];
+            
+            if (mensaje) {
+                try {
+                    await waitRandom();
+                    await sendMessage(userId, mensaje.mensaje);
+                    user.followUpStage = user.followUpStage + 1;
+                    user.lastActivity = now;
+                    count++;
+                    usuariosModificados = true;
+
+                    let phone = await getPhoneFromLid(client, userId);
+                    let numeroLimpio = phone?.replace('57', '');
+                    if (numeroLimpio) {
+                        saveToDB(numeroLimpio, user.curso);
+                        try {
+                            const labels = await client.getLabels();
+                            let etiqueta = labels.find(l => l.name === `seguimiento${user.followUpStage}`);
+                            if (etiqueta?.id) await client.addOrRemoveLabels([etiqueta.id], [userId]);
+                        } catch (e) { /* ignore label errors */ }
+                    }
+                    console.log(`📤 Enviado seguimiento ${user.followUpStage} a ${userId}`);
+                } catch (e) {
+                    console.error(`Error en seguimiento ${user.followUpStage} para ${userId}:`, e.message);
                 }
-                console.log(`Enviado mensaje de seguimiento 2 a ${userId}`);
-            } catch (e) {
-                console.error(`Error en seguimiento 2 para ${userId}:`, e.message);
             }
         }
-        // 3. Tercer seguimiento: 7 días
-        else if (estadoValido && timeSinceLastActivity > 7 * 24 * 60 * 60 * 1000 && user.followUpStage === 2) {
-            try {
-                await waitRandom();
-                await sendMessage(userId, '¡Hola de nuevo! Solo quería recordarte que *los cupos* para el curso *son limitados* y muchas personas ya están reservando. Si tú o alguien cercano está interesado, este es un buen momento para *asegurar su lugar antes de que se llenen los grupos*. ¿Quieres que te ayude con eso?');
-                user.followUpStage = 3;
-                user.lastActivity = now;
-                count++;
-                usuariosModificados = true;
-
-                let phone = await getPhoneFromLid(client, userId);
-                let numeroLimpio = phone?.replace('57', '');
-                if (numeroLimpio) {
-                    saveToDB(numeroLimpio, user.curso);
-                    try {
-                        const labels = await client.getLabels();
-                        let etiqueta = labels.find(l => l.name === 'seguimiento3');
-                        if (etiqueta?.id) await client.addOrRemoveLabels([etiqueta.id], [userId]);
-                    } catch (e) { /* ignore label errors */ }
-                }
-                console.log(`Enviado mensaje de seguimiento 3 a ${userId}`);
-            } catch (e) {
-                console.error(`Error en seguimiento 3 para ${userId}:`, e.message);
-            }
-        }
-        // Eliminar usuario después de 8 días de inactividad (sin importar el estado)
-        else if (timeSinceLastActivity > 8 * 24 * 60 * 60 * 1000) {
+        // Eliminar usuario después de 6 días de inactividad (sin importar el estado)
+        else if (timeSinceLastActivity > 6 * 24 * 60 * 60 * 1000) {
             delete users[userId];
             count++;
             usuariosModificados = true;
@@ -413,7 +418,7 @@ const handleNewConversation = async (chatId, text) => {
     console.log('🔍 Buscando curso para:', text);
     
     const cursoEncontrado = Object.keys(cursos).find(curso =>
-        cursos[curso].palabrasClave.some(palabra =>
+        cursos[curso].palabrasClave?.some(palabra =>
             text.includes(normalizeText(palabra))
         )
     );
@@ -521,7 +526,7 @@ const handleFechaEspecifica = async (chatId, text, usuario) => {
 
     // 3. Si el mensaje contiene un número mayor a 31, NO es fecha
     const numerosEnMensaje = text.match(/\d+/g);
-    if (numerosEnMensaje && numerosEnMensaje.some(n => parseInt(n) > 31)) {
+    if (numerosEnMensaje && numerosEnMensaje?.some(n => parseInt(n) > 31)) {
         console.log('NO es fecha: número mayor a 31');
         return false;
     }
@@ -534,7 +539,7 @@ const handleFechaEspecifica = async (chatId, text, usuario) => {
     let match;
     while ((match = regexFecha.exec(text)) !== null) {
         const mes = match[3].toLowerCase();
-        if (meses.some(m => mes.includes(m)) || dias.some(d => mes.includes(d))) {
+        if (meses?.some(m => mes.includes(m)) || dias?.some(d => mes.includes(d))) {
             contieneFecha = true;
             break;
         }
@@ -542,7 +547,7 @@ const handleFechaEspecifica = async (chatId, text, usuario) => {
 
     // 5. Si no encontró con regex, buscar por palabras sueltas (meses o días, pero NO solo números)
     if (!contieneFecha) {
-        contieneFecha = meses.some(m => text.includes(m)) || dias.some(d => text.includes(d));
+        contieneFecha = meses?.some(m => text.includes(m)) || dias?.some(d => text.includes(d));
         if (contieneFecha) {
             console.log('Detectado mes o día suelto');
         }
@@ -747,7 +752,7 @@ client.on('message_create', async msg => {
             const text = normalizeText(msg.body);
 
             const cursoEncontrado = Object.keys(cursos).find(curso =>
-                cursos[curso].palabrasClave.some(palabra =>
+                cursos[curso].palabrasClave?.some(palabra =>
                     text.includes(palabra)
                 )
             );
@@ -805,7 +810,7 @@ client.on('message_create', async msg => {
 
             // NUEVO: Si el mensaje contiene el emoji ✔, avanzar el flujo según el estado
             const EMOJIS_CONFIRMACION = ['✔', '✅', '👌', '👍'];
-            if (EMOJIS_CONFIRMACION.some(e => msg.body.includes(e))) {
+            if (EMOJIS_CONFIRMACION?.some(e => msg.body.includes(e))) {
                 if (users[chatId] && !users[chatId].finalizado) {
                     const usuario = users[chatId];
                     usuario.lastActivity = Date.now();
