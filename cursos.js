@@ -125,7 +125,7 @@ https://g.co/kgs/cc6o1RU`,
 
 *Fecha de inicio* | *días de estudio* | *horario* 
 
-10 Marzo 2026 | Martes y Jueves | 8:00 am a 12:00 pm
+7 Abril 2026 | Martes y Jueves | 8:00 am a 12:00 pm
 
 2 Mayo 2026 | Sábados | 8:00 am a 12:00 pm
 

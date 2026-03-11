@@ -418,5 +418,45 @@
     "followUpStage": 0,
     "finalizado": true,
     "handledManually": true
+  },
+  "22724722319396@lid": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "createdAt": 1773176718768,
+    "lastActivity": 1773176732049,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "104114939789480@lid": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1773176826876,
+    "lastActivity": 1773176848261,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "173280522674395@lid": {
+    "estado": "confirmacion_promocion",
+    "curso": "masajes",
+    "createdAt": 1773176852762,
+    "lastActivity": 1773183288781,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "207266934468845@lid": {
+    "estado": "confirmacion_promocion",
+    "curso": "Barberia",
+    "createdAt": 1773188901624,
+    "lastActivity": 1773189199406,
+    "respuestasInesperadas": 0,
+    "followUpSent": false,
+    "followUpStage": 0
+  },
+  "32998300885191@lid": {
+    "estado": "inicio",
+    "curso": "manicure",
+    "createdAt": 1773231262998,
+    "lastActivity": 1773231304188,
+    "respuestasInesperadas": 0
   }
 }
