@@ -458,5 +458,23 @@
     "createdAt": 1773231262998,
     "lastActivity": 1773231304188,
     "respuestasInesperadas": 0
+  },
+  "status@broadcast": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "idInstancia": 1,
+    "createdAt": 1773235103050,
+    "lastActivity": 1773235103050,
+    "respuestasInesperadas": 0,
+    "followUpSent": false
+  },
+  "78070039986291@lid": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "idInstancia": 1,
+    "createdAt": 1773235188561,
+    "lastActivity": 1773235188561,
+    "respuestasInesperadas": 0,
+    "followUpSent": false
   }
 }

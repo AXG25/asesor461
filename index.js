@@ -14,7 +14,8 @@ async function getPhoneFromLid(client, chatId) {
 
         // Si ya tiene formato de número (no es LID)
         if (chatId.endsWith('@c.us')) {
-            numero = chatId.replace('@c.us', '').replace('57', '');
+            // Quitar solo el prefijo 57 al inicio si existe
+            numero = chatId.replace('@c.us', '').replace(/^57/, '');
             return numero || null;
         }
 
@@ -22,9 +23,9 @@ async function getPhoneFromLid(client, chatId) {
         if (chatId.endsWith('@lid')) {
             try {
                 // Método 1: Intentar con getContactById
-                const contact = await client.getContactById(chatId);
+                const contact = await getClient().getContactById(chatId);
                 if (contact?.id?.user) {
-                    numero = contact.id.user.replace('57', '');
+                    numero = contact.id.user.replace(/^57/, '');
                     return numero;
                 }
             } catch (e) {
@@ -33,7 +34,7 @@ async function getPhoneFromLid(client, chatId) {
 
             try {
                 // Método 2: Intentar con Store interno de WhatsApp Web
-                const result = await client.pupPage.evaluate(async (lid) => {
+                const result = await getClient().pupPage.evaluate(async (lid) => {
                     try {
                         const wid = window.Store?.WidFactory?.createWid?.(lid);
                         if (!wid) return null;
@@ -46,7 +47,7 @@ async function getPhoneFromLid(client, chatId) {
                 }, chatId);
 
                 if (result) {
-                    numero = result.replace('57', '');
+                    numero = result.replace(/^57/, '');
                     return numero;
                 }
             } catch (e) {
@@ -67,7 +68,7 @@ async function getPhoneFromLid(client, chatId) {
         // Si el chatId parece ser un número directo
         const numeroDirecto = chatId.match(/^(\d+)$/);
         if (numeroDirecto) {
-            return numeroDirecto[1].replace('57', '');
+            return numeroDirecto[1].replace(/^57/, '');
         }
 
         return null;
@@ -78,34 +79,96 @@ async function getPhoneFromLid(client, chatId) {
 }
 
 
-// Configuración del cliente de WhatsApp
-const client = new Client({
-    authStrategy: new LocalAuth(),
-    puppeteer: {
-        executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-        headless: true,
-        args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-dev-shm-usage',
-            '--disable-accelerated-2d-canvas',
-            '--no-first-run',
-            '--no-zygote'
-        ]
-    }
+// Configuración de instancias (cuentas de WhatsApp = asesores)
+const INSTANCIAS = [
+    { id: 1, sessionName: 'session1', asistente: '573025479797@c.us' },
+    { id: 2, sessionName: 'session2', asistente: '573025479797@c.us' },
+];
+
+// Función para crear un cliente de WhatsApp
+const crearCliente = (config) => {
+    const client = new Client({
+        authStrategy: new LocalAuth({
+            dataPath: config.sessionName
+        }),
+        puppeteer: {
+            executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+            headless: true,
+            args: [
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-dev-shm-usage',
+                '--disable-accelerated-2d-canvas',
+                '--no-first-run',
+                '--no-zygote'
+            ]
+        }
+    });
+
+    // Configurar eventos del cliente
+    client.on('qr', qr => {
+        console.log(`\n📱 Cliente ${config.id} - QR Code generado. Escanea para iniciar sesión.`);
+        qrcode.generate(qr, { small: true });
+    });
+
+    client.on('authenticated', () => {
+        console.log(`✅ Cliente ${config.id} autenticado!`);
+    });
+
+    client.on('auth_failure', (error) => {
+        console.error(`❌ Cliente ${config.id} error de autenticación:`, error);
+    });
+
+    client.on('ready', () => {
+        console.log(`🤖 Cliente ${config.id} listo y conectado! ✅`);
+        // Solo cargar usuarios una vez (cuando cualquier cliente se conecte primero)
+        if (!usersLoaded) {
+            usersLoaded = true;
+            loadUsers();
+        }
+        // Configurar cleanup para este cliente
+        setupCleanup(client, config.id);
+    });
+
+    client.on('disconnected', (reason) => {
+        console.log(`❌ Cliente ${config.id} desconectado:`, reason);
+    });
+
+    // Configurar manejo de mensajes
+    client.on('message', (msg) => manejarMensaje(msg, config.id));
+
+    // Manejar mensajes creados por el bot
+    client.on('message_create', (msg) => manejarMessageCreate(msg, config.id));
+
+    return client;
+};
+
+// Inicializar todas las instancias
+const instancias = INSTANCIAS.map(config => ({
+    config,
+    cliente: crearCliente(config)
+}));
+
+console.log(`\n🚀 Iniciando ${instancias.length} instancia(s) de WhatsApp...\n`);
+
+instancias.forEach(({ config, cliente }) => {
+    cliente.initialize().catch(error => {
+        console.error(`Error al inicializar cliente ${config.id}:`, error);
+    });
 });
 
-// Constantes
-const ASISTENTE_NUMERO = '573025479797@c.us';
-const USERS_FILE = path.join(__dirname, 'users.json');
-const CLEANUP_INTERVAL = 15 * 24 * 60 * 60 * 1000; // 15 días en milisegundos
-const INACTIVE_TIMEOUT = 24 * 60 * 60 * 1000; // 24 horas en milisegundos
-const FOLLOW_UP_TIMEOUT = 24 * 60 * 60 * 1000; // 1 día en milisegundos
-const STOP_EMOJI = '✨'; // Emoji para detener interacción
+// Usar el primer cliente como referencia global para compatibilidad
+const client = instancias[0].cliente;
 
-// Estructura de datos para usuarios
+// Constantes (del primer cliente)
+const ASISTENTE_NUMERO = INSTANCIAS[0].asistente;
+const USERS_FILE = path.join(__dirname, 'users.json');
+const CLEANUP_INTERVAL = 15 * 24 * 60 * 60 * 1000;
+const STOP_EMOJI = '✨';
+
 let users = {};
-let processedMessages = new Set(); // Para evitar procesar mensajes duplicados
+let usersLoaded = false;
+let processedMessages = new Set();
 
 // Cargar usuarios desde JSON
 const loadUsers = () => {
@@ -158,11 +221,17 @@ const SEGUIMIENTO_INTERVAL = 24 * 60 * 60 * 1000; // 24 horas entre cada seguimi
 const MAX_SEGUIMIENTOS = 5;
 
 // Limpiar usuarios inactivos y enviar seguimientos
-const cleanupInactiveUsers = async () => {
+const cleanupInactiveUsers = async (clienteActivo, idInstancia) => {
     // Verificar que el cliente esté conectado
-    if (!client.info || !client.info.me) {
-        console.log('Cliente no conectado, saltando cleanup');
+    if (!clienteActivo || !clienteActivo.info || !clienteActivo.info.me) {
         return;
+    }
+
+    // Configurar clienteActual para este cleanup
+    clienteActual = clienteActivo;
+    const instanciaInfo = instancias.find(i => i.config.id === idInstancia);
+    if (instanciaInfo) {
+        asistenteActual = instanciaInfo.config.asistente;
     }
 
     const now = Date.now();
@@ -174,6 +243,9 @@ const cleanupInactiveUsers = async () => {
     for (const userId of userIds) {
         const user = users[userId];
         if (!user || !user.lastActivity) continue;
+
+        // Solo procesar clientes de esta instancia/asesor
+        if (user.idInstancia !== idInstancia) continue;
 
         // Omitir usuarios que ya completaron el pago (finalizado = true pero no detenidoManualmente)
         // Solo se saltan si tienen finalizado = true Y NO fue detenido manualmente con ✨
@@ -233,13 +305,13 @@ const cleanupInactiveUsers = async () => {
                     usuariosModificados = true;
 
                     let phone = await getPhoneFromLid(client, userId);
-                    let numeroLimpio = phone?.replace('57', '');
+                    let numeroLimpio = phone?.replace(/^57/, '');
                     if (numeroLimpio) {
                         saveToDB(numeroLimpio, user.curso);
                         try {
-                            const labels = await client.getLabels();
+                            const labels = await getClient().getLabels();
                             let etiqueta = labels.find(l => l.name === `seguimiento${user.followUpStage}`);
-                            if (etiqueta?.id) await client.addOrRemoveLabels([etiqueta.id], [userId]);
+                            if (etiqueta?.id)                 await getClient().addOrRemoveLabels([etiqueta.id], [userId]);
                         } catch (e) { /* ignore label errors */ }
                     }
                     console.log(`📤 Enviado seguimiento ${user.followUpStage} a ${userId}`);
@@ -263,12 +335,15 @@ const cleanupInactiveUsers = async () => {
     }
 };
 
-// Limpiar todos los usuarios periódicamente
-const setupCleanup = () => {
-    // Verificar usuarios inactivos cada 5 minutos para enviar mensajes de seguimiento
-    setInterval(cleanupInactiveUsers, 5 * 60 * 1000); // 5 minutos en milisegundos
+// Configurar cleanup para cada cliente activo
+const setupCleanup = (clienteActivo, idCliente) => {
+    if (!clienteActivo || !clienteActivo.info || !clienteActivo.info.me) return;
+    
+    // Verificar usuarios inactivos cada 5 minutos
+    cleanupInactiveUsers(clienteActivo, idCliente);
+    setInterval(() => cleanupInactiveUsers(clienteActivo, idCliente), 5 * 60 * 1000);
 
-    // Limpiar usuarios muy antiguos (más de 15 días) o con errores cada 15 días
+    // Limpiar usuarios muy antiguos cada 15 días
     setInterval(() => {
         const now = Date.now();
         let count = 0;
@@ -282,8 +357,6 @@ const setupCleanup = () => {
             }
 
             const antiguedad = now - user.lastActivity;
-
-            // Eliminar si tiene más de 15 días sin importar el estado
             if (antiguedad > DIAS_MAXIMOS) {
                 delete users[userId];
                 count++;
@@ -355,7 +428,7 @@ const fileExists = (filePath) => {
 // Enviar mensaje con manejo de errores
 const sendMessage = async (chatId, message, options = {}) => {
     try {
-        await client.sendMessage(chatId, message, options);
+        await getClient().sendMessage(chatId, message, options);
         return true;
     } catch (error) {
         console.error(`Error al enviar mensaje a ${chatId}:`);
@@ -366,7 +439,7 @@ const sendMessage = async (chatId, message, options = {}) => {
 // Función utilitaria para marcar chat como no leído
 const marcarNoLeido = async (chatId) => {
     try {
-        const chat = await client.getChatById(chatId);
+        const chat = await getClient().getChatById(chatId);
         await chat.markUnread();
     } catch (error) {
         console.error(`Error al marcar como no leído el chat ${chatId}:`, error);
@@ -383,7 +456,7 @@ const sendMedia = async (chatId, mediaPath, caption = '') => {
         }
 
         const media = MessageMedia.fromFilePath(absolutePath);
-        await client.sendMessage(chatId, media, { caption });
+        await getClient().sendMessage(chatId, media, { caption });
         return true;
     } catch (error) {
         console.error(`Error al enviar media a ${chatId}:`);
@@ -402,7 +475,7 @@ const sendAudio = async (chatId, audioPath) => {
         }
 
         const audioMedia = MessageMedia.fromFilePath(absolutePath);
-        await client.sendMessage(chatId, audioMedia, { sendAudioAsVoice: true });
+        await getClient().sendMessage(chatId, audioMedia, { sendAudioAsVoice: true });
         return true;
     } catch (error) {
         console.error(`Error al enviar audio a ${chatId}:`);
@@ -414,7 +487,7 @@ const sendAudio = async (chatId, audioPath) => {
 // Notificar al asistente y cerrar el flujo automático
 
 // Manejar inicio de nueva conversación
-const handleNewConversation = async (chatId, text) => {
+const handleNewConversation = async (chatId, text, idInstancia) => {
     console.log('🔍 Buscando curso para:', text);
     
     const cursoEncontrado = Object.keys(cursos).find(curso =>
@@ -442,6 +515,7 @@ const handleNewConversation = async (chatId, text) => {
         users[chatId] = {
             estado: 'inicio',
             curso: cursoEncontrado,
+            idInstancia: idInstancia, // Qué asesor/instancia lo atiende
             createdAt: Date.now(),
             lastActivity: Date.now(),
             respuestasInesperadas: 0,
@@ -450,13 +524,13 @@ const handleNewConversation = async (chatId, text) => {
 
         saveUsers();
         let phone = await getPhoneFromLid(client, chatId);
-        let numeroLimpio = phone?.replace('57', '')?.replace('@c.us', '')
+        let numeroLimpio = phone?.replace(/^57/, '')?.replace('@c.us', '')
         let guardado = saveToDB(numeroLimpio, cursoEncontrado)
         if (guardado) {
             // Obtener todas las etiquetas existentes
-            const labels = await client.getLabels();
+            const labels = await getClient().getLabels();
             let etiqueta = labels.find(l => l.name === 'Base de datos')
-            await client.addOrRemoveLabels([etiqueta.id], [chatId]);
+            await getClient().addOrRemoveLabels([etiqueta.id], [chatId]);
         }
         await marcarNoLeido(chatId);
         return true;
@@ -577,9 +651,9 @@ const handleConfirmacionPromocion = async (chatId, text, usuario) => {
         await waitRandom();
         await sendMessage(chatId, `Y podemos hacer la consignación a una de nuestras cuentas\n\n1.💳 BANCOLOMBIA \nCuenta de ahorros: Claudia Bolívar \n00896502867\n\n2.📱Nequi \nClaudia Bolívar \n3117367087`);
         await marcarNoLeido(chatId);
-        const labels = await client.getLabels();
+        const labels = await getClient().getLabels();
         let etiqueta = labels.find(l => l.name === 'Importante')
-        await client.addOrRemoveLabels([etiqueta.id], [chatId]);
+        await getClient().addOrRemoveLabels([etiqueta.id], [chatId]);
         return true;
     }
     else if (text.includes('presencial') || text.includes('personalmente') || text.includes('sede') || text.includes('direccion') || text.includes('ubicacion') || text.includes('ubicados') || text.includes('ubicado') || text.includes('encuentra') || text.includes('encuentras') || text.includes('efectivo') || text.includes('efetivo') || text.includes('acercarme') || text.includes('acercar') || text.includes('encuentras') || text.includes('encuentran')) {
@@ -592,9 +666,9 @@ const handleConfirmacionPromocion = async (chatId, text, usuario) => {
         await waitRandom();
         await sendMessage(chatId, `Si es posible me puedes decir que dia y a que hora puedes venir para poder agendarte la cita y de esa manera asesorarte presencialmente\n\nNosotros atendemos todos los dias de 8 a 5. Si puedes preguntar por mi me harias un enorme favor Yo me llamo Abi 😊`);
         await marcarNoLeido(chatId);
-        const labels = await client.getLabels();
+        const labels = await getClient().getLabels();
         let etiqueta = labels.find(l => l.name === 'Importante')
-        await client.addOrRemoveLabels([etiqueta.id], [chatId]);
+        await getClient().addOrRemoveLabels([etiqueta.id], [chatId]);
         return true;
     }
     return false;
@@ -626,57 +700,31 @@ const handleReservationSelection = async (chatId, text, usuario) => {
 // Verificar si un chat es un grupo
 const isGroup = async (chatId) => {
     try {
-        const chat = await client.getChatById(chatId);
+        const chat = await getClient().getChatById(chatId);
         return chat.isGroup;
     } catch (error) {
         console.error(`Error al verificar si ${chatId} es un grupo:`, error);
-        return false; // Por defecto, asumimos que no es un grupo en caso de error
+        return false;
     }
 };
 
-// Configurar eventos del cliente
-client.on('qr', qr => {
-    qrcode.generate(qr, { small: true });
-    console.log('QR Code generado. Escanea para iniciar sesión.');
-});
+// Estas funciones ya no se necesitan aquí porque están en crearCliente
+// Los eventos de cliente ya están configurados al crear cada cliente
 
-client.on('authenticated', () => {
-    console.log('✅ Autenticación exitosa!');
-});
+// Función helper para obtener el cliente actual
+const getClient = () => clienteActual || client;
+const getAsistente = () => asistenteActual || ASISTENTE_NUMERO;
+let clienteActual = null;
+let asistenteActual = null;
 
-client.on('auth_failure', (error) => {
-    console.error('❌ Error de autenticación:', error);
-});
-
-client.on('change_state', (state) => {
-    console.log('⚠️ Estado del cliente:', state);
-});
-
-client.on('loading_screen', (percent, message) => {
-    console.log('📱 Cargando:', percent, message);
-});
-
-client.on('ready', () => {
-    console.log('🤖 Bot listo y conectado! ✅');
-    loadUsers();
-    setupCleanup();
-});
-
-client.on('disconnected', (reason) => {
-    console.log('❌ Bot desconectado:', reason);
-});
-
-// Agregar evento para saber cuando se carga el servicio de mensajes
-client.on('message_ack', (msg, ack) => {
-    // ack: 1 = servidor, 2 = dispositivo, 3 = leido, 4 = reproducido
-});
-
-client.on('incoming_call', (call) => {
-    console.log('📞 Llamada recibida:', call);
-});
-
-// Procesar mensajes entrantes
-client.on('message', async msg => {
+const manejarMensaje = async (msg, idInstancia) => {
+    const instanciaInfo = INSTANCIAS.find(i => i.id === idInstancia);
+    if (!instanciaInfo) return;
+    
+    clienteActual = instancias.find(i => i.id === idInstancia)?.cliente;
+    asistenteActual = instanciaInfo.asistente;
+    const idInstanciaActual = idInstancia;
+    
     try {
         console.log('📩 Mensaje recibido de:', msg.from, '-', msg.body.substring(0, 50));
 
@@ -714,7 +762,7 @@ client.on('message', async msg => {
 
         // Si es un nuevo usuario o no está en proceso
         if (!users[chatId]) {
-            const iniciado = await handleNewConversation(chatId, text);
+            const iniciado = await handleNewConversation(chatId, text, idInstanciaActual);
             if (!iniciado) {
                 return;
             }
@@ -738,15 +786,68 @@ client.on('message', async msg => {
                 console.error(`Estado desconocido para usuario ${chatId}: ${usuario.estado}`);
             }
         }
+
+        // Comandos del asistente (si el mensaje viene del número del asistente)
+        if (msg.from === asistenteActual) {
+            const texto = normalizeText(msg.body);
+            
+            // info <chatId>
+            if (texto.startsWith('info ')) {
+                const chatIdInfo = texto.substring(5).trim();
+                if (users[chatIdInfo]) {
+                    const userInfo = JSON.stringify(users[chatIdInfo], null, 2);
+                    await sendMessage(asistenteActual, `Información del usuario ${chatIdInfo}:\n\`\`\`\n${userInfo}\n\`\`\``);
+                } else {
+                    await sendMessage(asistenteActual, `No hay información para el usuario ${chatIdInfo}`);
+                }
+                return;
+            }
+
+            // usuarios activos
+            if (texto === 'usuarios activos') {
+                const now = Date.now();
+                const activeUsers = Object.entries(users)
+                    .filter(([_, user]) => !user.finalizado && user.lastActivity && (now - user.lastActivity < 24 * 60 * 60 * 1000))
+                    .map(([id, user]) => `- ${id}: ${user.curso}, estado: ${user.estado}`)
+                    .join('\n');
+
+                if (activeUsers) {
+                    await sendMessage(asistenteActual, `Usuarios activos:\n${activeUsers}`);
+                } else {
+                    await sendMessage(asistenteActual, 'No hay usuarios activos actualmente');
+                }
+                return;
+            }
+
+            // detenidos por emoji
+            if (texto === 'detenidos por emoji') {
+                const stoppedUsers = Object.entries(users)
+                    .filter(([_, user]) => user.stoppedByEmoji)
+                    .map(([id, user]) => `- ${id}: ${user.curso || 'Sin curso'}, detenido hace: ${Math.round((Date.now() - user.lastActivity) / 60000)} minutos`)
+                    .join('\n');
+
+                if (stoppedUsers) {
+                    await sendMessage(asistenteActual, `Conversaciones detenidas por emoji:\n${stoppedUsers}`);
+                } else {
+                    await sendMessage(asistenteActual, 'No hay conversaciones detenidas por emoji actualmente');
+                }
+                return;
+            }
+        }
     } catch (error) {
         console.error('Error en el procesamiento del mensaje:', error);
     }
-});
+};
 
-// Escuchar mensajes enviados por el bot
-client.on('message_create', async msg => {
+// Manejar mensajes creados por el bot
+const manejarMessageCreate = async (msg, idInstancia) => {
+    const instanciaInfo = INSTANCIAS.find(i => i.id === idInstancia);
+    if (!instanciaInfo) return;
+    
+    const ASISTENTE_NUMERO = instanciaInfo.asistente;
+    const instanciaActual = instancias.find(i => i.id === idInstancia)?.cliente;
+    
     try {
-        // Solo procesar mensajes enviados por el bot, no por otros usuarios
         if (msg.fromMe) {
             const chatId = msg.to;
             const text = normalizeText(msg.body);
@@ -763,6 +864,7 @@ client.on('message_create', async msg => {
                     users[chatId] = {
                         estado: 'inicio',
                         curso: cursoEncontrado,
+                        idInstancia: idInstancia, // Qué asesor lo atiende
                         createdAt: Date.now(),
                         lastActivity: Date.now(),
                         respuestasInesperadas: 0
@@ -784,13 +886,13 @@ client.on('message_create', async msg => {
                     users[chatId].lastActivity = Date.now();
                     saveUsers();
                     let phone = await getPhoneFromLid(client, chatId);
-                    let numeroLimpio = phone?.replace('57', '')?.replace('@c.us', '')
+                    let numeroLimpio = phone?.replace(/^57/, '')?.replace('@c.us', '')
                     let guardado = saveToDB(numeroLimpio, cursoEncontrado)
                     if (guardado) {
                         // Obtener todas las etiquetas existentes
-                        const labels = await client.getLabels();
+                        const labels = await getClient().getLabels();
                         let etiqueta = labels.find(l => l.name === 'Base de datos')
-                        await client.addOrRemoveLabels([etiqueta?.id], [chatId]);
+                        await getClient().addOrRemoveLabels([etiqueta?.id], [chatId]);
                     }
                     await marcarNoLeido(chatId);
                 }
@@ -828,59 +930,7 @@ client.on('message_create', async msg => {
     } catch (error) {
         console.error('Error en message_create:', error);
     }
-});
-
-// Enviar información del usuario actual si el asesor lo solicita
-client.on('message', async msg => {
-    try {
-        if (msg.from === ASISTENTE_NUMERO) {
-            const text = normalizeText(msg.body);
-
-            // Comando para ver información de un usuario
-            if (text.startsWith('info ')) {
-                const chatId = text.substring(5).trim();
-
-                if (users[chatId]) {
-                    const userInfo = JSON.stringify(users[chatId], null, 2);
-                    await sendMessage(ASISTENTE_NUMERO, `Información del usuario ${chatId}:\n\`\`\`\n${userInfo}\n\`\`\``);
-                } else {
-                    await sendMessage(ASISTENTE_NUMERO, `No hay información para el usuario ${chatId}`);
-                }
-            }
-
-            // Comando para listar usuarios activos
-            if (text === 'usuarios activos') {
-                const now = Date.now();
-                const activeUsers = Object.entries(users)
-                    .filter(([_, user]) => !user.finalizado && user.lastActivity && (now - user.lastActivity < INACTIVE_TIMEOUT))
-                    .map(([id, user]) => `- ${id}: ${user.curso}, estado: ${user.estado}`)
-                    .join('\n');
-
-                if (activeUsers) {
-                    await sendMessage(ASISTENTE_NUMERO, `Usuarios activos:\n${activeUsers}`);
-                } else {
-                    await sendMessage(ASISTENTE_NUMERO, 'No hay usuarios activos actualmente');
-                }
-            }
-
-            // Comando para listar conversaciones detenidas por emoji
-            if (text === 'detenidos por emoji') {
-                const stoppedUsers = Object.entries(users)
-                    .filter(([_, user]) => user.stoppedByEmoji)
-                    .map(([id, user]) => `- ${id}: ${user.curso || 'Sin curso'}, detenido hace: ${Math.round((Date.now() - user.lastActivity) / 60000)} minutos`)
-                    .join('\n');
-
-                if (stoppedUsers) {
-                    await sendMessage(ASISTENTE_NUMERO, `Conversaciones detenidas por emoji:\n${stoppedUsers}`);
-                } else {
-                    await sendMessage(ASISTENTE_NUMERO, 'No hay conversaciones detenidas por emoji actualmente');
-                }
-            }
-        }
-    } catch (error) {
-        console.error('Error procesando comandos del asistente:', error);
-    }
-});
+};
 
 // Manejar errores no capturados
 process.on('uncaughtException', (error) => {
@@ -891,9 +941,5 @@ process.on('unhandledRejection', (reason, promise) => {
     console.error('Rechazo no manejado en:', promise, 'razón:', reason);
 });
 
-// Iniciar el cliente
-client.initialize().catch(error => {
-    console.error('Error al inicializar el cliente:', error);
-});
-
-console.log('Iniciando el bot de WhatsApp...');
+// El initialize ya se hace automáticamente al crear los clientes
+// en la sección INSTANCIAS al inicio del archivo
