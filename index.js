@@ -79,89 +79,71 @@ async function getPhoneFromLid(client, chatId) {
 }
 
 
-// Configuración de instancias (cuentas de WhatsApp = asesores)
-const INSTANCIAS = [
-    { id: 1, sessionName: 'session1', asistente: '573025479797@c.us' },
-    { id: 2, sessionName: 'session2', asistente: '573025479797@c.us' },
-];
+// Configuración para una sola instancia (una cuenta de WhatsApp = un asesor)
+const SESSION_NAME = 'session1';
+const ASISTENTE_NUMERO = '573025479797@c.us';
 
-// Función para crear un cliente de WhatsApp
-const crearCliente = (config) => {
-    const client = new Client({
-        authStrategy: new LocalAuth({
-            dataPath: config.sessionName
-        }),
-        puppeteer: {
-            executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-            headless: true,
-            args: [
-                '--no-sandbox',
-                '--disable-setuid-sandbox',
-                '--disable-dev-shm-usage',
-                '--disable-accelerated-2d-canvas',
-                '--no-first-run',
-                '--no-zygote'
-            ]
-        }
-    });
-
-    // Configurar eventos del cliente
-    client.on('qr', qr => {
-        console.log(`\n📱 Cliente ${config.id} - QR Code generado. Escanea para iniciar sesión.`);
-        qrcode.generate(qr, { small: true });
-    });
-
-    client.on('authenticated', () => {
-        console.log(`✅ Cliente ${config.id} autenticado!`);
-    });
-
-    client.on('auth_failure', (error) => {
-        console.error(`❌ Cliente ${config.id} error de autenticación:`, error);
-    });
-
-    client.on('ready', () => {
-        console.log(`🤖 Cliente ${config.id} listo y conectado! ✅`);
-        // Solo cargar usuarios una vez (cuando cualquier cliente se conecte primero)
-        if (!usersLoaded) {
-            usersLoaded = true;
-            loadUsers();
-        }
-        // Configurar cleanup para este cliente
-        setupCleanup(client, config.id);
-    });
-
-    client.on('disconnected', (reason) => {
-        console.log(`❌ Cliente ${config.id} desconectado:`, reason);
-    });
-
-    // Configurar manejo de mensajes
-    client.on('message', (msg) => manejarMensaje(msg, config.id));
-
-    // Manejar mensajes creados por el bot
-    client.on('message_create', (msg) => manejarMessageCreate(msg, config.id));
-
-    return client;
-};
-
-// Inicializar todas las instancias
-const instancias = INSTANCIAS.map(config => ({
-    config,
-    cliente: crearCliente(config)
-}));
-
-console.log(`\n🚀 Iniciando ${instancias.length} instancia(s) de WhatsApp...\n`);
-
-instancias.forEach(({ config, cliente }) => {
-    cliente.initialize().catch(error => {
-        console.error(`Error al inicializar cliente ${config.id}:`, error);
-    });
+// Crear un solo cliente de WhatsApp
+const client = new Client({
+    authStrategy: new LocalAuth({
+        dataPath: SESSION_NAME
+    }),
+    puppeteer: {
+        executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+        headless: true,
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-accelerated-2d-canvas',
+            '--no-first-run',
+            '--no-zygote'
+        ]
+    }
 });
 
-// Usar el primer cliente como referencia global para compatibilidad
-const client = instancias[0].cliente;
+// Configurar eventos del cliente único
+client.on('qr', qr => {
+    console.log('\n📱 Cliente único - QR Code generado. Escanea para iniciar sesión.');
+    qrcode.generate(qr, { small: true });
+});
 
-// Constantes (del primer cliente)
-const ASISTENTE_NUMERO = INSTANCIAS[0].asistente;
+client.on('authenticated', () => {
+    console.log('✅ Cliente autenticado!');
+});
+
+client.on('auth_failure', (error) => {
+    console.error('❌ Cliente error de autenticación:', error);
+});
+
+client.on('ready', () => {
+    console.log('🤖 Cliente listo y conectado! ✅');
+    // Cargar usuarios una vez cuando el cliente se conecta
+    if (!usersLoaded) {
+        usersLoaded = true;
+        loadUsers();
+    }
+    // Configurar cleanup para este cliente
+    setupCleanup(client);
+});
+
+client.on('disconnected', (reason) => {
+    console.log('❌ Cliente desconectado:', reason);
+});
+
+// Configurar manejo de mensajes
+client.on('message', (msg) => manejarMensaje(msg));
+
+// Manejar mensajes creados por el bot
+client.on('message_create', (msg) => manejarMessageCreate(msg));
+
+console.log('\n🚀 Iniciando 1 instancia de WhatsApp...\n');
+
+client.initialize().catch(error => {
+    console.error('Error al inicializar el cliente:', error);
+});
+
+// Constantes
 const USERS_FILE = path.join(__dirname, 'users.json');
 const CLEANUP_INTERVAL = 15 * 24 * 60 * 60 * 1000;
 const STOP_EMOJI = '✨';
@@ -220,32 +202,24 @@ const mensajesSeguimiento = [
 const SEGUIMIENTO_INTERVAL = 24 * 60 * 60 * 1000; // 24 horas entre cada seguimiento
 const MAX_SEGUIMIENTOS = 5;
 
-// Limpiar usuarios inactivos y enviar seguimientos
-const cleanupInactiveUsers = async (clienteActivo, idInstancia) => {
+// Limpiar usuarios inactivos y enviar seguimientos (para una sola instancia)
+const cleanupInactiveUsers = async (clienteActivo) => {
     // Verificar que el cliente esté conectado
     if (!clienteActivo || !clienteActivo.info || !clienteActivo.info.me) {
         return;
     }
 
-    // Configurar clienteActual para este cleanup
-    clienteActual = clienteActivo;
-    const instanciaInfo = instancias.find(i => i.config.id === idInstancia);
-    if (instanciaInfo) {
-        asistenteActual = instanciaInfo.config.asistente;
-    }
-
     const now = Date.now();
     let count = 0;
     let usuariosModificados = false;
+    let seguimientosEnviados = 0;
+    const MAX_SEGUIMIENTOS_POR_EJECUCION = 10;
 
     const userIds = Object.keys(users); // Copia para evitar problemas al eliminar
 
     for (const userId of userIds) {
         const user = users[userId];
         if (!user || !user.lastActivity) continue;
-
-        // Solo procesar clientes de esta instancia/asesor
-        if (user.idInstancia !== idInstancia) continue;
 
         // Omitir usuarios que ya completaron el pago (finalizado = true pero no detenidoManualmente)
         // Solo se saltan si tienen finalizado = true Y NO fue detenido manualmente con ✨
@@ -292,17 +266,24 @@ const cleanupInactiveUsers = async (clienteActivo, idInstancia) => {
 
         // Verificar si es momento de enviar el siguiente seguimiento (cada 24 horas)
         if (timeSinceLastActivity > SEGUIMIENTO_INTERVAL && user.followUpStage < MAX_SEGUIMIENTOS) {
+            // Limitar cantidad de seguimientos por ejecución para no enviar muchos de golpe
+            if (seguimientosEnviados >= MAX_SEGUIMIENTOS_POR_EJECUCION) {
+                break;
+            }
+
             const idxSeg = user.followUpStage; // 0 = primer seguimiento, 1 = segundo, etc.
             const mensaje = mensajesSeguimiento[idxSeg];
             
             if (mensaje) {
                 try {
+                    // Espera aleatoria más larga para seguimientos, para parecer más humano
                     await waitRandom();
                     await sendMessage(userId, mensaje.mensaje);
                     user.followUpStage = user.followUpStage + 1;
                     user.lastActivity = now;
                     count++;
                     usuariosModificados = true;
+                    seguimientosEnviados++;
 
                     let phone = await getPhoneFromLid(client, userId);
                     let numeroLimpio = phone?.replace(/^57/, '');
@@ -335,13 +316,13 @@ const cleanupInactiveUsers = async (clienteActivo, idInstancia) => {
     }
 };
 
-// Configurar cleanup para cada cliente activo
-const setupCleanup = (clienteActivo, idCliente) => {
+// Configurar cleanup para el cliente activo (único)
+const setupCleanup = (clienteActivo) => {
     if (!clienteActivo || !clienteActivo.info || !clienteActivo.info.me) return;
     
     // Verificar usuarios inactivos cada 5 minutos
-    cleanupInactiveUsers(clienteActivo, idCliente);
-    setInterval(() => cleanupInactiveUsers(clienteActivo, idCliente), 5 * 60 * 1000);
+    cleanupInactiveUsers(clienteActivo);
+    setInterval(() => cleanupInactiveUsers(clienteActivo), 5 * 60 * 1000);
 
     // Limpiar usuarios muy antiguos cada 15 días
     setInterval(() => {
@@ -487,7 +468,7 @@ const sendAudio = async (chatId, audioPath) => {
 // Notificar al asistente y cerrar el flujo automático
 
 // Manejar inicio de nueva conversación
-const handleNewConversation = async (chatId, text, idInstancia) => {
+const handleNewConversation = async (chatId, text) => {
     console.log('🔍 Buscando curso para:', text);
     
     const cursoEncontrado = Object.keys(cursos).find(curso =>
@@ -515,7 +496,6 @@ const handleNewConversation = async (chatId, text, idInstancia) => {
         users[chatId] = {
             estado: 'inicio',
             curso: cursoEncontrado,
-            idInstancia: idInstancia, // Qué asesor/instancia lo atiende
             createdAt: Date.now(),
             lastActivity: Date.now(),
             respuestasInesperadas: 0,
@@ -708,23 +688,11 @@ const isGroup = async (chatId) => {
     }
 };
 
-// Estas funciones ya no se necesitan aquí porque están en crearCliente
-// Los eventos de cliente ya están configurados al crear cada cliente
+// Función helper para obtener el cliente actual (único)
+const getClient = () => client;
+const getAsistente = () => ASISTENTE_NUMERO;
 
-// Función helper para obtener el cliente actual
-const getClient = () => clienteActual || client;
-const getAsistente = () => asistenteActual || ASISTENTE_NUMERO;
-let clienteActual = null;
-let asistenteActual = null;
-
-const manejarMensaje = async (msg, idInstancia) => {
-    const instanciaInfo = INSTANCIAS.find(i => i.id === idInstancia);
-    if (!instanciaInfo) return;
-    
-    clienteActual = instancias.find(i => i.id === idInstancia)?.cliente;
-    asistenteActual = instanciaInfo.asistente;
-    const idInstanciaActual = idInstancia;
-    
+const manejarMensaje = async (msg) => {
     try {
         console.log('📩 Mensaje recibido de:', msg.from, '-', msg.body.substring(0, 50));
 
@@ -762,7 +730,7 @@ const manejarMensaje = async (msg, idInstancia) => {
 
         // Si es un nuevo usuario o no está en proceso
         if (!users[chatId]) {
-            const iniciado = await handleNewConversation(chatId, text, idInstanciaActual);
+            const iniciado = await handleNewConversation(chatId, text);
             if (!iniciado) {
                 return;
             }
@@ -788,7 +756,7 @@ const manejarMensaje = async (msg, idInstancia) => {
         }
 
         // Comandos del asistente (si el mensaje viene del número del asistente)
-        if (msg.from === asistenteActual) {
+        if (msg.from === ASISTENTE_NUMERO) {
             const texto = normalizeText(msg.body);
             
             // info <chatId>
@@ -796,9 +764,9 @@ const manejarMensaje = async (msg, idInstancia) => {
                 const chatIdInfo = texto.substring(5).trim();
                 if (users[chatIdInfo]) {
                     const userInfo = JSON.stringify(users[chatIdInfo], null, 2);
-                    await sendMessage(asistenteActual, `Información del usuario ${chatIdInfo}:\n\`\`\`\n${userInfo}\n\`\`\``);
+                    await sendMessage(ASISTENTE_NUMERO, `Información del usuario ${chatIdInfo}:\n\`\`\`\n${userInfo}\n\`\`\``);
                 } else {
-                    await sendMessage(asistenteActual, `No hay información para el usuario ${chatIdInfo}`);
+                    await sendMessage(ASISTENTE_NUMERO, `No hay información para el usuario ${chatIdInfo}`);
                 }
                 return;
             }
@@ -812,9 +780,9 @@ const manejarMensaje = async (msg, idInstancia) => {
                     .join('\n');
 
                 if (activeUsers) {
-                    await sendMessage(asistenteActual, `Usuarios activos:\n${activeUsers}`);
+                    await sendMessage(ASISTENTE_NUMERO, `Usuarios activos:\n${activeUsers}`);
                 } else {
-                    await sendMessage(asistenteActual, 'No hay usuarios activos actualmente');
+                    await sendMessage(ASISTENTE_NUMERO, 'No hay usuarios activos actualmente');
                 }
                 return;
             }
@@ -827,9 +795,9 @@ const manejarMensaje = async (msg, idInstancia) => {
                     .join('\n');
 
                 if (stoppedUsers) {
-                    await sendMessage(asistenteActual, `Conversaciones detenidas por emoji:\n${stoppedUsers}`);
+                    await sendMessage(ASISTENTE_NUMERO, `Conversaciones detenidas por emoji:\n${stoppedUsers}`);
                 } else {
-                    await sendMessage(asistenteActual, 'No hay conversaciones detenidas por emoji actualmente');
+                    await sendMessage(ASISTENTE_NUMERO, 'No hay conversaciones detenidas por emoji actualmente');
                 }
                 return;
             }
@@ -839,14 +807,8 @@ const manejarMensaje = async (msg, idInstancia) => {
     }
 };
 
-// Manejar mensajes creados por el bot
-const manejarMessageCreate = async (msg, idInstancia) => {
-    const instanciaInfo = INSTANCIAS.find(i => i.id === idInstancia);
-    if (!instanciaInfo) return;
-    
-    const ASISTENTE_NUMERO = instanciaInfo.asistente;
-    const instanciaActual = instancias.find(i => i.id === idInstancia)?.cliente;
-    
+// Manejar mensajes creados por el bot (cliente único)
+const manejarMessageCreate = async (msg) => {
     try {
         if (msg.fromMe) {
             const chatId = msg.to;
@@ -864,7 +826,6 @@ const manejarMessageCreate = async (msg, idInstancia) => {
                     users[chatId] = {
                         estado: 'inicio',
                         curso: cursoEncontrado,
-                        idInstancia: idInstancia, // Qué asesor lo atiende
                         createdAt: Date.now(),
                         lastActivity: Date.now(),
                         respuestasInesperadas: 0

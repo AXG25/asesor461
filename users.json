@@ -1,778 +1,4 @@
 {
-  "573025479797@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "Barberia",
-    "createdAt": 1773151480712,
-    "lastActivity": 1773163298097,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "573117367087@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "cejas",
-    "createdAt": 1773151741124,
-    "lastActivity": 1773152035541,
-    "respuestasInesperadas": 0,
-    "followUpSent": false,
-    "followUpStage": 0
-  },
-  "149461288353881@lid": {
-    "estado": "inicio",
-    "curso": "Micropigmentacion",
-    "createdAt": 1773152523317,
-    "lastActivity": 1773152553597,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "238538255810724@lid": {
-    "estado": "seleccion_fechas",
-    "curso": "cejas",
-    "createdAt": 1773152639738,
-    "lastActivity": 1773152742561,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "124283535781900@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "Micropigmentacion",
-    "createdAt": 1773153584253,
-    "lastActivity": 1773154493560,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "90349317914864@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "createdAt": 1773153721581,
-    "lastActivity": 1773153761152,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "73753211982011@lid": {
-    "estado": "seleccion_fechas",
-    "curso": "cejas",
-    "createdAt": 1773153918790,
-    "lastActivity": 1773318052270,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "161241712611454@lid": {
-    "estado": "inicio",
-    "curso": "Micropigmentacion",
-    "createdAt": 1773154209540,
-    "lastActivity": 1773154227406,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "573113560215@c.us": {
-    "estado": "seleccion_fechas",
-    "curso": "cejas",
-    "createdAt": 1773154278646,
-    "lastActivity": 1773154503823,
-    "respuestasInesperadas": 0,
-    "followUpSent": false,
-    "followUpStage": 0
-  },
-  "275097252270110@lid": {
-    "estado": "inicio",
-    "curso": "cejas",
-    "createdAt": 1773154600593,
-    "lastActivity": 1773154614681,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "198758402883641@lid": {
-    "estado": "inicio",
-    "curso": "cejas",
-    "createdAt": 1773154774464,
-    "lastActivity": 1773154786412,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "114208112947428@lid": {
-    "estado": "seleccion_fechas",
-    "curso": "maquillaje",
-    "createdAt": 1773154801547,
-    "lastActivity": 1773155453536,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "27256550334692@lid": {
-    "estado": "inicio",
-    "curso": "Micropigmentacion",
-    "createdAt": 1773154884725,
-    "lastActivity": 1773154900050,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "44586491723869@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "Reparacion",
-    "createdAt": 1773154964147,
-    "lastActivity": 1773156624477,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "266038914592993@lid": {
-    "estado": "inicio",
-    "curso": "masajes",
-    "createdAt": 1773155004343,
-    "lastActivity": 1773155050310,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "227040695472190@lid": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "createdAt": 1773155056171,
-    "lastActivity": 1773155097958,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "95752386826451@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "createdAt": 1773155105303,
-    "lastActivity": 1773155121265,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "4943675170899@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "createdAt": 1773155147946,
-    "lastActivity": 1773155160505,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "12554374000775@lid": {
-    "estado": "inicio",
-    "curso": "masajes",
-    "createdAt": 1773155196014,
-    "lastActivity": 1773155210191,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "215268643066016@lid": {
-    "estado": "inicio",
-    "curso": "cejas",
-    "createdAt": 1773155266468,
-    "lastActivity": 1773155280358,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "145857659859049@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "masajes",
-    "createdAt": 1773155298684,
-    "lastActivity": 1773163711315,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "44281800691751@lid": {
-    "estado": "inicio",
-    "curso": "Micropigmentacion",
-    "createdAt": 1773155334406,
-    "lastActivity": 1773155347928,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "30086380183803@lid": {
-    "estado": "inicio",
-    "curso": "Barberia",
-    "createdAt": 1773155383909,
-    "lastActivity": 1773155397969,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "172782373617886@lid": {
-    "estado": "inicio",
-    "curso": "Reparacion",
-    "createdAt": 1773155423584,
-    "lastActivity": 1773155443977,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "76867482689717@lid": {
-    "estado": "inicio",
-    "curso": "Reparacion",
-    "createdAt": 1773155512997,
-    "lastActivity": 1773155525693,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "10093810733141@lid": {
-    "estado": "inicio",
-    "curso": "Micropigmentacion",
-    "createdAt": 1773155659458,
-    "lastActivity": 1773155672511,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "35150180155435@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "masajes",
-    "createdAt": 1773155686681,
-    "lastActivity": 1773156875326,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "226298202992857@lid": {
-    "estado": "inicio",
-    "curso": "cejas",
-    "createdAt": 1773155724357,
-    "lastActivity": 1773155744509,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "114237573726348@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "createdAt": 1773155930370,
-    "lastActivity": 1773155946786,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "246033074405547@lid": {
-    "estado": "inicio",
-    "curso": "Micropigmentacion",
-    "createdAt": 1773156020135,
-    "lastActivity": 1773156034847,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "28256908632117@lid": {
-    "estado": "inicio",
-    "curso": "masajes",
-    "createdAt": 1773156096863,
-    "lastActivity": 1773156115529,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "199935072964863@lid": {
-    "estado": "inicio",
-    "curso": "Reparacion",
-    "createdAt": 1773156123004,
-    "lastActivity": 1773156141066,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "17150207115415@lid": {
-    "estado": "seleccion_fechas",
-    "curso": "manicure",
-    "createdAt": 1773156370544,
-    "lastActivity": 1773156488449,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "105300115861568@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "trenzas",
-    "createdAt": 1773163668737,
-    "lastActivity": 1773164206890,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0,
-    "finalizado": true
-  },
-  "215221297741948@lid": {
-    "estado": "inicio",
-    "curso": "Micropigmentacion",
-    "createdAt": 1773163704198,
-    "lastActivity": 1773163730817,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "573104406905@c.us": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "createdAt": 1773164026667,
-    "lastActivity": 1773164051471,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "11527776121050@lid": {
-    "estado": "inicio",
-    "curso": "masajes",
-    "createdAt": 1773164082344,
-    "lastActivity": 1773164113893,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "190026986082354@lid": {
-    "estado": "inicio",
-    "curso": "Micropigmentacion",
-    "createdAt": 1773164124452,
-    "lastActivity": 1773164139653,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "221122213748792@lid": {
-    "estado": "inicio",
-    "curso": "maquillaje",
-    "createdAt": 1773164150341,
-    "lastActivity": 1773164180510,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "191319855104022@lid": {
-    "estado": "seleccion_fechas",
-    "curso": "cejas",
-    "createdAt": 1773164190880,
-    "lastActivity": 1773164791396,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "86733039390952@lid": {
-    "estado": "inicio",
-    "curso": "Micropigmentacion",
-    "createdAt": 1773164733317,
-    "lastActivity": 1773164746831,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "207176404602978@lid": {
-    "estado": "inicio",
-    "curso": "maquillaje",
-    "createdAt": 1773164760145,
-    "lastActivity": 1773164781256,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "179409424240653@lid": {
-    "estado": "inicio",
-    "curso": "Barberia",
-    "createdAt": 1773165897540,
-    "lastActivity": 1773166379568,
-    "respuestasInesperadas": 0,
-    "followUpSent": false,
-    "followUpStage": 0,
-    "finalizado": true,
-    "handledManually": true
-  },
-  "78525071683613@lid": {
-    "estado": "inicio",
-    "curso": "masajes",
-    "createdAt": 1773166842283,
-    "lastActivity": 1773166851376,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "46914028486752@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "Barberia",
-    "createdAt": 1773168648204,
-    "lastActivity": 1773171818302,
-    "respuestasInesperadas": 0,
-    "followUpSent": false,
-    "followUpStage": 0
-  },
-  "52678159782044@lid": {
-    "estado": "inicio",
-    "curso": "masajes",
-    "createdAt": 1773169078980,
-    "lastActivity": 1773169097607,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "83370281287720@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "Micropigmentacion",
-    "createdAt": 1773169110186,
-    "lastActivity": 1773170454978,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "102260487012439@lid": {
-    "estado": "inicio",
-    "curso": "maquillaje",
-    "createdAt": 1773169138481,
-    "lastActivity": 1773169724860,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0,
-    "finalizado": true,
-    "handledManually": true
-  },
-  "72774496338134@lid": {
-    "estado": "inicio",
-    "curso": "cejas",
-    "createdAt": 1773171821515,
-    "lastActivity": 1773171835981,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "87900901363853@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "manicure",
-    "createdAt": 1773171920404,
-    "lastActivity": 1773172435545,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "573011873159@c.us": {
-    "estado": "inicio",
-    "curso": "Barberia",
-    "createdAt": 1773172772935,
-    "lastActivity": 1773173266013,
-    "respuestasInesperadas": 0,
-    "followUpSent": false,
-    "followUpStage": 0,
-    "finalizado": true,
-    "handledManually": true
-  },
-  "22724722319396@lid": {
-    "estado": "inicio",
-    "curso": "cejas",
-    "createdAt": 1773176718768,
-    "lastActivity": 1773176732049,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "104114939789480@lid": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "createdAt": 1773176826876,
-    "lastActivity": 1773176848261,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "173280522674395@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "masajes",
-    "createdAt": 1773176852762,
-    "lastActivity": 1773183288781,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "207266934468845@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "Barberia",
-    "createdAt": 1773188901624,
-    "lastActivity": 1773189199406,
-    "respuestasInesperadas": 0,
-    "followUpSent": false,
-    "followUpStage": 0
-  },
-  "32998300885191@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "createdAt": 1773231262998,
-    "lastActivity": 1773231304188,
-    "respuestasInesperadas": 0
-  },
-  "status@broadcast": {
-    "estado": "confirmacion_promocion",
-    "curso": "trenzas",
-    "idInstancia": 1,
-    "createdAt": 1773235103050,
-    "lastActivity": 1773321049626,
-    "respuestasInesperadas": 0,
-    "followUpSent": false,
-    "followUpStage": 0
-  },
-  "78070039986291@lid": {
-    "estado": "seleccion_fechas",
-    "curso": "cejas",
-    "idInstancia": 1,
-    "createdAt": 1773235188561,
-    "lastActivity": 1773253630981,
-    "respuestasInesperadas": 0,
-    "followUpSent": false,
-    "followUpStage": 0
-  },
-  "62195773743289@lid": {
-    "estado": "seleccion_fechas",
-    "curso": "maquillaje",
-    "idInstancia": 1,
-    "createdAt": 1773236366825,
-    "lastActivity": 1773239402902,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "168827144896709@lid": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "idInstancia": 1,
-    "createdAt": 1773236648277,
-    "lastActivity": 1773323303130,
-    "respuestasInesperadas": 0,
-    "followUpStage": 1
-  },
-  "181625879031910@lid": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "idInstancia": 1,
-    "createdAt": 1773236675656,
-    "lastActivity": 1773323303130,
-    "respuestasInesperadas": 0,
-    "followUpStage": 1
-  },
-  "42846660903012@lid": {
-    "estado": "seleccion_fechas",
-    "curso": "cejas",
-    "idInstancia": 1,
-    "createdAt": 1773236889859,
-    "lastActivity": 1773237703932,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "73980945924145@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "idInstancia": 1,
-    "createdAt": 1773236929241,
-    "lastActivity": 1773236973791,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "175600375443553@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "idInstancia": 1,
-    "createdAt": 1773236980654,
-    "lastActivity": 1773237000052,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "277987496861906@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "manicure",
-    "idInstancia": 1,
-    "createdAt": 1773237021333,
-    "lastActivity": 1773238536300,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "181359876255790@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "idInstancia": 1,
-    "createdAt": 1773246823175,
-    "lastActivity": 1773246823175,
-    "respuestasInesperadas": 0,
-    "followUpSent": false,
-    "followUpStage": 0
-  },
-  "134724718710929@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "idInstancia": 1,
-    "createdAt": 1773246859997,
-    "lastActivity": 1773246877157,
-    "respuestasInesperadas": 0,
-    "followUpSent": false,
-    "finalizado": true,
-    "followUpStage": 0,
-    "handledManually": true
-  },
-  "239024040059054@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "cejas",
-    "idInstancia": 1,
-    "createdAt": 1773250528877,
-    "lastActivity": 1773256175091,
-    "respuestasInesperadas": 0,
-    "followUpSent": false,
-    "followUpStage": 0
-  },
-  "27200078254119@lid": {
-    "estado": "seleccion_fechas",
-    "curso": "cejas",
-    "idInstancia": 1,
-    "createdAt": 1773251718809,
-    "lastActivity": 1773252037558,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "172911793057946@lid": {
-    "estado": "inicio",
-    "curso": "masajes",
-    "idInstancia": 1,
-    "createdAt": 1773251924554,
-    "lastActivity": 1773251966239,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "77610159755284@lid": {
-    "estado": "inicio",
-    "curso": "Micropigmentacion",
-    "idInstancia": 1,
-    "createdAt": 1773251974623,
-    "lastActivity": 1773251994159,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "27956009246920@lid": {
-    "estado": "seleccion_fechas",
-    "curso": "manicure",
-    "idInstancia": 1,
-    "createdAt": 1773252109166,
-    "lastActivity": 1773253724193,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "49813601124384@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "idInstancia": 1,
-    "createdAt": 1773252336779,
-    "lastActivity": 1773252355215,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "59962457853984@lid": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "idInstancia": 1,
-    "createdAt": 1773252382244,
-    "lastActivity": 1773252418665,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "62105378152565@lid": {
-    "estado": "inicio",
-    "curso": "Reparacion",
-    "idInstancia": 1,
-    "createdAt": 1773252448531,
-    "lastActivity": 1773260723298,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "240836449198240@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "Micropigmentacion",
-    "idInstancia": 1,
-    "createdAt": 1773252483606,
-    "lastActivity": 1773254502094,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "25344736280697@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "idInstancia": 1,
-    "createdAt": 1773252598821,
-    "lastActivity": 1773255308979,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0,
-    "finalizado": true,
-    "handledManually": true
-  },
-  "55508341936240@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "Micropigmentacion",
-    "idInstancia": 1,
-    "createdAt": 1773252729813,
-    "lastActivity": 1773255179898,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0,
-    "finalizado": true
-  },
-  "3273419411674@lid": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "idInstancia": 1,
-    "createdAt": 1773252939554,
-    "lastActivity": 1773252967412,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "79397486887156@lid": {
-    "estado": "seleccion_fechas",
-    "curso": "Reparacion",
-    "idInstancia": 1,
-    "createdAt": 1773253033471,
-    "lastActivity": 1773253309242,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0,
-    "finalizado": true,
-    "handledManually": true
-  },
-  "78164126617820@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "idInstancia": 1,
-    "createdAt": 1773253076250,
-    "lastActivity": 1773253089654,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "36258466263065@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "idInstancia": 1,
-    "createdAt": 1773253103198,
-    "lastActivity": 1773253492004,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0,
-    "finalizado": true,
-    "handledManually": true
-  },
-  "273078366007533@lid": {
-    "estado": "inicio",
-    "curso": "trenzas",
-    "idInstancia": 1,
-    "createdAt": 1773253271585,
-    "lastActivity": 1773253290355,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "240054765117475@lid": {
-    "estado": "confirmacion_promocion",
-    "curso": "Micropigmentacion",
-    "idInstancia": 1,
-    "createdAt": 1773253521326,
-    "lastActivity": 1773323366550,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0,
-    "finalizado": true
-  },
-  "155954691727481@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "idInstancia": 1,
-    "createdAt": 1773253547515,
-    "lastActivity": 1773253567351,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "212429451595884@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "idInstancia": 1,
-    "createdAt": 1773253578686,
-    "lastActivity": 1773253590188,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "218253544693769@lid": {
-    "estado": "inicio",
-    "curso": "manicure",
-    "idInstancia": 1,
-    "createdAt": 1773253679557,
-    "lastActivity": 1773316421495,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0,
-    "finalizado": true,
-    "handledManually": true
-  },
-  "22115457708282@lid": {
-    "estado": "inicio",
-    "curso": "Micropigmentacion",
-    "idInstancia": 1,
-    "createdAt": 1773253707801,
-    "lastActivity": 1773253715272,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
-  "185843654389927@lid": {
-    "estado": "seleccion_fechas",
-    "curso": "trenzas",
-    "idInstancia": 1,
-    "createdAt": 1773253900679,
-    "lastActivity": 1773261631892,
-    "respuestasInesperadas": 0,
-    "followUpStage": 0
-  },
   "238211771142229@lid": {
     "estado": "seleccion_fechas",
     "curso": "manicure",
@@ -908,9 +134,8 @@
   "15406702030919@lid": {
     "estado": "inicio",
     "curso": "masajes",
-    "idInstancia": 2,
-    "createdAt": 1773322619318,
-    "lastActivity": 1773322662438,
+    "createdAt": 1773326253741,
+    "lastActivity": 1773326304179,
     "respuestasInesperadas": 0,
     "followUpStage": 0
   },
@@ -935,10 +160,442 @@
   "216337653698742@lid": {
     "estado": "inicio",
     "curso": "cejas",
-    "idInstancia": 2,
-    "createdAt": 1773323150006,
-    "lastActivity": 1773323178443,
+    "createdAt": 1773325709256,
+    "lastActivity": 1773325727463,
     "respuestasInesperadas": 0,
     "followUpStage": 0
+  },
+  "186088584917116@lid": {
+    "estado": "inicio",
+    "curso": "Barberia",
+    "createdAt": 1773324731050,
+    "lastActivity": 1773324763971,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "98969585721487@lid": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "createdAt": 1773325365458,
+    "lastActivity": 1773325403097,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "110612671676518@lid": {
+    "estado": "seleccion_fechas",
+    "curso": "Reparacion",
+    "createdAt": 1773325545192,
+    "lastActivity": 1773330920519,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "278185149206537@lid": {
+    "estado": "inicio",
+    "curso": "Barberia",
+    "createdAt": 1773325815216,
+    "lastActivity": 1773325828546,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "83378267254934@lid": {
+    "estado": "inicio",
+    "curso": "Micropigmentacion",
+    "createdAt": 1773325953143,
+    "lastActivity": 1773325973764,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "263105804284144@lid": {
+    "estado": "seleccion_fechas",
+    "curso": "cejas",
+    "createdAt": 1773326068519,
+    "lastActivity": 1773332306618,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "248051943870536@lid": {
+    "estado": "inicio",
+    "curso": "Micropigmentacion",
+    "createdAt": 1773326119075,
+    "lastActivity": 1773326134256,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "6464194248906@lid": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1773326223945,
+    "lastActivity": 1773326266514,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "162058242883714@lid": {
+    "estado": "inicio",
+    "curso": "Barberia",
+    "createdAt": 1773326296722,
+    "lastActivity": 1773326308063,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "110501036040221@lid": {
+    "estado": "inicio",
+    "curso": "maquillaje",
+    "createdAt": 1773326332735,
+    "lastActivity": 1773326373202,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "234651276841111@lid": {
+    "estado": "inicio",
+    "curso": "manicure",
+    "createdAt": 1773326384397,
+    "lastActivity": 1773326415000,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "188179730682096@lid": {
+    "estado": "inicio",
+    "curso": "Micropigmentacion",
+    "createdAt": 1773326418031,
+    "lastActivity": 1773326429514,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "181690622292054@lid": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1773326465333,
+    "lastActivity": 1773326474434,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "78095558172754@lid": {
+    "estado": "seleccion_fechas",
+    "curso": "maquillaje",
+    "createdAt": 1773326536268,
+    "lastActivity": 1773326590411,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "208731618975880@lid": {
+    "estado": "inicio",
+    "curso": "Barberia",
+    "createdAt": 1773326580718,
+    "lastActivity": 1773326596756,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "241158588465266@lid": {
+    "estado": "inicio",
+    "curso": "manicure",
+    "createdAt": 1773326628105,
+    "lastActivity": 1773326643613,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "212403983794237@lid": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1773326877424,
+    "lastActivity": 1773326895438,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "28639227867215@lid": {
+    "estado": "inicio",
+    "curso": "manicure",
+    "createdAt": 1773326910398,
+    "lastActivity": 1773326926836,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "215221297741948@lid": {
+    "estado": "inicio",
+    "curso": "Micropigmentacion",
+    "createdAt": 1773327066011,
+    "lastActivity": 1773327081930,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "108207775162486@lid": {
+    "estado": "inicio",
+    "curso": "Barberia",
+    "createdAt": 1773327192607,
+    "lastActivity": 1773327201317,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "212154707894327@lid": {
+    "estado": "inicio",
+    "curso": "Micropigmentacion",
+    "createdAt": 1773327229350,
+    "lastActivity": 1773327238277,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "117197376614509@lid": {
+    "estado": "seleccion_fechas",
+    "curso": "Reparacion",
+    "createdAt": 1773327265081,
+    "lastActivity": 1773335122754,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "84293044953193@lid": {
+    "estado": "inicio",
+    "curso": "masajes",
+    "createdAt": 1773327294100,
+    "lastActivity": 1773327315212,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "256512895234268@lid": {
+    "estado": "inicio",
+    "curso": "Reparacion",
+    "createdAt": 1773327327376,
+    "lastActivity": 1773327342670,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "246183935139921@lid": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "createdAt": 1773327362373,
+    "lastActivity": 1773327380326,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "227672424730699@lid": {
+    "estado": "inicio",
+    "curso": "Micropigmentacion",
+    "createdAt": 1773327571171,
+    "lastActivity": 1773327583449,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "103130872180913@lid": {
+    "estado": "inicio",
+    "curso": "manicure",
+    "createdAt": 1773327647846,
+    "lastActivity": 1773327666583,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "127247012880423@lid": {
+    "estado": "confirmacion_promocion",
+    "curso": "maquillaje",
+    "createdAt": 1773327673597,
+    "lastActivity": 1773327996216,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0,
+    "finalizado": true
+  },
+  "108856399159487@lid": {
+    "estado": "inicio",
+    "curso": "Micropigmentacion",
+    "createdAt": 1773327707896,
+    "lastActivity": 1773327720818,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "221641837687012@lid": {
+    "estado": "inicio",
+    "curso": "Barberia",
+    "createdAt": 1773327734717,
+    "lastActivity": 1773327747075,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "136954276528308@lid": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "createdAt": 1773327767566,
+    "lastActivity": 1773327780126,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "276089641423014@lid": {
+    "estado": "seleccion_fechas",
+    "curso": "manicure",
+    "createdAt": 1773327853205,
+    "lastActivity": 1773328133037,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "8315073523891@lid": {
+    "estado": "seleccion_fechas",
+    "curso": "cejas",
+    "createdAt": 1773327967696,
+    "lastActivity": 1773329223478,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "214593762808057@lid": {
+    "estado": "inicio",
+    "curso": "Barberia",
+    "createdAt": 1773328009487,
+    "lastActivity": 1773328031410,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "98397986001093@lid": {
+    "estado": "inicio",
+    "curso": "manicure",
+    "createdAt": 1773328094072,
+    "lastActivity": 1773328107761,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "53850350301288@lid": {
+    "estado": "confirmacion_promocion",
+    "curso": "trenzas",
+    "createdAt": 1773328129723,
+    "lastActivity": 1773337732447,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "118163593257110@lid": {
+    "estado": "inicio",
+    "curso": "Barberia",
+    "createdAt": 1773328542837,
+    "lastActivity": 1773328559058,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "218253544693769@lid": {
+    "estado": "seleccion_fechas",
+    "curso": "cejas",
+    "createdAt": 1773328644019,
+    "lastActivity": 1773328942156,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "status@broadcast": {
+    "estado": "seleccion_fechas",
+    "curso": "maquillaje",
+    "createdAt": 1773329127501,
+    "lastActivity": 1773338553883,
+    "respuestasInesperadas": 0,
+    "followUpSent": false,
+    "followUpStage": 0
+  },
+  "75823889535066@lid": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "createdAt": 1773330328464,
+    "lastActivity": 1773330343702,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "67856658120950@lid": {
+    "estado": "inicio",
+    "curso": "Micropigmentacion",
+    "createdAt": 1773335199590,
+    "lastActivity": 1773335211245,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "197353797628073@lid": {
+    "estado": "seleccion_fechas",
+    "curso": "trenzas",
+    "createdAt": 1773335353019,
+    "lastActivity": 1773335430820,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "220311018573860@lid": {
+    "estado": "seleccion_fechas",
+    "curso": "manicure",
+    "createdAt": 1773335503668,
+    "lastActivity": 1773335552547,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "30468565110987@lid": {
+    "estado": "seleccion_fechas",
+    "curso": "manicure",
+    "createdAt": 1773335591870,
+    "lastActivity": 1773335961979,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "99665387245819@lid": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "createdAt": 1773335623230,
+    "lastActivity": 1773336959322,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "186685417635852@lid": {
+    "estado": "inicio",
+    "curso": "Reparacion",
+    "createdAt": 1773335688728,
+    "lastActivity": 1773335709869,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "264595822358724@lid": {
+    "estado": "seleccion_fechas",
+    "curso": "trenzas",
+    "createdAt": 1773335901825,
+    "lastActivity": 1773336157462,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "221740890337349@lid": {
+    "estado": "inicio",
+    "curso": "manicure",
+    "createdAt": 1773336149942,
+    "lastActivity": 1773336171524,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "179710071967903@lid": {
+    "estado": "confirmacion_promocion",
+    "curso": "manicure",
+    "createdAt": 1773336254139,
+    "lastActivity": 1773337271149,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "126122117341286@lid": {
+    "estado": "inicio",
+    "curso": "manicure",
+    "createdAt": 1773336283350,
+    "lastActivity": 1773336295246,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "76631309856994@lid": {
+    "estado": "inicio",
+    "curso": "trenzas",
+    "createdAt": 1773336365468,
+    "lastActivity": 1773336380167,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "212665909678172@lid": {
+    "estado": "inicio",
+    "curso": "Reparacion",
+    "createdAt": 1773336403798,
+    "lastActivity": 1773336421260,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "127689797202006@lid": {
+    "estado": "inicio",
+    "curso": "cejas",
+    "createdAt": 1773336555407,
+    "lastActivity": 1773336582772,
+    "respuestasInesperadas": 0,
+    "followUpStage": 0
+  },
+  "180814549643437@lid": {
+    "estado": "inicio",
+    "curso": "Barberia",
+    "createdAt": 1773338657305,
+    "lastActivity": 1773338672277,
+    "respuestasInesperadas": 0
   }
 }
