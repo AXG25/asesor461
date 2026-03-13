@@ -279,6 +279,7 @@ const cleanupInactiveUsers = async (clienteActivo) => {
                     // Espera aleatoria más larga para seguimientos, para parecer más humano
                     await waitRandom();
                     await sendMessage(userId, mensaje.mensaje);
+                    await waitRandom();
                     user.followUpStage = user.followUpStage + 1;
                     user.lastActivity = now;
                     count++;
@@ -353,10 +354,10 @@ const setupCleanup = (clienteActivo) => {
 
 // Comportamientos humanos para los delays
 const estadosHumanos = {
-    concentrado: { min: 4000, max: 7000, peso: 0.3 },    // Pensando en la respuesta
-    normal: { min: 2500, max: 4500, peso: 0.4 },         // Respuesta normal
-    ansioso: { min: 1000, max: 2500, peso: 0.15 },      // Queriendo responder rápido
-    distraido: { min: 6000, max: 12000, peso: 0.15 },   // Distraído, ocupado
+    concentrado: { min: 6000, max: 9000, peso: 0.5 },    // Pensando en la respuesta
+    normal: { min: 4500, max: 6500, peso: 0.6 },         // Respuesta normal
+    ansioso: { min: 3000, max: 5500, peso: 0.35 },      // Queriendo responder rápido
+    distraido: { min: 8000, max: 14000, peso: 0.35 },   // Distraído, ocupado
 };
 
 function seleccionarEstado() {

@@ -2,7 +2,7 @@ module.exports = {
         'Barberia': {
                 palabrasClave: ['barberia', 'barbería', 'barbero', 'peluqueria', 'peluquero', 'peluquiar', 'motilar'],
                 pensum: 'barberia.jpeg',
-                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 31 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puede *apartar su cupo con solo $100.000* y pagar los $180.000 restantes *en EFECTIVO* tres dias antes de comenzar clases o antes del 31 de Marzo. 
+                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 16 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puede *apartar su cupo con solo $100.000* y pagar los $180.000 restantes *en EFECTIVO* tres dias antes de comenzar clases o antes del 16 de Marzo. 
 
 Si estudia *entre semana*, el curso dura *5 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *8 semanas (1 clase por semana)*.
 
@@ -14,9 +14,9 @@ https://g.co/kgs/cc6o1RU`,
                                 
 *Fecha de inicio* | *días de estudio* | *horario* 
 
-17 Marzo 2026 | Martes y Jueves | 9:00 am a 12:00 pm
+31 Marzo 2026 | Martes y Jueves | 9:00 am a 12:00 pm
 
-10 Marzo 2026 | Martes y Jueves | 4:00 pm a 7:00 pm
+21 Abril 2026 | Martes y Jueves | 4:00 pm a 7:00 pm
 
 15 Abril 2026 | Miércoles y Viernes | 9:00 am a 12:00 pm
 
@@ -39,7 +39,7 @@ _*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transfe
         'cejas': {
                 palabrasClave: ['cejas y pestañas', 'pestañas', 'pestaña', 'pestanas', 'pestana', 'pestañina', 'laminado', 'laminados', 'volumen', 'volumenes'],
                 pensum: 'pestañas.jpg',
-                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 31 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puede *apartar su cupo con solo $100.000* y pagar los $180.000 restantes *en EFECTIVO* tres dias antes de comenzar clases o antes del 31 de Marzo.
+                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 16 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puede *apartar su cupo con solo $100.000* y pagar los $180.000 restantes *en EFECTIVO* tres dias antes de comenzar clases o antes del 16 de Marzo.
 
 Son 8 clases. Si estudia *entre semana*, el curso dura *4 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *8 semanas (1 clase por semana)*.
 
@@ -51,9 +51,9 @@ https://g.co/kgs/cc6o1RU`,
 
 *Fecha de inicio* | *días de estudio* | *horario* 
 
-17 Marzo 2026 | Martes y Jueves | 8:00 am a 12:00 pm
+24 Marzo 2026 | Martes y Jueves | 8:00 am a 12:00 pm
 
-10 Marzo 2026 | Martes y Jueves | 1:00 pm a 5:00 pm
+8 Abril 2026 | Martes y Jueves | 1:00 pm a 5:00 pm
 
 1 Abril 2026 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
@@ -62,6 +62,7 @@ https://g.co/kgs/cc6o1RU`,
 28 Marzo 2026 | Sábados | 1:00 pm a 5:00 pm
 
 26 Abril 2026 | Domingos | 8:00 am a 12:00 pm
+
 
 
 🚨 *Recordatorio* 🚨
@@ -75,7 +76,7 @@ _*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transfe
         'manicure': {
                 palabrasClave: ['uñas', 'manicure', 'pedicure', 'manicurista', 'pedicure', 'manicura', 'pedicura'],
                 pensum: 'uñas.jpg',
-                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 31 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puede *apartar su cupo con solo $100.000* y pagar los $180.000 restantes *en EFECTIVO* tres dias antes de comenzar clases o antes del 31 de Marzo.
+                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 16 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puede *apartar su cupo con solo $100.000* y pagar los $180.000 restantes *en EFECTIVO* tres dias antes de comenzar clases o antes del 16 de Marzo.
 
 Son 8 clases. Si estudia *entre semana*, el curso dura *4 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *8 semanas (1 clase por semana)*.
 
@@ -91,7 +92,7 @@ https://g.co/kgs/cc6o1RU`,
 
 1 Abril 2026 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
-11  Marzo 2026 | Miércoles y Viernes | 1:00 pm a 5:00 pm
+18  Marzo 2026 | Miércoles y Viernes | 1:00 pm a 5:00 pm
 
 28 Marzo 2026 | Sábados | 8:00 am a 12:00 pm
 
@@ -113,7 +114,7 @@ _*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transfe
         'maquillaje': {
                 palabrasClave: ['maquillaje', 'maquilladora', 'maquillar'],
                 pensum: 'maquillaje.jpg',
-                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 31 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puede *apartar su cupo con solo $100.000* y pagar los $180.000 restantes *en EFECTIVO* tres dias antes de comenzar clases o antes del 31 de Marzo.
+                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 16 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puede *apartar su cupo con solo $100.000* y pagar los $180.000 restantes *en EFECTIVO* tres dias antes de comenzar clases o antes del 16 de Marzo.
 
 Son 8 clases. Si estudia *entre semana*, el curso dura *4 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *8 semanas (1 clase por semana)*.
 
@@ -125,7 +126,7 @@ https://g.co/kgs/cc6o1RU`,
 
 *Fecha de inicio* | *días de estudio* | *horario* 
 
-7 Abril 2026 | Martes y Jueves | 8:00 am a 12:00 pm
+14 Abril 2026 | Martes y Jueves | 8:00 am a 12:00 pm
 
 2 Mayo 2026 | Sábados | 8:00 am a 12:00 pm
 
@@ -143,7 +144,7 @@ _*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transfe
         'masajes': {
                 palabrasClave: ['masajes', 'corporales', 'masajista', 'masaje', 'maderoterapia', 'masoterapia'],
                 pensum: 'masajes.jpg',
-                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 31 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puedes *apartar tu cupo con solo $100.000* y pagar los $180.000 restantes tres dias antes de comenzar clases o antes del 31 de Marzo en *EFECTIVO*. 
+                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 16 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puedes *apartar tu cupo con solo $100.000* y pagar los $180.000 restantes tres dias antes de comenzar clases o antes del 16 de Marzo en *EFECTIVO*. 
 
 Son 5 clases. Si estudia *entre semana*, el curso dura *3 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *5 semanas (1 clase por semana)*.
 
@@ -172,7 +173,7 @@ _*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transfe
         'Reparacion': {
                 palabrasClave: ['celulares', 'celular'],
                 pensum: 'celulares.jpg',
-                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 31 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puede *apartar su cupo con solo $100.000* y pagar los $180.000 restantes *en EFECTIVO* tres dias antes de comenzar clases o antes del 31 de Marzo.
+                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 16 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puede *apartar su cupo con solo $100.000* y pagar los $180.000 restantes *en EFECTIVO* tres dias antes de comenzar clases o antes del 16 de Marzo.
 
 Si estudia *entre semana*, el curso dura *7 semanas (4 clases por semana)*. Si estudia los *sábados o domingos*, dura *10 semanas (1 clase por semana)*.
 
@@ -188,7 +189,7 @@ https://g.co/kgs/cc6o1RU`,
 
 17 Marzo 2026 | Martes a Viernes | 1:00 pm a 3:00 pm
 
-7 Marzo 2026 | Sábados | 8:00 am a 1:00 pm
+18 Abril 2026 | Sábados | 8:00 am a 1:00 pm
 
 22 Marzo 2026 | Domingos | 8:00 am a 1:00 pm
 
@@ -205,7 +206,7 @@ _*Recuerde que los 100.000 pesos para apartar su cupo se pueden pagar en transfe
         'trenzas': {
                 palabrasClave: ['trenzas', 'trensa', 'trensas', 'peinados', 'peinado', 'trenzadora', 'trenza', 'peinado'],
                 pensum: 'trenzas.jpg',
-                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 31 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puede *apartar su cupo con solo $100.000* y pagar los $180.000 restantes *en EFECTIVO* tres dias antes de comenzar clases o antes del 31 de Marzo.
+                promocion: `El curso cuesta ~$500.000~, pero *Hasta el 16 de Marzo* tiene un *descuento del 44%* y queda en *$280.000* Puede *apartar su cupo con solo $100.000* y pagar los $180.000 restantes *en EFECTIVO* tres dias antes de comenzar clases o antes del 16 de Marzo.
 
 Son 8 clases 100% practicas (el curso no incluye materiales se debe contar con cabezote probitaminico). Si estudia *entre semana*, el curso dura *4 semanas (2 clases por semana)*. Si estudia los *sábados o domingos*, dura *8 semanas (1 clase por semana)*.
 
@@ -247,11 +248,11 @@ Valor normal: $600.000 c/u
 *Valor promocional: _$450.000_  c/u* 
 
 
-_Promoción disponible *Hasta el 31 de Marzo*_
+_Promoción disponible *Hasta el 16 de Marzo*_
 
 _*APARTA TU CUPO y MATRICULATE ABONANDO 100.000 pesos*_ para cada uno
 
-_cancela el resto *tres dias antes de que comience tu curso o antes del 31 de Marzo*_`,
+_cancela el resto *tres dias antes de que comience tu curso o antes del 16 de Marzo*_`,
                 pensum: 'micropigmentacion.jpeg',
                 presentacion: 'presentacionMicros.ogg',
                 fechas: `Fechas inicio *MICROPIGMENTACIÓN DE LABIOS*
@@ -265,7 +266,7 @@ _cancela el resto *tres dias antes de que comience tu curso o antes del 31 de Ma
 
 Fechas inicio *MICROPIGMENTACIÓN DE CEJAS*
 
-25 Marzo 2026 | Miércoles y Viernes | 8:00 am a 12:00 pm
+29 Abril 2026 | Miércoles y Viernes | 8:00 am a 12:00 pm
 
 22 Marzo 2026 | Domingos | 8:00 am a 12:00 pm
 
